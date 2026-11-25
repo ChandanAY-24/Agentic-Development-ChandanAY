@@ -716,7 +716,7 @@
     },
     {
       "path": "tests/test_logs_feature.js",
-      "sha256": "54023d7499749883a5fb1cfdc69ed5f1e99e165b9c270d0a5013088b118a4597"
+      "sha256": "c9437602403226e90dc7824d14d14ff85ba5da316959e6c6f740ee0ddae8ce0a"
     },
     {
       "path": "tests/test_token_telemetry.js",

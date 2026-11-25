@@ -11,7 +11,34 @@ const DashboardParser = require('../Project-Manager-Dashboard/parser');
 
 const PROJECT_ROOT = path.resolve(__dirname, '..');
 const DASHBOARD_DIR = path.join(PROJECT_ROOT, 'Project-Manager-Dashboard');
+const LOGS_DIR = path.join(PROJECT_ROOT, 'logs');
 const parser = new DashboardParser(PROJECT_ROOT);
+
+// Ensure starter .log files exist in clean/CI checkouts (logs/*.log are gitignored)
+const STARTER_LOGS = ['dev.log', 'test.log', 'server.log', 'error.log'];
+const createdStarterLogs = [];
+if (!fs.existsSync(LOGS_DIR)) {
+  fs.mkdirSync(LOGS_DIR, { recursive: true });
+}
+STARTER_LOGS.forEach(file => {
+  const filePath = path.join(LOGS_DIR, file);
+  if (!fs.existsSync(filePath)) {
+    fs.writeFileSync(
+      filePath,
+      `[2026-11-26 00:00:00] [INFO] Starter ${file} initialized for verification.\n`,
+      'utf8'
+    );
+    createdStarterLogs.push(filePath);
+  }
+});
+
+process.on('exit', () => {
+  createdStarterLogs.forEach(filePath => {
+    if (fs.existsSync(filePath)) {
+      fs.unlinkSync(filePath);
+    }
+  });
+});
 
 console.log('=================================================================');
 console.log('       📜 LIVE DEVELOPMENT LOGS EXPLORER TEST SUITE              ');
