@@ -1,0 +1,31 @@
+# Validates the unified 1-in-2 SDD-Vibe-Framework package in this guide repository.
+# The package also ships its own .github/workflows/docs-ci.yml for projects instantiated from it.
+name: frameworks-ci
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Docs, feature specs and agent assets
+        run: python "SDD-Vibe-Framework/scripts/check_docs.py"
+      - name: MANIFEST.json is current
+        run: python "SDD-Vibe-Framework/scripts/manifest.py" --check
+      - name: Dashboard syntax
+        run: |
+          node --check "SDD-Vibe-Framework/Project-Manager-Dashboard/server.js"
+          node --check "SDD-Vibe-Framework/Project-Manager-Dashboard/parser.js"
+          node --check "SDD-Vibe-Framework/Project-Manager-Dashboard/assets/dashboard.js"
+      - name: Logging sanity test
+        run: node "SDD-Vibe-Framework/tests/test_logs_feature.js"

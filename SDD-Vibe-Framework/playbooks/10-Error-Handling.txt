@@ -1,0 +1,25 @@
+10-Error-Handling
+=================
+
+Purpose: Standardize structured error handling, safe client responses, logging, and incident recovery.
+Read trigger: MUST read when designing API error responses, retry logic, or incident runbooks.
+Applicability: SDD
+
+Prerequisites:
+- Read `docs/error-tracker.md`, `docs/apis.md`, `docs/observability.md`, and `docs/runbook.md`.
+
+Commands & Skills:
+- Commands: `/errorlogs-ca-agent`, `/tdd-ca-agent`, `/security-audit-ca-agent`
+- Skills: `debugging-analyst`, `api-contract-review`, `security-auditor`
+
+Procedure:
+1. Contract-First Error Shapes:
+   - Return documented HTTP status codes (`400`, `401`, `403`, `404`, `422`, `429`, `5xx`) without leaking stack traces or secrets.
+2. Observability & Correlation:
+   - Log structured error codes, correlation/request IDs, and sanitized context at system boundaries.
+   - Maintain development and runtime error traces in `logs/error.log`; ensure secrets, credentials, and PII are redacted.
+3. Negative Tests & Runbook:
+   - Add tests for malformed payloads, timeouts, and downstream failures; document recovery steps in `docs/runbook.md`.
+
+Required output:
+- Verified error-path tests, sanitized error responses, and updated `docs/runbook.md` / `docs/error-tracker.md`.

@@ -1,0 +1,28 @@
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+**/node_modules/
+**/__pycache__/
+**/.pytest_cache/
+**/dist/
+**/build/
+**/coverage/
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/tasks.json
+
+# Temporary runtime logs
+**/.dashboard-state.json
+**/local-dashboard-logs/
+
+# Development logs (directory preserved via .gitkeep)
+logs/*.log
+!logs/.gitkeep
+
+
+# Dashboard-generated draft approval records (local only until a human completes them)
+docs/approvals/approval-phase-*.md

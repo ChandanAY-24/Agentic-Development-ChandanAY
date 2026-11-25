@@ -1,0 +1,33 @@
+# Microsoft Office temporary lock files
+~$*.*
+*.tmp
+
+# Operating System Files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Editor and IDE temporary files
+*.swp
+*.swo
+*~
+
+# Documentation binary files
+*.docx
+
+# Consolidated / Superseded Guides (Track-specific and Universal guides used instead)
+CUSTOM-SLASH-COMMANDS-GUIDE.md
+GUIDE.md
+
+# Temporary runtime logs
+**/.dashboard-state.json
+**/local-dashboard-logs/
+
+# Runtime development logs (directory structure preserved via .gitkeep)
+logs/*.log
+**/logs/*.log
+!logs/.gitkeep
+!**/logs/.gitkeep
+
+

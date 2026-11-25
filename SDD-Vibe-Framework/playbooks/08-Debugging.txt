@@ -1,0 +1,27 @@
+08-Debugging
+============
+
+Purpose: Diagnose root causes using real logs and minimal reproduction tests without breaking SDD contracts.
+Read trigger: MUST read when investigating bugs, test failures, or runtime regressions.
+Applicability: SDD
+
+Prerequisites:
+- Read `docs/error-tracker.md`, `docs/observability.md`, and `docs/runbook.md`.
+
+Commands & Skills:
+- Commands: `/errorlogs-ca-agent`, `/gitlogs-ca-agent`, `/tdd-ca-agent`, `/verify-ca-agent`
+- Skills: `debugging-analyst`, `core-engineering-skills`
+
+Procedure:
+1. Capture Evidence:
+   - Run `/errorlogs-ca-agent` and `/gitlogs-ca-agent` to inspect actual stack traces, inputs, and recent commits.
+2. Reproduce with a Failing Test:
+   - Write a minimal failing regression test (`TEST-FEAT###-##` or unit test) before touching production code.
+3. Fix & Verify:
+   - Apply the smallest fix within scope; run `/verify-ca-agent` and full regression suite.
+4. Prevent Recurrence:
+   - Log recurring or P0/P1 defects in `docs/error-tracker.md` (`ERR-###`) and context in `docs/memory.md`.
+
+Required output:
+- Root cause summary, regression test evidence, and `docs/error-tracker.md` entry (if P0/P1 or recurring).
+

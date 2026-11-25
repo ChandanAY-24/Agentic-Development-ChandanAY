@@ -1,0 +1,18 @@
+# Local documentation hooks (no external downloads). Enable with: pip install pre-commit && pre-commit install
+# Add stack-specific hooks (formatters, linters, secret scanning) after verifying versions for the chosen stack.
+# MUST NOT pretend hooks are installed simply because this file exists.
+repos:
+  - repo: local
+    hooks:
+      - id: check-docs
+        name: Docs, feature specs and agent assets conformance
+        entry: python scripts/check_docs.py
+        language: system
+        pass_filenames: false
+        always_run: true
+      - id: manifest-check
+        name: MANIFEST.json is current
+        entry: python scripts/manifest.py --check
+        language: system
+        pass_filenames: false
+        always_run: true

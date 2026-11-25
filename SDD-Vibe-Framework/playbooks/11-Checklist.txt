@@ -1,0 +1,25 @@
+11-Checklist
+============
+
+Purpose: Final end-to-end release, handoff, and governance checklist before shipping or transferring work.
+Read trigger: MUST read before final release sign-off or engineering handoff.
+Applicability: SDD
+
+Prerequisites:
+- Read `docs/release-checklist.md`, `docs/handoff.md`, `docs/deployment.md`, and `docs/CHANGELOG.md`.
+
+Commands & Skills:
+- Commands: `/release-check-ca-agent`, `/security-audit-ca-agent`, `/handoff-ca-agent`, `/gitlogs-ca-agent`
+- Skills: `release-validator`, `documentation-sync`, `security-auditor`
+
+Checklist:
+1. [ ] `python scripts/check_docs.py` exits 0 (0 errors, 0 warnings).
+2. [ ] `python scripts/manifest.py --check` exits 0.
+3. [ ] All target IDE adapters synced (`python scripts/sync_ide_adapters.py --ides ...`) and `.agents/hooks.json` active.
+4. [ ] All implemented `FEAT-###` specs are `APPROVED` in `docs/spec.md` with `APR-###` in `docs/approvals/`.
+5. [ ] Full test suite and `/security-audit-ca-agent` pass with real recorded output.
+6. [ ] `docs/CHANGELOG.md` updated for product changes; `docs/memory.md` and `docs/handoff.md` synced via `/handoff-ca-agent`.
+7. [ ] Rollback plan verified in `docs/deployment.md` and `docs/runbook.md`.
+
+Required output:
+- Completed `/release-check-ca-agent` + `/handoff-ca-agent` evidence and human ship approval.
