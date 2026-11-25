@@ -23,36 +23,48 @@
 This repository provides a single, unified, battle-tested engineering framework—**SDD-Vibe (1-in-2 Single Workflow)**—for developing **production-grade software** using autonomous AI coding agents. Instead of forcing a choice between rapid visual prototyping and formal enterprise rigor, **SDD-Vibe** combines **Vibe-Coding's** frontend-first sensory demo and fluid iteration with **SDD + TDD's** contract-first specifications, Red-Green-Refactor discipline, and measurable quality gates in one seamless pipeline.
 
 ```mermaid
+%%{init: {'flowchart': {'curve': 'basis', 'padding': 16, 'nodeSpacing': 32, 'rankSpacing': 44}}}%%
 flowchart TB
     classDef gate fill:#451a03,stroke:#fbbf24,stroke-width:2px,color:#fffbeb;
-    classDef vibe fill:#2e1065,stroke:#c084fc,stroke-width:2px,color:#faf5ff;
-    classDef sdd fill:#082f49,stroke:#38bdf8,stroke-width:2px,color:#f0f9ff;
-    classDef core fill:#0f172a,stroke:#94a3b8,stroke-width:1.5px,color:#f8fafc;
+    classDef vibe fill:#2e1065,stroke:#c084fc,stroke-width:1.5px,color:#faf5ff;
+    classDef sdd fill:#082f49,stroke:#38bdf8,stroke-width:1.5px,color:#f0f9ff;
+    classDef core fill:#0f172a,stroke:#64748b,stroke-width:1.5px,color:#f8fafc;
 
-    Start(["<b>🧭 1-in-2 Single Workflow (SDD-Vibe)</b>"]) --> Stage12
+    Start(["`**🧭 1-in-2 Single Workflow (SDD-Vibe)**`"]):::core --> Stage12
 
-    subgraph Stage12 ["STAGE A: VIBE DISCOVERY & FRONTEND SENSORY DEMO"]
+    subgraph Stage12 ["STAGE A — VIBE DISCOVERY & FRONTEND SENSORY DEMO"]
         direction LR
-        Phase1["<b>🏛️ Phase 1: Architecture & Vibe Discovery</b><br/><small>Domain + HLD/LLD + Aesthetic Tokens</small>"]:::core
-        Phase2["<b>🎨 Phase 2: Frontend Sensory Demo</b><br/><small>PROTOTYPE → DRAFT • Live UI (:3000)</small>"]:::vibe
+        Phase1["`**🏛️ Phase 1: Architecture & Vibe**
+Domain + HLD/LLD + Aesthetic Tokens`"]:::core
+        Phase2["`**🎨 Phase 2: Frontend Sensory Demo**
+PROTOTYPE → DRAFT • Live UI (:3000)`"]:::vibe
     end
 
-    subgraph Stage34 ["STAGE B: FORMAL SPEC LOCK, TDD & RELEASE"]
+    subgraph Stage34 ["STAGE B — FORMAL SPEC LOCK, TDD & RELEASE"]
         direction LR
-        Phase3["<b>🧪 Phase 3: Spec Lock & TDD Cycle</b><br/><small>APPROVED Spec • Red-Green-Refactor</small>"]:::sdd
-        Phase4["<b>🚀 Phase 4: Quality Audit & Ship</b><br/><small>Review • Verify • SAST • Release Gate</small>"]:::sdd
+        Phase3["`**🧪 Phase 3: Spec Lock & TDD Cycle**
+APPROVED Spec • Red-Green-Refactor`"]:::sdd
+        Phase4["`**🚀 Phase 4: Quality Audit & Ship**
+Review • Verify • SAST • Release Gate`"]:::sdd
     end
 
-    subgraph SharedCore ["🏛️ Unified Governance & Mission Control Baseline"]
+    subgraph SharedCore ["🏛️ UNIFIED GOVERNANCE & MISSION CONTROL"]
         direction LR
-        AgentEngine["<b>🤖 .agents/ ASSET REPOSITORY</b><br/><small>17 Collision-Free Tools & 19 Deterministic Skills</small>"]:::core
-        DashboardEngine["<b>🖥️ IN-IDE MISSION CONTROL</b><br/><small>Zero-Dependency Local Daemon (Port 4200)</small>"]:::core
-        DocGovernance["<b>📑 docs/ GOVERNANCE ENGINE</b><br/><small>Plan, Prompts, Constitution, PRD, Spec & ADRs</small>"]:::core
+        AgentEngine["`**🤖 .agents/ Asset Repository**
+17 Commands & 19 Deterministic Skills`"]:::core
+        DashboardEngine["`**🖥️ In-IDE Mission Control**
+Zero-Dependency Daemon (Port 4200)`"]:::core
+        DocGovernance["`**📑 docs/ Governance Engine**
+Plan, Prompts, Constitution, Spec & ADRs`"]:::core
     end
 
     Stage12 ==>|"Visual Sign-Off"| Stage34
     Stage12 -->|"Governed By"| SharedCore
     Stage34 ==>|"Enforced By"| SharedCore
+
+    style Stage12 fill:#0b1120,stroke:#334155,stroke-width:1.5px,color:#e2e8f0
+    style Stage34 fill:#0b1120,stroke:#334155,stroke-width:1.5px,color:#e2e8f0
+    style SharedCore fill:#0b1120,stroke:#475569,stroke-width:1.5px,color:#e2e8f0
 ```
 
 ### The 4 Foundational Directives of Agentic Engineering:
@@ -79,6 +91,7 @@ One unified starter blueprint (`SDD-Vibe-Framework/`) that scales smoothly from 
 ## 🔄 Prompt Workflow Diagram
 
 ```mermaid
+%%{init: {'flowchart': {'curve': 'basis', 'padding': 16, 'nodeSpacing': 28, 'rankSpacing': 44}}}%%
 flowchart TB
     classDef step fill:#082f49,stroke:#38bdf8,stroke-width:1.5px,color:#f0f9ff;
     classDef vibe fill:#2e1065,stroke:#c084fc,stroke-width:1.5px,color:#faf5ff;
@@ -87,34 +100,44 @@ flowchart TB
     classDef green fill:#064e3b,stroke:#34d399,stroke-width:2px,color:#ecfdf5;
     classDef ship fill:#022c22,stroke:#10b981,stroke-width:2px,color:#d1fae5;
 
-    subgraph Row1 ["DISCOVERY & FRONTEND SENSORY PROTOTYPING"]
+    subgraph Row1 ["STAGE A — DISCOVERY & FRONTEND SENSORY PROTOTYPING"]
         direction LR
         subgraph P1 ["🏛️ PHASE 1: ARCHITECTURE & VIBE DISCOVERY"]
-            Setup(["<b>⚙️ Setup</b><br/><small>Copy SDD-Vibe-Framework/</small>"]):::step
-            CmdCheck["<b>🔍 Verify Commands</b><br/><small>Check 16 /-ca-agent Contracts</small>"]:::gate
-            Prompt1["<b>💡 Prompt 1: Architecture & Vibe</b><br/><small>Plan Mode • HLD/LLD • Tokens</small>"]:::step
+            Setup(["`**⚙️ Setup**
+Copy SDD-Vibe-Framework/`"]):::step
+            CmdCheck["`**🔍 Verify Commands**
+Check 17 /-ca-agent Contracts`"]:::gate
+            Prompt1["`**💡 Prompt 1: Architecture**
+Plan Mode • HLD/LLD • Tokens`"]:::step
             HumanP1{"Design Approved?"}:::gate
         end
 
         subgraph P2 ["🎨 PHASE 2: FRONTEND SENSORY DEMO"]
-            Prompt2["<b>🏗️ Prompt 2: UI Shell</b><br/><small>PROTOTYPE Spec • Mock State</small>"]:::vibe
-            LiveDemo["<b>🌐 Live Demo (/run-ca-agent)</b><br/><small>Inspect at :3000 • Tune Vibe</small>"]:::vibe
+            Prompt2["`**🏗️ Prompt 2: UI Shell**
+PROTOTYPE Spec • Mock State`"]:::vibe
+            LiveDemo["`**🌐 Live Demo (/run-ca-agent)**
+Inspect at :3000 • Tune Vibe`"]:::vibe
             VibeGate{"UI Approved?"}:::gate
         end
     end
 
-    subgraph Row2 ["FORMAL SPEC LOCK, TDD & PRODUCTION SHIP"]
+    subgraph Row2 ["STAGE B — FORMAL SPEC LOCK, TDD & PRODUCTION SHIP"]
         direction LR
         subgraph P3 ["🧪 PHASE 3: SPEC LOCK & TDD CYCLE"]
-            LockSpec["<b>📋 Prompt 3: Spec Lock</b><br/><small>IN REVIEW → APPROVED</small>"]:::step
-            RedPhase["<b>🔴 RED: Failing Tests</b><br/><small>/testing-ca-agent</small>"]:::red
-            GreenPhase["<b>🟢 GREEN: Backend & Auth</b><br/><small>/tdd-ca-agent • /implement</small>"]:::green
+            LockSpec["`**📋 Prompt 3: Spec Lock**
+IN REVIEW → APPROVED`"]:::step
+            RedPhase["`**🔴 RED: Failing Tests**
+/testing-ca-agent`"]:::red
+            GreenPhase["`**🟢 GREEN: Backend & Auth**
+/tdd-ca-agent • /implement`"]:::green
             NextFeature{"More Features?"}:::gate
         end
 
         subgraph P4 ["🚀 PHASE 4: QUALITY AUDIT & SHIP"]
-            Audits["<b>🛡️ Pre-Flight Audits</b><br/><small>/review • /verify • /security-audit</small>"]:::step
-            Release(["<b>🎉 Production Ship</b><br/><small>/release-check-ca-agent</small>"]):::ship
+            Audits["`**🛡️ Pre-Flight Audits**
+/review • /verify • /security-audit`"]:::step
+            Release(["`**🎉 Production Ship**
+/release-check-ca-agent`"]):::ship
         end
     end
 
@@ -125,16 +148,23 @@ flowchart TB
     HumanP1 -->|"Approved"| Prompt2
 
     Prompt2 -->|"Launch Server"| LiveDemo
-    LiveDemo -->|"Conversational Tuning"| VibeGate
-    VibeGate -->|"Iterate UI"| Prompt2
+    LiveDemo -->|"Tune UI"| VibeGate
+    VibeGate -->|"Iterate"| Prompt2
     VibeGate ==>|"UI Signed Off"| LockSpec
 
-    LockSpec -->|"Failing Contract"| RedPhase
-    RedPhase -->|"Minimal Code + Refactor"| GreenPhase
+    LockSpec -->|"Contract"| RedPhase
+    RedPhase -->|"Minimal Code"| GreenPhase
     GreenPhase -->|"All Green"| NextFeature
-    NextFeature -->|"Next Spec"| Prompt2
+    NextFeature -.->|"Yes: Next Spec"| Prompt2
     NextFeature -->|"All Done"| Audits
-    Audits -->|"All Gates Passed"| Release
+    Audits -->|"Gates Passed"| Release
+
+    style Row1 fill:#0b1120,stroke:#334155,stroke-width:1.5px,color:#e2e8f0
+    style Row2 fill:#0b1120,stroke:#334155,stroke-width:1.5px,color:#e2e8f0
+    style P1 fill:#0f172a,stroke:#1e293b,stroke-width:1px,color:#cbd5e1
+    style P2 fill:#1e1b4b,stroke:#312e81,stroke-width:1px,color:#e0e7ff
+    style P3 fill:#0f172a,stroke:#1e293b,stroke-width:1px,color:#cbd5e1
+    style P4 fill:#064e3b,stroke:#065f46,stroke-width:1px,color:#d1fae5
 ```
 
 ---

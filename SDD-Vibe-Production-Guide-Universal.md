@@ -18,15 +18,33 @@
 4. **Phase 4 — Quality Audit & Production Ship:** Execute `/review-ca-agent`, `/verify-ca-agent`, `/security-audit-ca-agent`, and `/release-check-ca-agent` before release.
 
 ```mermaid
+%%{init: {'flowchart': {'curve': 'basis', 'padding': 16, 'nodeSpacing': 32, 'rankSpacing': 44}}}%%
 flowchart LR
     classDef p1 fill:#0f172a,stroke:#38bdf8,stroke-width:1.5px,color:#f8fafc;
     classDef p2 fill:#2e1065,stroke:#c084fc,stroke-width:1.5px,color:#faf5ff;
     classDef p3 fill:#082f49,stroke:#38bdf8,stroke-width:1.5px,color:#f0f9ff;
     classDef p4 fill:#064e3b,stroke:#34d399,stroke-width:2px,color:#ecfdf5;
 
-    P1["<b>Phase 1: Architecture & Vibe</b><br/>• Domain + HLD/LLD<br/>• docs/plan.md & design.md<br/>• /plan-ca-agent"]:::p1 --> P2["<b>Phase 2: Frontend Sensory Demo</b><br/>• PROTOTYPE → DRAFT UI<br/>• /run-ca-agent (:3000)<br/>• Visual Sign-Off"]:::p2
-    P2 --> P3["<b>Phase 3: Spec Lock & TDD</b><br/>• APPROVED Spec Lock<br/>• RED (/testing) → GREEN (/tdd)<br/>• Backend, DB & Auth"]:::p3
-    P3 --> P4["<b>Phase 4: Audit & Ship</b><br/>• /review & /verify<br/>• /security-audit<br/>• /release-check-ca-agent"]:::p4
+    P1["`**🏛️ Phase 1: Architecture & Vibe**
+• Domain + HLD/LLD
+• docs/plan.md & design.md
+• /plan-ca-agent`"]:::p1
+    P2["`**🎨 Phase 2: Frontend Sensory Demo**
+• PROTOTYPE → DRAFT UI
+• /run-ca-agent (:3000)
+• Visual Sign-Off`"]:::p2
+    P3["`**🧪 Phase 3: Spec Lock & TDD**
+• APPROVED Spec Lock
+• RED (/testing) → GREEN (/tdd)
+• Backend, DB & Auth`"]:::p3
+    P4["`**🚀 Phase 4: Audit & Ship**
+• /review & /verify
+• /security-audit
+• /release-check-ca-agent`"]:::p4
+
+    P1 -->|"Sign-Off"| P2
+    P2 ==>|"UI Approved"| P3
+    P3 -->|"All Green"| P4
 ```
 
 ### Non-Negotiable Directives

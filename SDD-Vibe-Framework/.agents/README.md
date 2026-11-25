@@ -26,27 +26,39 @@ The `.agents/` directory is the single cross-IDE canonical source of truth for a
 ## 🏛️ Agent Asset Architecture
 
 ```mermaid
+%%{init: {'flowchart': {'curve': 'basis', 'padding': 16, 'nodeSpacing': 28, 'rankSpacing': 40}}}%%
 flowchart LR
     classDef asset fill:#0f172a,stroke:#38bdf8,stroke-width:1.5px,color:#f8fafc;
     classDef ide fill:#1e293b,stroke:#818cf8,stroke-width:1.5px,color:#f8fafc;
 
     subgraph AgentsRoot ["🛠️ .agents/ CANONICAL ASSET STORE"]
         direction TB
-        Commands["<b>⚡ commands/ Catalog</b><br/><sub>16 Collision-Free *-ca-agent.md Commands</sub>"]:::asset
-        Skills["<b>📚 skills/ Playbooks</b><br/><sub>18 Reusable Skills & core-engineering-skills</sub>"]:::asset
-        Hooks["<b>🪝 hooks/ & hooks.json</b><br/><sub>SessionStart, PreToolUse, PostToolUse</sub>"]:::asset
-        Templates["<b>📑 templates/ Contracts</b><br/><sub>Standardized Task & Completion Reports</sub>"]:::asset
+        Commands["`**⚡ commands/ Catalog**
+17 Collision-Free *-ca-agent.md Commands`"]:::asset
+        Skills["`**📚 skills/ Playbooks**
+19 Reusable Skills & Ecosystem Playbooks`"]:::asset
+        Hooks["`**🪝 hooks/ & hooks.json**
+SessionStart, PreToolUse, PostToolUse`"]:::asset
+        Templates["`**📑 templates/ Contracts**
+Standardized Task & Completion Reports`"]:::asset
     end
 
     subgraph HostIDEs ["🖥️ SUPPORTED AI CODING HOST IDES"]
-        direction LR
-        IDE1(["<b>Claude Code</b><br/><sub>Anthropic CLI</sub>"]):::ide
-        IDE2(["<b>Cursor / Windsurf</b><br/><sub>VS Code Forks</sub>"]):::ide
-        IDE3(["<b>Antigravity</b><br/><sub>Native Engine</sub>"]):::ide
-        IDE4(["<b>OpenCode / VS Code</b><br/><sub>AI Extensions</sub>"]):::ide
+        direction TB
+        IDE1(["`**Claude Code**
+Anthropic CLI`"]):::ide
+        IDE2(["`**Cursor / Windsurf**
+VS Code Forks`"]):::ide
+        IDE3(["`**Antigravity**
+Native Engine`"]):::ide
+        IDE4(["`**OpenCode / VS Code**
+AI Extensions`"]):::ide
     end
 
     AgentsRoot ==>|"Walk-Up Directory Discovery"| HostIDEs
+
+    style AgentsRoot fill:#0b1120,stroke:#334155,stroke-width:1.5px,color:#e2e8f0
+    style HostIDEs fill:#0b1120,stroke:#334155,stroke-width:1.5px,color:#e2e8f0
 ```
 
 ---
@@ -56,16 +68,22 @@ flowchart LR
 All supported IDEs discover `.agents/` by walking up the directory tree to the workspace root:
 
 ```mermaid
+%%{init: {'flowchart': {'curve': 'basis', 'padding': 16, 'nodeSpacing': 28, 'rankSpacing': 40}}}%%
 flowchart LR
     classDef root fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#f8fafc;
     classDef disc fill:#172554,stroke:#60a5fa,stroke-width:1.5px,color:#eff6ff;
     classDef ui fill:#064e3b,stroke:#34d399,stroke-width:2px,color:#ecfdf5;
 
-    WorkspaceRoot[("<b>📁 Workspace / Git Root</b><br/><sub>.agents/ Asset Store Located</sub>")]:::root -->|"Discovers"| DiscoverCommands["<b>⚡ Parse Commands</b><br/><sub>commands/*.md -> /<name>-ca-agent</sub>"]:::disc
-    WorkspaceRoot -->|"Discovers"| DiscoverSkills["<b>📚 Load Skills</b><br/><sub>skills/*/SKILL.md Playbooks</sub>"]:::disc
-    WorkspaceRoot -->|"Discovers"| DiscoverHooks["<b>🪝 Bind Lifecycle Hooks</b><br/><sub>hooks.json -> scripts/hooks/*.py</sub>"]:::disc
+    WorkspaceRoot[("`**📁 Workspace / Git Root**
+.agents/ Asset Store Located`")]:::root -->|"Discovers"| DiscoverCommands["`**⚡ Parse Commands**
+commands/*.md -> /<name>-ca-agent`"]:::disc
+    WorkspaceRoot -->|"Discovers"| DiscoverSkills["`**📚 Load Skills**
+skills/*/SKILL.md Playbooks`"]:::disc
+    WorkspaceRoot -->|"Discovers"| DiscoverHooks["`**🪝 Bind Lifecycle Hooks**
+hooks.json -> scripts/hooks/*.py`"]:::disc
 
-    DiscoverCommands ==>|"Registers in Chat UI"| IDEPalette["<b>💬 AI Chat Palette Autocomplete</b><br/><sub>Typing '/' Displays All 16 Commands</sub>"]:::ui
+    DiscoverCommands ==>|"Registers in Chat UI"| IDEPalette["`**💬 AI Chat Palette Autocomplete**
+Typing '/' Displays All 17 Commands`"]:::ui
 ```
 
 ---
@@ -74,9 +92,9 @@ flowchart LR
 
 | Subdirectory / File | Purpose & Operational Contract |
 | :--- | :--- |
-| `commands/` | 16 canonical, collision-free agent commands named `<name>-ca-agent.md` (see [`commands/README.md`](commands/README.md)). |
+| `commands/` | 17 canonical, collision-free agent commands named `<name>-ca-agent.md` (see [`commands/README.md`](commands/README.md)). |
 | `workflows/` | Antigravity-native slash-command mirrors (`<name>-ca-agent.md`) synced from `commands/` so `/<name>-ca-agent` appears in the `/` dropdown. |
-| `skills/` | 18 domain-specific capability playbooks, each `skills/<name>/SKILL.md` with standardized `name`/`description` frontmatter. |
+| `skills/` | 19 domain-specific capability playbooks, each `skills/<name>/SKILL.md` with standardized `name`/`description` frontmatter. |
 | `hooks.json` | Executable Antigravity lifecycle hooks (`SessionStart`, `PreToolUse`, `PostToolUse`) backed by `scripts/hooks/*.py`. |
 | `hooks/` | Lifecycle hook execution contracts and security matrices ([`hooks/HOOK-MATRIX.md`](hooks/HOOK-MATRIX.md)). |
 | `templates/` | Standardized reporting artifacts (`AGENT-TASK-CONTRACT.md`, `AGENT-COMPLETION-REPORT.md`). |

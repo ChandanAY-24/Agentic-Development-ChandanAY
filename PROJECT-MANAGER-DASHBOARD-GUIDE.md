@@ -23,6 +23,7 @@
 The **Project-Manager-Dashboard** is a zero-dependency, Apple/Linear and Shadcn UI-inspired telemetry dashboard designed specifically for local development workflows. It runs side-by-side with your code inside the IDE, providing live visibility into tasks, acceptance criteria contracts, git commits, milestones, error triage, logs, and AI agent token consumption.
 
 ```mermaid
+%%{init: {'flowchart': {'curve': 'basis', 'padding': 16, 'nodeSpacing': 28, 'rankSpacing': 44}}}%%
 flowchart TB
     classDef store fill:#1e293b,stroke:#64748b,stroke-width:1.5px,color:#f8fafc;
     classDef daemon fill:#082f49,stroke:#0284c7,stroke-width:2px,color:#f0f9ff;
@@ -31,34 +32,50 @@ flowchart TB
 
     subgraph WorkspaceState ["📁 LOCAL WORKSPACE ARTIFACTS & DATA STREAMS"]
         direction LR
-        Tasks[("<b>📋 docs/task.md</b><br/><small>Tasks</small>")]:::store
-        Phases[("<b>🏁 docs/phases.md</b><br/><small>Milestones</small>")]:::store
-        Specs[("<b>📑 docs/features/</b><br/><small>Specs</small>")]:::store
-        Errors[("<b>🐛 docs/error-tracker.md</b><br/><small>Defects</small>")]:::store
-        GitRepo[("<b>🗄️ .git/ Repo</b><br/><small>HEAD Commit</small>")]:::store
-        Logs[("<b>🪵 logs/*.log</b><br/><small>Log Streams</small>")]:::store
-        Transcripts[("<b>🤖 JSONL Logs</b><br/><small>Tokens</small>")]:::store
+        Tasks[("`**📋 docs/task.md**
+Tasks`")]:::store
+        Phases[("`**🏁 docs/phases.md**
+Milestones`")]:::store
+        Specs[("`**📑 docs/features/**
+Specs`")]:::store
+        Errors[("`**🐛 docs/error-tracker.md**
+Defects`")]:::store
+        GitRepo[("`**🗄️ .git/ Repo**
+HEAD Commit`")]:::store
+        Logs[("`**🪵 logs/*.log**
+Log Streams`")]:::store
+        Transcripts[("`**🤖 JSONL Logs**
+Tokens`")]:::store
     end
 
     subgraph DaemonTier ["⚙️ ZERO-DEPENDENCY LOCAL DAEMON (NATIVE NODE.JS)"]
         direction LR
-        Parser[["<b>🔍 parser.js AST Engine</b><br/><small>Regex & JSON Synthesizer</small>"]]:::daemon
-        Server[["<b>🔌 server.js Daemon</b><br/><small>Port 4200 (SDD-Vibe)</small>"]]:::daemon
-        SecurityGuard["<b>🛡️ DNS-Rebind Guard</b><br/><small>Origin & Host Guard</small>"]:::sec
-        CSRFManager["<b>🔑 CSRF Guard</b><br/><small>Token Injector</small>"]:::sec
+        Parser[["`**🔍 parser.js AST Engine**
+Regex & JSON Synthesizer`"]]:::daemon
+        Server[["`**🔌 server.js Daemon**
+Port 4200 (SDD-Vibe)`"]]:::daemon
+        SecurityGuard["`**🛡️ DNS-Rebind Guard**
+Origin & Host Guard`"]:::sec
+        CSRFManager["`**🔑 CSRF Guard**
+Token Injector`"]:::sec
     end
 
     subgraph ViewportTier ["🖥️ IN-IDE SIMPLE BROWSER VIEWPORT"]
-        DashboardUI["<b>📊 Mission Control Bento Viewport</b><br/><small>Active Task • HEAD Commit • AC Engine • Live Logs • Gauges</small>"]:::client
+        DashboardUI["`**📊 Mission Control Bento Viewport**
+Active Task • HEAD Commit • AC Engine • Live Logs • Gauges`"]:::client
     end
 
-    WorkspaceState -->|"📁 Real-Time File Watch (2s)"| Parser
+    WorkspaceState -->|"📁 Real-Time Watch (2s)"| Parser
     Parser -->|"Synthesized State"| Server
-    SecurityGuard -->|"Enforces Local Isolation"| Server
+    SecurityGuard -->|"Enforces Isolation"| Server
     CSRFManager -->|"Session Token"| Server
-    Server ==>|"⚡ Live SSE Telemetry Stream"| DashboardUI
-    DashboardUI -.->|"🔒 Interactive Action / CSRF Verified"| Server
-    Server -.->|"Safe Persistence Update"| WorkspaceState
+    Server ==>|"⚡ Live SSE Telemetry"| DashboardUI
+    DashboardUI -.->|"🔒 CSRF Verified Action"| Server
+    Server -.->|"Safe Persistence"| WorkspaceState
+
+    style WorkspaceState fill:#0b1120,stroke:#334155,stroke-width:1.5px,color:#e2e8f0
+    style DaemonTier fill:#0b1120,stroke:#334155,stroke-width:1.5px,color:#e2e8f0
+    style ViewportTier fill:#0b1120,stroke:#334155,stroke-width:1.5px,color:#e2e8f0
 ```
 
 ### Core Design Principles
@@ -71,30 +88,41 @@ flowchart TB
 4. **Strict Security Sandbox:** Binds exclusively to `127.0.0.1`, enforces origin validation, and issues per-session CSRF security tokens (`X-Dashboard-Token`).
 
 ```mermaid
+%%{init: {'flowchart': {'curve': 'basis', 'padding': 16, 'nodeSpacing': 28, 'rankSpacing': 40}}}%%
 flowchart LR
     classDef sdd fill:#082f49,stroke:#38bdf8,stroke-width:2px,color:#f0f9ff;
     classDef vibe fill:#2e1065,stroke:#c084fc,stroke-width:2px,color:#faf5ff;
     classDef client fill:#0f172a,stroke:#94a3b8,stroke-width:1.5px,color:#f8fafc;
 
-    subgraph SDDInstance ["🛡️ PORT 4200: SPEC-DRIVEN DEVELOPMENT"]
-        SDDServer[["<b>🔌 SDD Local Daemon</b><br/><small>server.js --port=4200</small>"]]:::sdd
-        SDDTarget[("<b>📑 SDD Workspace</b><br/><small>Spec-Driven-Development/</small>")]:::sdd
+    subgraph SDDInstance ["🛡️ PORT 4200: PRIMARY SDD-VIBE INSTANCE"]
+        SDDServer[["`**🔌 Primary Local Daemon**
+server.js --port=4200`"]]:::sdd
+        SDDTarget[("`**📑 SDD-Vibe Workspace**
+SDD-Vibe-Framework/`")]:::sdd
     end
 
-    subgraph VibeInstance ["🌟 PORT 4201: VIBE-CODING"]
-        VibeServer[["<b>🔌 Vibe Local Daemon</b><br/><small>server.js --port=4201</small>"]]:::vibe
-        VibeTarget[("<b>🎨 Vibe Workspace</b><br/><small>Vibe-Coding/</small>")]:::vibe
+    subgraph VibeInstance ["🌟 PORT 4201: SECONDARY / SANDBOX INSTANCE"]
+        VibeServer[["`**🔌 Secondary Local Daemon**
+server.js --port=4201`"]]:::vibe
+        VibeTarget[("`**🎨 Parallel Workspace**
+SDD-Vibe-Framework/`")]:::vibe
     end
 
     subgraph BrowserClient ["🖥️ DOCKED IN-IDE SIMPLE BROWSERS"]
-        Client1(["<b>Simple Browser 1</b><br/><small>http://127.0.0.1:4200</small>"]):::client
-        Client2(["<b>Simple Browser 2</b><br/><small>http://127.0.0.1:4201</small>"]):::client
+        Client1(["`**Simple Browser 1**
+127.0.0.1:4200`"]):::client
+        Client2(["`**Simple Browser 2**
+127.0.0.1:4201`"]):::client
     end
 
     SDDServer <-->|"Watches State"| SDDTarget
     VibeServer <-->|"Watches State"| VibeTarget
     Client1 <==>|"Live Telemetry"| SDDServer
     Client2 <==>|"Live Telemetry"| VibeServer
+
+    style SDDInstance fill:#0b1120,stroke:#0369a1,stroke-width:1.5px,color:#e0f2fe
+    style VibeInstance fill:#1e1b4b,stroke:#6d28d9,stroke-width:1.5px,color:#ede9fe
+    style BrowserClient fill:#0b1120,stroke:#334155,stroke-width:1.5px,color:#e2e8f0
 ```
 
 ---
@@ -168,6 +196,7 @@ node SDD-Vibe-Framework/Project-Manager-Dashboard/server.js
 For the ultimate distraction-free developer experience, dock the dashboard directly inside your IDE alongside your code.
 
 ```mermaid
+%%{init: {'flowchart': {'curve': 'basis', 'padding': 16, 'nodeSpacing': 28, 'rankSpacing': 40}}}%%
 flowchart TB
     classDef editor fill:#0f172a,stroke:#38bdf8,stroke-width:1.5px,color:#f8fafc;
     classDef dash fill:#082f49,stroke:#0284c7,stroke-width:2px,color:#f0f9ff;
@@ -176,15 +205,23 @@ flowchart TB
     subgraph IDEWindow ["🖥️ IDE WORKSPACE WINDOW (VS Code / Cursor / Windsurf / Antigravity)"]
         direction LR
         subgraph Col1 ["📝 Editor Group 1 (Left 60%)"]
-            SourceCode["<b>Active Source Code & Specs</b><br/><small>src/auth/login.ts • docs/features/002-*.md</small>"]:::editor
+            SourceCode["`**Active Source Code & Specs**
+src/auth/login.ts • docs/features/002-*.md`"]:::editor
         end
         subgraph Col2 ["📊 Editor Group 2 (Right 40%)"]
-            SimpleBrowser["<b>Docked Simple Browser Viewport</b><br/><small>http://127.0.0.1:4200 (SDD) / :4201 (Vibe)</small>"]:::dash
+            SimpleBrowser["`**Docked Simple Browser Viewport**
+127.0.0.1:4200 (Primary) / :4201`"]:::dash
         end
     end
     subgraph TerminalPane ["💻 Integrated Terminal Pane (Bottom)"]
-        DevServer["<b>Integrated Terminal Execution Pane</b><br/><small>Active Dev Server • Automated Tests • logs/*.log</small>"]:::term
+        DevServer["`**Integrated Terminal Execution Pane**
+Active Dev Server • Automated Tests • logs/*.log`"]:::term
     end
+
+    style IDEWindow fill:#0b1120,stroke:#334155,stroke-width:1.5px,color:#e2e8f0
+    style Col1 fill:#0f172a,stroke:#1e293b,stroke-width:1px,color:#cbd5e1
+    style Col2 fill:#082f49,stroke:#0369a1,stroke-width:1px,color:#e0f2fe
+    style TerminalPane fill:#0b1120,stroke:#334155,stroke-width:1.5px,color:#e2e8f0
 ```
 
 ### 4-Step Docking Instructions:
@@ -295,19 +332,19 @@ The dashboard includes a dedicated Live Development Logs Explorer integrated dir
 ```mermaid
 sequenceDiagram
     autonumber
-    participant Client as 🖥️ Simple Browser (127.0.0.1)
-    participant Server as 🔌 server.js (Local Daemon)
-    participant FS as 📁 Local Filesystem (docs/)
+    participant Client as "🖥️ Simple Browser (127.0.0.1)"
+    participant Server as "🔌 server.js (Local Daemon)"
+    participant FS as "📁 Local Filesystem (docs/)"
 
     Client->>Server: 📡 GET / (Initial Page Load)
     Note over Server: 🔒 Generates per-process CSRF token (X-Dashboard-Token)<br/>Validates Host Header: 127.0.0.1
     Server-->>Client: 200 OK (Injected with X-Dashboard-Token)
 
-    Client->>Server: 🔐 POST /api/action { action: "run-tests" }<br/>Header: X-Dashboard-Token
+    Client->>Server: 🔐 POST /api/action (action: run-tests)<br/>Header: X-Dashboard-Token
     Note over Server: 🛡️ Verifies Token & Same-Origin<br/>Rejects non-127.0.0.1 DNS Rebinding
     Server->>FS: ⚙️ Reads docs/task.md & Executes Test Runner
     FS-->>Server: 📊 Test Suite Output
-    Server-->>Client: 200 OK { success: true, output: "..." }
+    Server-->>Client: 200 OK (success, output)
 ```
 
 ### Security Directives:

@@ -68,6 +68,7 @@ stateDiagram-v2
 ## ⚡ Command Dispatch & Authorization Pipeline
 
 ```mermaid
+%%{init: {'flowchart': {'curve': 'basis', 'padding': 16, 'nodeSpacing': 28, 'rankSpacing': 40}}}%%
 flowchart LR
     classDef dev fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#f8fafc;
     classDef gate fill:#451a03,stroke:#fbbf24,stroke-width:2px,color:#fffbeb;
@@ -75,11 +76,17 @@ flowchart LR
     classDef log fill:#1e293b,stroke:#64748b,stroke-width:1.5px,color:#f8fafc;
     classDef report fill:#064e3b,stroke:#34d399,stroke-width:2px,color:#ecfdf5;
 
-    DevPrompt(["<b>👤 Developer Invocation</b><br/><sub>'/<name>-ca-agent [args]'</sub>"]):::dev -->|"Parses Contract"| Validator["<b>📑 Contract Validator</b><br/><sub>Reads YAML Frontmatter</sub>"]:::exec
-    Validator -->|"Requires Gate"| HumanGate{"<b>👤 Human Lead Gate</b><br/><sub>Authorizes Execution</sub>"}:::gate
-    HumanGate -->|"Authorized"| Execution[["<b>⚙️ Agent Execution</b><br/><sub>Deterministic Tool Calls</sub>"]]:::exec
-    Execution -->|"Pipes Output"| DevLog[("<b>🪵 Audit Trail in logs/</b><br/><sub>dev.log, test.log, error.log</sub>")]:::log
-    DevLog ==>|"Evidence Returned"| ReportResult(["<b>📊 Return Evidence</b><br/><sub>Standardized Report to Chat & UI</sub>"]):::report
+    DevPrompt(["`**👤 Developer Invocation**
+/<name>-ca-agent [args]`"]):::dev -->|"Parses Contract"| Validator["`**📑 Contract Validator**
+Reads YAML Frontmatter`"]:::exec
+    Validator -->|"Requires Gate"| HumanGate{"`**👤 Human Lead Gate**
+Authorizes Execution`"}:::gate
+    HumanGate -->|"Authorized"| Execution[["`**⚙️ Agent Execution**
+Deterministic Tool Calls`"]]:::exec
+    Execution -->|"Pipes Output"| DevLog[("`**🪵 Audit Trail in logs/**
+dev.log, test.log, error.log`")]:::log
+    DevLog ==>|"Evidence Returned"| ReportResult(["`**📊 Return Evidence**
+Standardized Report to Chat & UI`"]):::report
 ```
 
 ---

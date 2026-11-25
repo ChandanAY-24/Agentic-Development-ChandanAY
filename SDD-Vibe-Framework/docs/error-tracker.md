@@ -18,6 +18,7 @@ Systematic tracking, root cause analysis, regression prevention, and defect hist
 ## 1. Defect Resolution Lifecycle
 
 ```mermaid
+%%{init: {'flowchart': {'curve': 'basis', 'padding': 16, 'nodeSpacing': 28, 'rankSpacing': 40}}}%%
 flowchart LR
     classDef err fill:#4c0519,stroke:#fb7185,stroke-width:1.5px,color:#fff1f2;
     classDef step fill:#082f49,stroke:#38bdf8,stroke-width:1.5px,color:#f0f9ff;
@@ -25,11 +26,16 @@ flowchart LR
     classDef green fill:#064e3b,stroke:#34d399,stroke-width:2px,color:#ecfdf5;
     classDef close fill:#022c22,stroke:#10b981,stroke-width:2px,color:#d1fae5;
 
-    Detect(["<b>🐛 1. Defect Logged</b><br/><small>Ingest & Assign ERR-###</small>"]):::err
-    Isolate["<b>🔍 2. Root Cause</b><br/><small>Reproduce Failing State</small>"]:::step
-    RegressionTest["<b>🔴 3. Write Failing Test</b><br/><small>Scaffold Red Contract</small>"]:::red
-    Patch["<b>🟢 4. Minimal Code Fix</b><br/><small>Pass Test & Refactor</small>"]:::green
-    Verify(["<b>✅ 5. Verify & Close</b><br/><small>Green & Status RESOLVED</small>"]):::close
+    Detect(["`**🐛 1. Defect Logged**
+Ingest & Assign ERR-###`"]):::err
+    Isolate["`**🔍 2. Root Cause**
+Reproduce Failing State`"]:::step
+    RegressionTest["`**🔴 3. Write Failing Test**
+Scaffold Red Contract`"]:::red
+    Patch["`**🟢 4. Minimal Code Fix**
+Pass Test & Refactor`"]:::green
+    Verify(["`**✅ 5. Verify & Close**
+Green & Status RESOLVED`"]):::close
 
     Detect -->|"Reproduce"| Isolate
     Isolate -->|"Scaffold"| RegressionTest

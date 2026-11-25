@@ -22,19 +22,26 @@ The core framework provides universal software engineering rules. The `docs/doma
 ## 🏛️ Domain Extension Topology
 
 ```mermaid
+%%{init: {'flowchart': {'curve': 'basis', 'padding': 16, 'nodeSpacing': 28, 'rankSpacing': 40}}}%%
 flowchart LR
     classDef core fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#f8fafc;
     classDef ext fill:#1e293b,stroke:#818cf8,stroke-width:1.5px,color:#f8fafc;
     classDef code fill:#064e3b,stroke:#34d399,stroke-width:2px,color:#ecfdf5;
 
-    Core[("<b>🏛️ Core Framework Baseline</b><br/><small>docs/rules.md • constitution.md</small>")]:::core
+    Core[("`**🏛️ Core Framework Baseline**
+docs/rules.md • constitution.md`")]:::core
 
-    Ext1["<b>🌐 Web & Frontend Domain</b><br/><small>docs/domains/web.md • SSR, Accessibility</small>"]:::ext
-    Ext2["<b>💳 FinTech / Regulated</b><br/><small>docs/domains/fintech.md • PCI-DSS, Audit</small>"]:::ext
-    Ext3["<b>🏥 HealthTech / FERPA / HIPAA</b><br/><small>docs/domains/health.md • Privacy</small>"]:::ext
-    Ext4["<b>🤖 AI & Machine Learning</b><br/><small>docs/domains/aiml.md • Drift, Lineage</small>"]:::ext
+    Ext1["`**🌐 Web & Frontend Domain**
+docs/domains/web.md • SSR, A11y`"]:::ext
+    Ext2["`**💳 FinTech / Regulated**
+docs/domains/fintech.md • PCI-DSS, Audit`"]:::ext
+    Ext3["`**🏥 HealthTech / FERPA / HIPAA**
+docs/domains/health.md • Privacy`"]:::ext
+    Ext4["`**🤖 AI & Machine Learning**
+docs/domains/aiml.md • Drift, Lineage`"]:::ext
 
-    ProjectCode(["<b>💻 Production Application Code</b><br/><small>High-Assurance Verified Modules</small>"]):::code
+    ProjectCode(["`**💻 Production Application Code**
+High-Assurance Verified Modules`"]):::code
 
     Core -->|"Extends Rules"| Ext1
     Core -->|"Extends Rules"| Ext2

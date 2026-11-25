@@ -26,19 +26,24 @@
 ## 🏛️ Flat vs. Modular Decision Tree
 
 ```mermaid
+%%{init: {'flowchart': {'curve': 'basis', 'padding': 16, 'nodeSpacing': 28, 'rankSpacing': 40}}}%%
 flowchart LR
     classDef start fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#f8fafc;
     classDef gate fill:#451a03,stroke:#fbbf24,stroke-width:2px,color:#fffbeb;
     classDef flat fill:#172554,stroke:#60a5fa,stroke-width:1.5px,color:#eff6ff;
     classDef modular fill:#2e1065,stroke:#c084fc,stroke-width:2px,color:#faf5ff;
 
-    Start(["<b>🚀 Initiate New Feature Specification</b><br/><small>Triggered via /plan-ca-agent or /spec-check-ca-agent</small>"]):::start --> DevAsk{"Format Choice?"}:::gate
+    Start(["`**🚀 Initiate New Feature Spec**
+/plan-ca-agent or /spec-check-ca-agent`"]):::start --> DevAsk{"Format Choice?"}:::gate
     
-    DevAsk -->|"User Defined"| UserChoice["<b>🎯 Follow Explicit User Choice</b><br/><small>Adhere strictly to chosen format</small>"]:::start
+    DevAsk -->|"User Defined"| UserChoice["`**🎯 Follow Explicit User Choice**
+Adhere strictly to chosen format`"]:::start
     DevAsk -->|"Auto Detect"| AutoTier{"Evaluate Tier?"}:::gate
     
-    AutoTier -->|"Tier 1 / Tier 2"| FlatFormat["<b>📄 Scaffold Flat Format</b><br/><small>docs/features/NNN-name.md • Single Living Contract</small>"]:::flat
-    AutoTier -->|"Tier 3"| ModularFormat["<b>📁 Scaffold Modular Format</b><br/><small>docs/features/NNN-name/ • Multi-File Modular Spec</small>"]:::modular
+    AutoTier -->|"Tier 1 / Tier 2"| FlatFormat["`**📄 Scaffold Flat Format**
+docs/features/NNN-name.md`"]:::flat
+    AutoTier -->|"Tier 3"| ModularFormat["`**📁 Scaffold Modular Format**
+docs/features/NNN-name/`"]:::modular
 ```
 
 ---
@@ -58,6 +63,7 @@ Every feature must be categorized into one of three complexity tiers to drive si
 ## 🔄 Step-by-Step Spec Development Protocol
 
 ```mermaid
+%%{init: {'flowchart': {'curve': 'basis', 'padding': 16, 'nodeSpacing': 28, 'rankSpacing': 44}}}%%
 flowchart TB
     classDef step fill:#082f49,stroke:#38bdf8,stroke-width:1.5px,color:#f0f9ff;
     classDef red fill:#4c0519,stroke:#fb7185,stroke-width:2px,color:#fff1f2;
@@ -66,17 +72,23 @@ flowchart TB
 
     subgraph ForwardTier ["🧪 SPEC IMPLEMENTATION STAGE"]
         direction LR
-        SelectSpec["<b>1. 📑 Select Spec</b><br/><small>Approved FEAT-###</small>"]:::step
-        WriteTests["<b>2. 🔴 Write Tests</b><br/><small>Verify AC (Red Phase)</small>"]:::red
-        ImplementCode["<b>3. 🟢 Minimal Code</b><br/><small>Pass Tests (Green Phase)</small>"]:::green
+        SelectSpec["`**1. 📑 Select Spec**
+Approved FEAT-###`"]:::step
+        WriteTests["`**2. 🔴 Write Tests**
+Verify AC (Red Phase)`"]:::red
+        ImplementCode["`**3. 🟢 Minimal Code**
+Pass Tests (Green Phase)`"]:::green
     end
 
     subgraph ReviewTier ["🔍 VERIFICATION & REVIEW STAGE"]
         direction LR
-        RefactorCode["<b>4. ✨ Refactor</b><br/><small>Clean Architecture</small>"]:::green
-        UpdateDocs["<b>5. 📝 Update Docs</b><br/><small>Living Trackers Synced</small>"]:::step
+        RefactorCode["`**4. ✨ Refactor**
+Clean Architecture`"]:::green
+        UpdateDocs["`**5. 📝 Update Docs**
+Living Trackers Synced`"]:::step
         NextSpec{"Next Spec?"}:::gate
-        ReleaseAudit(["<b>6. 🚀 Release Audit</b><br/><small>/release-check-ca-agent</small>"]):::green
+        ReleaseAudit(["`**6. 🚀 Release Audit**
+/release-check-ca-agent`"]):::green
     end
 
     SelectSpec -->|"Contract"| WriteTests
@@ -85,8 +97,11 @@ flowchart TB
 
     RefactorCode -->|"Polish"| UpdateDocs
     UpdateDocs -->|"Evaluate"| NextSpec
-    NextSpec -->|"Yes: Next"| SelectSpec
+    NextSpec -.->|"Yes: Next"| SelectSpec
     NextSpec -->|"No: Done"| ReleaseAudit
+
+    style ForwardTier fill:#0b1120,stroke:#334155,stroke-width:1.5px,color:#e2e8f0
+    style ReviewTier fill:#0b1120,stroke:#334155,stroke-width:1.5px,color:#e2e8f0
 ```
 
 > [!CRITICAL]

@@ -22,6 +22,7 @@
 The **Project-Manager-Dashboard** is an embedded telemetry mission control designed exclusively for local IDE development within the **SDD-Vibe (1-in-2 Single Workflow)** framework. It runs side-by-side with your source code in an IDE split tab (Simple Browser), providing immediate, real-time visibility into task execution, acceptance criteria contracts, git commits, milestone gates, defect triage, and agent token usage.
 
 ```mermaid
+%%{init: {'flowchart': {'curve': 'basis', 'padding': 16, 'nodeSpacing': 28, 'rankSpacing': 44}}}%%
 flowchart TB
     classDef store fill:#1e293b,stroke:#64748b,stroke-width:1.5px,color:#f8fafc;
     classDef daemon fill:#082f49,stroke:#0284c7,stroke-width:2px,color:#f0f9ff;
@@ -30,26 +31,39 @@ flowchart TB
 
     subgraph FilesystemState ["📁 LOCAL WORKSPACE ARTIFACTS & DATA STREAMS"]
         direction LR
-        Tasks[("<b>📋 docs/task.md</b><br/><small>Tasks</small>")]:::store
-        Phases[("<b>🏁 docs/phases.md</b><br/><small>Milestones</small>")]:::store
-        Specs[("<b>📑 docs/features/</b><br/><small>AC Specs</small>")]:::store
-        Errors[("<b>🐛 docs/error-tracker.md</b><br/><small>Defects</small>")]:::store
-        GitMeta[("<b>🗄️ .git/ Repo</b><br/><small>HEAD Commit</small>")]:::store
-        LogsStream[("<b>🪵 logs/*.log</b><br/><small>Log Streams</small>")]:::store
-        Transcripts[("<b>🤖 JSONL Logs</b><br/><small>Tokens</small>")]:::store
+        Tasks[("`**📋 docs/task.md**
+Tasks`")]:::store
+        Phases[("`**🏁 docs/phases.md**
+Milestones`")]:::store
+        Specs[("`**📑 docs/features/**
+AC Specs`")]:::store
+        Errors[("`**🐛 docs/error-tracker.md**
+Defects`")]:::store
+        GitMeta[("`**🗄️ .git/ Repo**
+HEAD Commit`")]:::store
+        LogsStream[("`**🪵 logs/*.log**
+Log Streams`")]:::store
+        Transcripts[("`**🤖 JSONL Logs**
+Tokens`")]:::store
     end
 
     subgraph DaemonEngine ["⚙️ ZERO-DEPENDENCY LOCAL DAEMON (PORT 4200)"]
         direction LR
-        Watcher[["<b>📁 File Watcher</b><br/><small>Poll 2s</small>"]]:::daemon
-        ASTParser[["<b>🔍 parser.js AST</b><br/><small>JSON Synthesizer</small>"]]:::daemon
-        Server[["<b>🔌 server.js Daemon</b><br/><small>Port 4200</small>"]]:::daemon
-        SecFilter["<b>🛡️ DNS-Rebind</b><br/><small>Host Guard</small>"]:::sec
-        CSRFManager["<b>🔑 CSRF Guard</b><br/><small>Token Injector</small>"]:::sec
+        Watcher[["`**📁 File Watcher**
+Poll 2s`"]]:::daemon
+        ASTParser[["`**🔍 parser.js AST**
+JSON Synthesizer`"]]:::daemon
+        Server[["`**🔌 server.js Daemon**
+Port 4200`"]]:::daemon
+        SecFilter["`**🛡️ DNS-Rebind**
+Host Guard`"]:::sec
+        CSRFManager["`**🔑 CSRF Guard**
+Token Injector`"]:::sec
     end
 
-    subgraph UIClient ["🖥️ IN-IDE SIMPLE BROWSER (http://127.0.0.1:4200)"]
-        DashboardUI["<b>📊 Mission Control Bento Viewport</b><br/><small>Active Task • HEAD Commit • AC Engine • Live Logs • Gauges</small>"]:::client
+    subgraph UIClient ["🖥️ IN-IDE SIMPLE BROWSER (127.0.0.1:4200)"]
+        DashboardUI["`**📊 Mission Control Bento Viewport**
+Active Task • HEAD Commit • AC Engine • Live Logs • Gauges`"]:::client
     end
 
     FilesystemState -->|"Real-Time Watch"| Watcher
@@ -59,6 +73,10 @@ flowchart TB
     CSRFManager -->|"Session Token"| Server
     Server ==>|"⚡ Live SSE Telemetry"| DashboardUI
     DashboardUI -.->|"🔒 Interactive Action"| Server
+
+    style FilesystemState fill:#0b1120,stroke:#334155,stroke-width:1.5px,color:#e2e8f0
+    style DaemonEngine fill:#0b1120,stroke:#334155,stroke-width:1.5px,color:#e2e8f0
+    style UIClient fill:#0b1120,stroke:#334155,stroke-width:1.5px,color:#e2e8f0
 ```
 
 ---
@@ -69,20 +87,29 @@ flowchart TB
 The dashboard dynamically prioritizes the items developers care about most:
 
 ```mermaid
+%%{init: {'flowchart': {'curve': 'basis', 'padding': 16, 'nodeSpacing': 28, 'rankSpacing': 40}}}%%
 flowchart LR
     classDef active fill:#451a03,stroke:#fbbf24,stroke-width:2px,color:#fffbeb;
     classDef normal fill:#1e293b,stroke:#64748b,stroke-width:1.5px,color:#f8fafc;
     classDef git fill:#082f49,stroke:#38bdf8,stroke-width:2px,color:#f0f9ff;
 
     subgraph TaskStream ["📋 TASK STREAM RE-ORDERING ENGINE"]
-        IncomingTasks["<b>Raw Task List</b><br/><small>Task 1, Task 2, Task 3...</small>"]:::normal --> StateCheck{"Task Active?"}
-        StateCheck -->|"Yes"| FloatTop["<b>⚡ CURRENT RUNNING TASK</b><br/><small>Dynamically Floated to Index 0</small>"]:::active
-        StateCheck -->|"No"| NaturalOrder["<b>Preserve Order</b><br/><small>Sequential Numbering</small>"]:::normal
+        IncomingTasks["`**Raw Task List**
+Task 1, Task 2, Task 3...`"]:::normal --> StateCheck{"Task Active?"}
+        StateCheck -->|"Yes"| FloatTop["`**⚡ CURRENT RUNNING TASK**
+Dynamically Floated to Index 0`"]:::active
+        StateCheck -->|"No"| NaturalOrder["`**Preserve Order**
+Sequential Numbering`"]:::normal
     end
 
     subgraph GitStream ["🗄️ GIT TELEMETRY STREAM"]
-        GitLog["<b>Raw Git Log</b><br/><small>Recent Commit History</small>"]:::git --> PinHead["<b>📅 HEAD COMMIT PINNED</b><br/><small>Index 0 • DD-MM-YYYY Date</small>"]:::git
+        GitLog["`**Raw Git Log**
+Recent Commit History`"]:::git --> PinHead["`**📅 HEAD COMMIT PINNED**
+Index 0 • DD-MM-YYYY Date`"]:::git
     end
+
+    style TaskStream fill:#0b1120,stroke:#334155,stroke-width:1.5px,color:#e2e8f0
+    style GitStream fill:#0b1120,stroke:#334155,stroke-width:1.5px,color:#e2e8f0
 ```
 
 ---
@@ -104,6 +131,7 @@ node server.js
 
 ### 2. Dock the Dashboard in Your IDE (Side-by-Side Viewport)
 ```mermaid
+%%{init: {'flowchart': {'curve': 'basis', 'padding': 16, 'nodeSpacing': 28, 'rankSpacing': 40}}}%%
 flowchart LR
     classDef code fill:#0f172a,stroke:#38bdf8,stroke-width:1.5px,color:#f8fafc;
     classDef dash fill:#082f49,stroke:#0284c7,stroke-width:2px,color:#f0f9ff;
@@ -111,12 +139,18 @@ flowchart LR
     subgraph IDEWindow ["🖥️ IDE WORKSPACE WINDOW"]
         direction LR
         subgraph Col1 ["📝 Editor Group 1 (Active Code)"]
-            Code["<b>Active Source Code & Specs</b><br/><small>src/components/ • tests/unit/</small>"]:::code
+            Code["`**Active Source Code & Specs**
+src/components/ • tests/unit/`"]:::code
         end
         subgraph Col2 ["📊 Editor Group 2 (Simple Browser Tab)"]
-            Dash["<b>Docked Simple Browser Viewport</b><br/><small>http://127.0.0.1:4200 • Live Telemetry</small>"]:::dash
+            Dash["`**Docked Simple Browser Viewport**
+127.0.0.1:4200 • Live Telemetry`"]:::dash
         end
     end
+
+    style IDEWindow fill:#0b1120,stroke:#334155,stroke-width:1.5px,color:#e2e8f0
+    style Col1 fill:#0f172a,stroke:#1e293b,stroke-width:1px,color:#cbd5e1
+    style Col2 fill:#082f49,stroke:#0369a1,stroke-width:1px,color:#e0f2fe
 ```
 
 1. In your IDE (Cursor, VS Code, Windsurf, Antigravity), press `Ctrl + Shift + P` (or `Cmd + Shift + P` on macOS).
@@ -145,19 +179,19 @@ flowchart LR
 ```mermaid
 sequenceDiagram
     autonumber
-    participant IDE as 🖥️ IDE Simple Browser (127.0.0.1)
-    participant Daemon as 🔌 server.js (Local Daemon: Port 4200)
-    participant Core as 📁 docs/ & tests/ Harness
+    participant IDE as "🖥️ IDE Simple Browser (127.0.0.1)"
+    participant Daemon as "🔌 server.js Daemon (Port 4200)"
+    participant Core as "📁 docs/ & tests/ Harness"
 
     IDE->>Daemon: 📡 GET / (Initial Connection)
-    Note over Daemon: 🔒 Validates Host: 127.0.0.1:4200<br/>Generates Unique Process CSRF Token
-    Daemon-->>IDE: 200 OK (index.html Injected with X-Dashboard-Token)
+    Note over Daemon: 🔒 Validates Host 127.0.0.1:4200<br/>Generates Per-Process CSRF Token
+    Daemon-->>IDE: 200 OK (index.html + X-Dashboard-Token)
 
-    IDE->>Daemon: 🔐 POST /api/action (Trigger Test / Spec Check)<br/>Header: X-Dashboard-Token
-    Note over Daemon: 🛡️ Verifies CSRF Token & Same-Origin<br/>Rejects External Network DNS Rebinding
+    IDE->>Daemon: 🔐 POST /api/action (Header: X-Dashboard-Token)
+    Note over Daemon: 🛡️ Verifies CSRF Token & Same-Origin<br/>Blocks External DNS Rebinding
     Daemon->>Core: ⚙️ Executes Child Process Command
-    Core-->>Daemon: 📊 Command Output Streams
-    Daemon-->>IDE: 200 OK { success: true, output: "..." }
+    Core-->>Daemon: 📊 Command Output Stream
+    Daemon-->>IDE: 200 OK (success, output)
 ```
 
 - **Localhost 127.0.0.1 Binding Only:** Strictly rejects all external and LAN network traffic.

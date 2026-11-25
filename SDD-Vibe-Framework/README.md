@@ -33,6 +33,7 @@
 ## 🏛️ 1-in-2 Hybrid Staged Pipeline
 
 ```mermaid
+%%{init: {'flowchart': {'curve': 'basis', 'padding': 16, 'nodeSpacing': 28, 'rankSpacing': 44}}}%%
 flowchart TB
     classDef gov fill:#0f172a,stroke:#38bdf8,stroke-width:1.5px,color:#f8fafc;
     classDef vibe fill:#2e1065,stroke:#c084fc,stroke-width:1.5px,color:#faf5ff;
@@ -40,34 +41,44 @@ flowchart TB
     classDef green fill:#064e3b,stroke:#34d399,stroke-width:2px,color:#ecfdf5;
     classDef gate fill:#451a03,stroke:#fbbf24,stroke-width:2px,color:#fffbeb;
 
-    subgraph Row1 ["🎨 DISCOVERY & FRONTEND SENSORY TIERS"]
+    subgraph Row1 ["🎨 STAGE A — DISCOVERY & FRONTEND SENSORY DEMO"]
         direction LR
         subgraph Phase1 ["🏛️ 1. ARCHITECTURE & VIBE DISCOVERY"]
-            ProductVision["<b>💡 Product & Plan</b><br/><small>CAP-### • docs/plan.md</small>"]:::gov
-            SysArch["<b>🏛️ System Architecture</b><br/><small>HLD/LLD • docs/design.md</small>"]:::gov
+            ProductVision["`**💡 Product & Plan**
+CAP-### • docs/plan.md`"]:::gov
+            SysArch["`**🏛️ System Architecture**
+HLD/LLD • docs/design.md`"]:::gov
             HumanP1{"Design Approved?"}:::gate
         end
 
         subgraph Phase2 ["🎨 2. FRONTEND SENSORY DEMO"]
-            ProtoUI["<b>💻 Scaffold UI Shell</b><br/><small>PROTOTYPE → DRAFT • Mock State</small>"]:::vibe
-            LiveDemo["<b>🌐 Run /run-ca-agent</b><br/><small>Inspect at :3000 • Tune Vibe</small>"]:::vibe
+            ProtoUI["`**💻 Scaffold UI Shell**
+PROTOTYPE → DRAFT • Mock State`"]:::vibe
+            LiveDemo["`**🌐 Run /run-ca-agent**
+Inspect at :3000 • Tune Vibe`"]:::vibe
             VibeGate{"Sensory UI Approved?"}:::gate
         end
     end
 
-    subgraph Row2 ["🧪 FORMAL SPEC LOCK, TDD & RELEASE TIERS"]
+    subgraph Row2 ["🧪 STAGE B — FORMAL SPEC LOCK, TDD & RELEASE"]
         direction LR
         subgraph Phase3 ["🔒 3. SPEC LOCK & TDD CYCLE"]
-            LockSpec["<b>📋 Lock Feature Spec</b><br/><small>IN REVIEW → APPROVED</small>"]:::gov
-            RedTest["<b>🔴 RED: Failing Tests</b><br/><small>/testing-ca-agent</small>"]:::red
-            GreenCode["<b>🟢 GREEN: Backend & Auth</b><br/><small>/tdd-ca-agent • /implement</small>"]:::green
+            LockSpec["`**📋 Lock Feature Spec**
+IN REVIEW → APPROVED`"]:::gov
+            RedTest["`**🔴 RED: Failing Tests**
+/testing-ca-agent`"]:::red
+            GreenCode["`**🟢 GREEN: Backend & Auth**
+/tdd-ca-agent • /implement`"]:::green
         end
 
         subgraph Phase4 ["🚀 4. QUALITY AUDIT & SHIP"]
-            CodeReview["<b>🔍 Review & Verify</b><br/><small>/review & /verify Scorecard</small>"]:::gov
-            SecurityScan["<b>🛡️ Security Audit</b><br/><small>/security-audit-ca-agent</small>"]:::gov
+            CodeReview["`**🔍 Review & Verify**
+/review & /verify Scorecard`"]:::gov
+            SecurityScan["`**🛡️ Security Audit**
+/security-audit-ca-agent`"]:::gov
             ReleaseGate{"Release Gate Passed?"}:::gate
-            ProductionDeploy(["<b>🎉 Production Ship</b><br/><small>/release-check-ca-agent</small>"]):::green
+            ProductionDeploy(["`**🎉 Production Ship**
+/release-check-ca-agent`"]):::green
         end
     end
 
@@ -88,6 +99,13 @@ flowchart TB
     CodeReview -->|"Pass"| SecurityScan
     SecurityScan -->|"Clean"| ReleaseGate
     ReleaseGate -->|"Authorized"| ProductionDeploy
+
+    style Row1 fill:#0b1120,stroke:#334155,stroke-width:1.5px,color:#e2e8f0
+    style Row2 fill:#0b1120,stroke:#334155,stroke-width:1.5px,color:#e2e8f0
+    style Phase1 fill:#0f172a,stroke:#1e293b,stroke-width:1px,color:#cbd5e1
+    style Phase2 fill:#1e1b4b,stroke:#312e81,stroke-width:1px,color:#e0e7ff
+    style Phase3 fill:#0f172a,stroke:#1e293b,stroke-width:1px,color:#cbd5e1
+    style Phase4 fill:#064e3b,stroke:#065f46,stroke-width:1px,color:#d1fae5
 ```
 
 ---
@@ -97,6 +115,7 @@ flowchart TB
 Every line of production code traces back to a root business capability:
 
 ```mermaid
+%%{init: {'flowchart': {'curve': 'basis', 'padding': 16, 'nodeSpacing': 28, 'rankSpacing': 40}}}%%
 flowchart LR
     classDef cap fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#f8fafc;
     classDef req fill:#1e293b,stroke:#818cf8,stroke-width:1.5px,color:#f8fafc;
@@ -105,11 +124,17 @@ flowchart LR
     classDef test fill:#064e3b,stroke:#34d399,stroke-width:2px,color:#ecfdf5;
     classDef code fill:#022c22,stroke:#10b981,stroke-width:2px,color:#d1fae5;
 
-    CAP["<b>💡 CAPABILITY</b><br/><small>CAP-001: Student Lifecycle</small>"]:::cap -->|"Deconstructs to"| REQ["<b>📑 REQUIREMENT</b><br/><small>REQ-002: Enrollment Service</small>"]:::req
-    REQ -->|"Specified by"| FEAT["<b>📝 FEATURE SPEC</b><br/><small>FEAT-002: Admission Workflow</small>"]:::feat
-    FEAT -->|"Enforces Contract"| AC["<b>🧪 ACCEPTANCE CRITERIA</b><br/><small>AC-FEAT002-01: Unique ID Check</small>"]:::ac
-    AC -->|"Directly Verified by"| TEST["<b>🔬 AUTOMATED TEST</b><br/><small>TEST-FEAT002-01 (tests/unit/)</small>"]:::test
-    TEST ==>|"Guarantees"| CODE["<b>💻 PRODUCTION CODE</b><br/><small>src/modules/students/enroll.ts</small>"]:::code
+    CAP["`**💡 CAPABILITY**
+CAP-001: Student Lifecycle`"]:::cap -->|"Deconstructs to"| REQ["`**📑 REQUIREMENT**
+REQ-002: Enrollment Service`"]:::req
+    REQ -->|"Specified by"| FEAT["`**📝 FEATURE SPEC**
+FEAT-002: Admission Workflow`"]:::feat
+    FEAT -->|"Enforces Contract"| AC["`**🧪 ACCEPTANCE CRITERIA**
+AC-FEAT002-01: Unique ID Check`"]:::ac
+    AC -->|"Verified by"| TEST["`**🔬 AUTOMATED TEST**
+TEST-FEAT002-01 (tests/unit/)`"]:::test
+    TEST ==>|"Guarantees"| CODE["`**💻 PRODUCTION CODE**
+src/modules/students/enroll.ts`"]:::code
 ```
 
 ---
@@ -169,6 +194,7 @@ All custom commands carry the `-ca-agent` namespace to guarantee zero collisions
 ## 📁 Repository Structure & Component Map
 
 ```mermaid
+%%{init: {'flowchart': {'curve': 'basis', 'padding': 16, 'nodeSpacing': 28, 'rankSpacing': 40}}}%%
 flowchart LR
     classDef agent fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#f8fafc;
     classDef doc fill:#1e293b,stroke:#818cf8,stroke-width:1.5px,color:#f8fafc;
@@ -177,13 +203,22 @@ flowchart LR
     classDef log fill:#2e1065,stroke:#c084fc,stroke-width:1.5px,color:#faf5ff;
 
     subgraph RepoRoot ["🧭 SDD-VIBE-FRAMEWORK /"]
-        AGENTS["<b>🤖 Agent Master Directives</b><br/><small>AGENTS.md • GEMINI.md • CLAUDE.md</small>"]:::agent
-        AgentsDir["<b>🛠️ .agents/ Canonical Asset Store</b><br/><small>17 Commands • 19 Skills • Lifecycle Hooks</small>"]:::agent
-        DocsDir["<b>📑 docs/ Architecture & Living Specs</b><br/><small>Plan • Prompts • Spec • ADRs • Approvals</small>"]:::doc
-        DashboardDir["<b>🖥️ Project-Manager-Dashboard</b><br/><small>In-IDE Mission Control • Local Port 4200</small>"]:::dash
-        TestsDir["<b>🧪 tests/ Automated Test Harness</b><br/><small>Unit, Integration & E2E Acceptance Suites</small>"]:::test
-        LogsDir["<b>🪵 logs/ Audit Directory</b><br/><small>Structured Runtime Logs • Sanitized PII</small>"]:::log
+        direction LR
+        AGENTS["`**🤖 Agent Master Directives**
+AGENTS.md • GEMINI.md • CLAUDE.md`"]:::agent
+        AgentsDir["`**🛠️ .agents/ Canonical Asset Store**
+17 Commands • 19 Skills • Hooks`"]:::agent
+        DocsDir["`**📑 docs/ Living Specs & Architecture**
+Plan • Prompts • Spec • ADRs • Approvals`"]:::doc
+        DashboardDir["`**🖥️ Project-Manager-Dashboard**
+In-IDE Mission Control • Port 4200`"]:::dash
+        TestsDir["`**🧪 tests/ Automated Test Harness**
+Unit, Integration & E2E Suites`"]:::test
+        LogsDir["`**🪵 logs/ Audit Directory**
+Structured Runtime Logs • Redacted PII`"]:::log
     end
+
+    style RepoRoot fill:#0b1120,stroke:#334155,stroke-width:1.5px,color:#e2e8f0
 ```
 
 ---

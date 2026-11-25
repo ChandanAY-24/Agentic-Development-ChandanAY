@@ -21,6 +21,7 @@ High-level and low-level system designs, architectural patterns, boundary contra
 The High-Level Design outlines the end-to-end topological boundaries, ingress traffic flows, microservices / modular monolith components, and peripheral infrastructure.
 
 ```mermaid
+%%{init: {'flowchart': {'curve': 'basis', 'padding': 16, 'nodeSpacing': 28, 'rankSpacing': 44}}}%%
 flowchart TB
     classDef client fill:#0f172a,stroke:#38bdf8,stroke-width:1.5px,color:#f8fafc;
     classDef edge fill:#1e1b4b,stroke:#818cf8,stroke-width:1.5px,color:#e0e7ff;
@@ -32,37 +33,53 @@ flowchart TB
     subgraph IngressLayer ["🌐 INGRESS & EDGE SECURITY BOUNDARY"]
         direction LR
         subgraph Clients ["CLIENT VIEWPORTS"]
-            Browser(["<b>🖥️ Web Clients</b><br/><small>SPA & SSR Viewports</small>"]):::client
-            MobileApp(["<b>📱 Mobile Clients</b><br/><small>iOS / Android Shells</small>"]):::client
-            ExternalAPI(["<b>🏢 B2B Partners</b><br/><small>Third-Party Integrations</small>"]):::client
+            Browser(["`**🖥️ Web Clients**
+SPA & SSR Viewports`"]):::client
+            MobileApp(["`**📱 Mobile Clients**
+iOS / Android Shells`"]):::client
+            ExternalAPI(["`**🏢 B2B Partners**
+Third-Party Integrations`"]):::client
         end
 
         subgraph Edge ["EDGE SECURITY"]
-            DNS["<b>🌐 Anycast DNS</b><br/><small>Route 53 / Cloudflare</small>"]:::edge
-            WAF["<b>🛡️ WAF & Shield</b><br/><small>TLS Term & DDoS Guard</small>"]:::edge
-            CDN["<b>⚡ Static CDN</b><br/><small>Edge Compute & Cache</small>"]:::edge
+            DNS["`**🌐 Anycast DNS**
+Route 53 / Cloudflare`"]:::edge
+            WAF["`**🛡️ WAF & Shield**
+TLS Term & DDoS Guard`"]:::edge
+            CDN["`**⚡ Static CDN**
+Edge Compute & Cache`"]:::edge
         end
 
         subgraph Gateway ["ROUTING GATEWAY"]
-            APIGateway["<b>🔀 API Gateway</b><br/><small>Reverse Proxy Router</small>"]:::gw
-            AuthFilter["<b>🔑 Auth Filter</b><br/><small>JWT & Session Guard</small>"]:::gw
+            APIGateway["`**🔀 API Gateway**
+Reverse Proxy Router`"]:::gw
+            AuthFilter["`**🔑 Auth Filter**
+JWT & Session Guard`"]:::gw
         end
     end
 
     subgraph CoreDataLayer ["⚙️ CORE APPLICATION & PERSISTENCE TIERS"]
         direction LR
         subgraph AppTier ["APPLICATION CORE"]
-            CoreService["<b>⚙️ Core Server</b><br/><small>Modular Monolith</small>"]:::app
-            AsyncWorker["<b>🏃 Worker Pool</b><br/><small>Background Jobs</small>"]:::app
-            Telemetry["<b>📊 Observability</b><br/><small>OTel & Winston Logs</small>"]:::app
+            CoreService["`**⚙️ Core Server**
+Modular Monolith`"]:::app
+            AsyncWorker["`**🏃 Worker Pool**
+Background Jobs`"]:::app
+            Telemetry["`**📊 Observability**
+OTel & Winston Logs`"]:::app
         end
 
         subgraph DataTier ["PERSISTENCE & CACHE"]
-            PrimaryDB[("<b>🗄️ Primary DB</b><br/><small>PostgreSQL ACID</small>")]:::data
-            ReadReplica[("<b>📑 Read Nodes</b><br/><small>Query Offloading</small>")]:::data
-            RedisCache[("<b>⚡ Redis Store</b><br/><small>Session & Rate Limits</small>")]:::cache
-            MsgQueue[("<b>📨 Message Broker</b><br/><small>Kafka / Streams</small>")]:::cache
-            BlobStore[("<b>📦 Object Store</b><br/><small>S3 / GCS Buckets</small>")]:::data
+            PrimaryDB[("`**🗄️ Primary DB**
+PostgreSQL ACID`")]:::data
+            ReadReplica[("`**📑 Read Nodes**
+Query Offloading`")]:::data
+            RedisCache[("`**⚡ Redis Store**
+Session & Rate Limits`")]:::cache
+            MsgQueue[("`**📨 Message Broker**
+Kafka / Streams`")]:::cache
+            BlobStore[("`**📦 Object Store**
+S3 / GCS Buckets`")]:::data
         end
     end
 
@@ -86,6 +103,14 @@ flowchart TB
 
     CoreService -.->|"Traces"| Telemetry
     AsyncWorker -.->|"Metrics"| Telemetry
+
+    style IngressLayer fill:#0b1120,stroke:#334155,stroke-width:1.5px,color:#e2e8f0
+    style CoreDataLayer fill:#0b1120,stroke:#334155,stroke-width:1.5px,color:#e2e8f0
+    style Clients fill:#0f172a,stroke:#1e293b,stroke-width:1px,color:#cbd5e1
+    style Edge fill:#1e1b4b,stroke:#312e81,stroke-width:1px,color:#e0e7ff
+    style Gateway fill:#0f172a,stroke:#1e293b,stroke-width:1px,color:#cbd5e1
+    style AppTier fill:#082f49,stroke:#0369a1,stroke-width:1px,color:#e0f2fe
+    style DataTier fill:#022c22,stroke:#065f46,stroke-width:1px,color:#d1fae5
 ```
 
 ### 1.2 Low-Level Design (LLD)

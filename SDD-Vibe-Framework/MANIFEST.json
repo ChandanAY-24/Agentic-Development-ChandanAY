@@ -8,11 +8,11 @@
   "files": [
     {
       "path": ".agents/README.md",
-      "sha256": "2624b7ba558b66ae3e353e4f907ab9b2df90507d13e36ac34ecd9118e1aa3bc1"
+      "sha256": "14ae895b0657c5203aacf5652aa4141b163cf318ac15f143d8de0dc69f34db61"
     },
     {
       "path": ".agents/commands/README.md",
-      "sha256": "f36472de7d69e41b0cc627e5fe2e9b43a43afe2f3bffbd8d0c564428dfa0ca68"
+      "sha256": "568c45c99a89f35c5a363a9b0699cfaa28f6869cdad5bc703f4897692d78fe1f"
     },
     {
       "path": ".agents/commands/change-request-ca-agent.md",
@@ -344,7 +344,7 @@
     },
     {
       "path": "Project-Manager-Dashboard/README.md",
-      "sha256": "86a7891623b0a2b239a0f9835c4c25b42c1211a1f3d3817c8e6806d44d29b64c"
+      "sha256": "73e6541598ceef00b8496176e4df01170754136e61a6a0cd368fbabb82af4002"
     },
     {
       "path": "Project-Manager-Dashboard/assets/anime.min.js",
@@ -384,7 +384,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "47731bfd4ea76494b6a2abac1ba2be4aa773fdd970917292ee06fa17650bb897"
+      "sha256": "dc171ef3218990677cf61cadbf677347091adeb2cbea79548800ccccb01fb53a"
     },
     {
       "path": "SOURCE-NOTES.md",
@@ -476,7 +476,7 @@
     },
     {
       "path": "docs/design.md",
-      "sha256": "19bcaf4e1e9fe9496fbadc0fe8d9aa9c2c72380eb3c78bad4278d3208bc23be6"
+      "sha256": "2cfa17089df4ddd065a35f8e80bbd1267eacbbc432bcd72f6350ca6b22d0512b"
     },
     {
       "path": "docs/devops.md",
@@ -484,7 +484,7 @@
     },
     {
       "path": "docs/domains/README.md",
-      "sha256": "6d969a861561b4606eaae1d6789c1f9d6689010dc540f1a9d4d1d01ab2d79f6b"
+      "sha256": "fa102084ced48c4606be6c353fcfc79965312eaacefd774154b34e09097ca2f5"
     },
     {
       "path": "docs/environments.md",
@@ -492,7 +492,7 @@
     },
     {
       "path": "docs/error-tracker.md",
-      "sha256": "beeed151942138cdd594002fa8be54749ac2e97286650669853fcc7bddc77e4c"
+      "sha256": "4076bb33016d5cf4cf027e54416f9e2a5d7b566838f300954a12f82302839d57"
     },
     {
       "path": "docs/features/001-example-feature/acceptance.md",
@@ -516,7 +516,7 @@
     },
     {
       "path": "docs/features/README.md",
-      "sha256": "1d2d33771b798fb6e020b090b0ad675a66d644e17a0b96ab1726865d62be531f"
+      "sha256": "166f59c49829ec7dd3f6c3dc657903fe0e79ba7389044efd308fca62d7f5ce4c"
     },
     {
       "path": "docs/guideline-CHANGELOG.md",
@@ -600,7 +600,7 @@
     },
     {
       "path": "docs/system-architecture.md",
-      "sha256": "bb5af874873cdce0ab8d1694530b1484aa5b80f35d722de67e57460ee66ade0a"
+      "sha256": "1394eee3091300ef55bb4fdc56a7304b20d71265db3661df1c6651be59dd9633"
     },
     {
       "path": "docs/task.md",
@@ -688,7 +688,7 @@
     },
     {
       "path": "tests/README.md",
-      "sha256": "2fbca3e09640761d6011fb090f342ab91579bba7bf766e63d71b7df932791f7f"
+      "sha256": "8b1215e3ffb2c33714562efe1c4bd28fecb3ca7fa6683c5c82663a8f73843759"
     },
     {
       "path": "tests/test_ac_contracts.js",

@@ -23,6 +23,7 @@ The test harness in **SDD-Vibe (1-in-2 Single Workflow)** is an immutable qualit
 ## 🏛️ Testing Pyramid & AC Traceability Pipeline
 
 ```mermaid
+%%{init: {'flowchart': {'curve': 'basis', 'padding': 16, 'nodeSpacing': 28, 'rankSpacing': 44}}}%%
 flowchart TB
     classDef spec fill:#172554,stroke:#60a5fa,stroke-width:1.5px,color:#eff6ff;
     classDef unit fill:#082f49,stroke:#38bdf8,stroke-width:1.5px,color:#f0f9ff;
@@ -31,30 +32,39 @@ flowchart TB
     classDef runner fill:#064e3b,stroke:#34d399,stroke-width:2px,color:#ecfdf5;
     classDef log fill:#1e293b,stroke:#64748b,stroke-width:1.5px,color:#f8fafc;
 
-    SpecAC[("<b>📑 Approved Acceptance Criteria</b><br/><small>docs/features/**.md: AC-FEAT###-##</small>")]:::spec
+    SpecAC[("`**📑 Approved Acceptance Criteria**
+docs/features/**.md: AC-FEAT###-##`")]:::spec
 
     subgraph Pyramid ["🧪 TEST HARNESS PYRAMID TIERS"]
         direction LR
-        Unit["<b>⚡ Unit Tests (60-70%)</b><br/><small>Pure domain logic (tests/unit/)</small>"]:::unit
-        Integration["<b>🔌 Integration Tests (20-30%)</b><br/><small>API routes & DB (tests/integration/)</small>"]:::integ
-        E2E["<b>🌐 End-to-End Tests (10%)</b><br/><small>Browser journeys (tests/e2e/)</small>"]:::e2e
+        Unit["`**⚡ Unit Tests (60-70%)**
+Pure domain logic (tests/unit/)`"]:::unit
+        Integration["`**🔌 Integration Tests (20-30%)**
+API routes & DB (tests/integration/)`"]:::integ
+        E2E["`**🌐 End-to-End Tests (10%)**
+Browser journeys (tests/e2e/)`"]:::e2e
     end
 
     subgraph ExecutionGate ["⚙️ TEST RUNNER & GATE EXECUTION"]
         direction LR
-        TestRunner[["<b>🏃 Test Suite Runner</b><br/><small>Vitest / Jest / PyTest Harness</small>"]]:::runner
-        CoverageReport[("<b>🪵 Test Audit & Gate Report</b><br/><small>logs/test.log Stream Output</small>")]:::log
+        TestRunner[["`**🏃 Test Suite Runner**
+Vitest / Jest / PyTest Harness`"]]:::runner
+        CoverageReport[("`**🪵 Test Audit & Gate Report**
+logs/test.log Stream Output`")]:::log
     end
 
-    SpecAC -->|"AC Contract Binding"| Unit
-    SpecAC -->|"AC Contract Binding"| Integration
-    SpecAC -->|"AC Contract Binding"| E2E
+    SpecAC -->|"AC Binding"| Unit
+    SpecAC -->|"AC Binding"| Integration
+    SpecAC -->|"AC Binding"| E2E
 
-    Unit -->|"Red/Green Assertions"| TestRunner
-    Integration -->|"Integration Assertions"| TestRunner
+    Unit -->|"Unit Assertions"| TestRunner
+    Integration -->|"API Assertions"| TestRunner
     E2E -->|"Journey Assertions"| TestRunner
 
     TestRunner ==>|"Pipes Evidence"| CoverageReport
+
+    style Pyramid fill:#0b1120,stroke:#334155,stroke-width:1.5px,color:#e2e8f0
+    style ExecutionGate fill:#0b1120,stroke:#334155,stroke-width:1.5px,color:#e2e8f0
 ```
 
 ---
