@@ -194,10 +194,10 @@ Teams 5–8 (Test/Sec/Rev/QA) • 9–10 (Ops)`"]:::grp
     Orch --> G4["`**Group 4: Docs & Growth**
 Team 11 (Docs) • 12 (BI) • 13 (Marketing)`"]:::grp
 
-    G1 -->|"Triggers"| S1["`/plan-ca-agent` • `/task-ca-agent`"]:::sdd
-    G2 -->|"Triggers"| S2["`/implement-ca-agent` • `/run-ca-agent` • `/tdd-ca-agent`"]:::sdd
-    G3 -->|"Triggers"| S3["`/testing-ca-agent` • `/review-ca-agent` • `/security-audit-ca-agent` • `/release-check-ca-agent`"]:::sdd
-    G4 -->|"Triggers"| S4["`/dashboard-ca-agent` • `/handoff-ca-agent`"]:::sdd
+    G1 -->|"Triggers"| S1["/plan-ca-agent • /task-ca-agent"]:::sdd
+    G2 -->|"Triggers"| S2["/implement-ca-agent • /run-ca-agent • /tdd-ca-agent"]:::sdd
+    G3 -->|"Triggers"| S3["/testing-ca-agent • /review-ca-agent • /security-audit-ca-agent • /release-check-ca-agent"]:::sdd
+    G4 -->|"Triggers"| S4["/dashboard-ca-agent • /handoff-ca-agent"]:::sdd
 ```
 
 ### 1. Step-by-Step Development Flow (Steps 0–9) & SDD-Vibe Triggers
