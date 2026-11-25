@@ -95,3 +95,30 @@ Replace these placeholders when adapting this guide to any project:
 ### Phase 4: Quality Audit & Production Ship (`/review-ca-agent`, `/verify-ca-agent`, `/security-audit-ca-agent`, `/release-check-ca-agent`)
 - Run `python scripts/check_docs.py` and `python scripts/manifest.py --check` (0 errors required).
 - Execute `/review-ca-agent`, `/verify-ca-agent`, `/security-audit-ca-agent`, and `/release-check-ca-agent` to sign off the release.
+
+---
+
+## 4. First-Choice Agentic Skill Development & Custom Feature Lifecycle
+
+> **First Choice:** Whole features are developed through `agentic-team-ecosystem` (`/team-ecosystem-ca-agent`). SDD-Vibe slash commands and external skills trigger at exact step gates so nothing runs speculatively.
+
+### Preset Multi-IDE Chat Tabs (Claude Code, Antigravity, Cursor, Windsurf, Codex, Copilot)
+1. Run `python scripts/sync_ide_adapters.py --ides all` inside `{{PROJECT_NAME}}/`.
+2. Every host IDE chat tab now has all `17` `/-ca-agent` commands and `19` skills preset (`.claude/`, `.agents/workflows/`, `.cursor/`, `.windsurf/`, `.codex/`, `.github/prompts/`).
+3. Use dedicated chat tabs per Group/Step (e.g., Tab 1: `/team-ecosystem-ca-agent` + `/plan-ca-agent`, Tab 2: `/run-ca-agent`, Tab 3: `/tdd-ca-agent`, Tab 4: `/dashboard-ca-agent`) to keep context windows lean.
+
+### External Skill Mapping & Exact Trigger Timing (Max 1–3/Step, Rank #1 Only)
+All external skills require the **5-Point Security Vetting Checklist** ([`07-curated-external-skills-registry.md`](SDD-Vibe-Framework/.agents/skills/agentic-team-ecosystem/references/07-curated-external-skills-registry.md)) before installation:
+- **Core (Always-On):** `anthropics/skills`, `claude-mem`, `serena`, `playwright`, `gitleaks`.
+- **Step 1 (Discovery):** `grill-me` (Team 2 + Team 14 requirement grilling) → triggers `/plan-ca-agent`.
+- **Step 2 (Architecture):** `find-skill` (Team 2 verified skill lookup) → triggers `/task-ca-agent`.
+- **Step 3 (UI Sensory Demo):** `vercel-labs` / `modern-web-guidance` (+ `recharts`, `motion-dev`, `react-spline` only if domain requires) → triggers `/implement-ca-agent` + `/run-ca-agent`.
+- **Step 4 (Kanban Sync):** Team 1 exports Google Sheet CSV via `/dashboard-ca-agent` (`#ecosystem` + `/api/kanban-export`).
+- **Step 5 (Spec Lock & TDD):** `dify` / `openhands` / `REA` (if AI/LLM or reverse-engineering) → triggers `/spec-check-ca-agent` → `/testing-ca-agent` (`RED`) → `/tdd-ca-agent` (`GREEN/REFACTOR`).
+- **Step 6 (Security & QA Gate):** `semgrep`, `trivy`, `trufflehog` (Team 6) → triggers `/review-ca-agent` → `/verify-ca-agent` → `/security-audit-ca-agent`.
+- **Step 7–9 (Docs, Marketing, Deploy & 24×7 Ops):** `ppt-master` (Team 11), `claude-seo` & `postiz-app` (Team 13) → triggers `/handoff-ca-agent`, `/release-check-ca-agent`, `/errorlogs-ca-agent`, `/gitlogs-ca-agent`.
+
+### Adding New Custom Features Later or Mid-Development
+1. If modifying an already-`APPROVED` spec, run `/change-request-ca-agent` (`CR-###`) first.
+2. Invoke `/team-ecosystem-ca-agent <domain-or-feature>` so **Team 14** classifies the new custom feature and guides you step by step.
+3. Execute the full SDD-Vibe loop for the new feature: `/plan-ca-agent` → `/task-ca-agent` → `docs/features/NNN-name.md` (`PROTOTYPE`) → `/implement-ca-agent` + `/run-ca-agent` → `/dashboard-ca-agent` (Kanban sync) → `/spec-check-ca-agent` (`APPROVED`) → `/testing-ca-agent` → `/tdd-ca-agent` → `/review-ca-agent` → `/verify-ca-agent` → `/security-audit-ca-agent`.

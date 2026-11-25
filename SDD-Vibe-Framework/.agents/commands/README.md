@@ -8,7 +8,7 @@
 [![Count](https://img.shields.io/badge/Commands-17_Standardized_Tools-indigo?style=for-the-badge)](.)
 [![Logging](https://img.shields.io/badge/Audit_Trail-Mandatory_logs/_Output-teal?style=for-the-badge)](.)
 
-[🌟 Overview](#-overview) • [🔄 Lifecycle State Machine](#-command-lifecycle-state-machine) • [⚡ Dispatch Pipeline](#-command-dispatch--authorization-pipeline) • [📋 Catalog](#-command-catalog-16)
+[🌟 Overview](#-overview) • [🔄 Lifecycle State Machine](#-command-lifecycle-state-machine) • [⚡ Dispatch Pipeline](#-command-dispatch--authorization-pipeline) • [📋 Catalog](#-command-catalog-17)
 
 </div>
 
@@ -55,6 +55,7 @@ stateDiagram-v2
     ReleaseGate --> [*]: 🎉 Production Ship
 
     state SupportTools {
+        TeamEcosystem: 🤖 /team-ecosystem-ca-agent (14-Team Orchestrator)
         Dashboard: 🖥️ /dashboard-ca-agent (Port 4200)
         ErrorTriage: 🐛 /errorlogs-ca-agent (RCA Analysis)
         GitAudit: 🗄️ /gitlogs-ca-agent (Traceability)

@@ -12,7 +12,7 @@
 **Framework Lead:** Chandan Adhikary · **Standard:** Production-Grade Universal Release 2.0.0  
 **Target Domains:** SaaS MVPs · Enterprise Core · FinTech · HealthTech · Modern Web Apps · Regulated Systems
 
-[🌟 Framework Overview](#-framework-overview) • [🏛️ Hybrid Pipeline](#️-1-in-2-hybrid-staged-pipeline) • [🔄 Traceability Flow](#-spec-to-code-traceability-contract) • [⚡ Quick-Start](#-quick-start-guide) • [🛡️ Slash Commands](#️-collision-free-agent-slash-commands--ca-agent) • [📁 Structure](#-repository-structure--component-map) • [📋 Governance](#-governance-rules--policies)
+[🌟 Framework Overview](#-framework-overview) • [🏛️ Hybrid Pipeline](#️-1-in-2-hybrid-staged-pipeline) • [🤖 Agentic Skill Workflow](#-agentic-team-ecosystem-workflow-first-choice) • [🔄 Traceability Flow](#-spec-to-code-traceability-contract) • [⚡ Quick-Start](#-quick-start-guide) • [🛡️ Slash Commands](#️-collision-free-agent-slash-commands--ca-agent) • [📁 Structure](#-repository-structure--component-map) • [📋 Governance](#-governance-rules--policies)
 
 </div>
 
@@ -110,6 +110,31 @@ IN REVIEW → APPROVED`"]:::gov
 
 ---
 
+## 🤖 Agentic Team Ecosystem Workflow (First Choice)
+
+> **First-Choice Feature Development:** Whole features are developed through [`.agents/skills/agentic-team-ecosystem/SKILL.md`](.agents/skills/agentic-team-ecosystem/SKILL.md) (`/team-ecosystem-ca-agent`), with **SDD-Vibe's 17 `-ca-agent` slash commands, spec locks, and TDD gates triggering at each step** and **Team 14 (Manual Workflow Guider)** coaching the developer at every gate.
+
+### Steps 0–9 Execution & Trigger Matrix
+
+| Step | Owning Group / Teams | SDD-Vibe Commands Triggered | External Skills Triggered (Max 1–3/Step, Rank #1 Only) |
+|---|---|---|---|
+| **0. Intake** | Main Agent + Team 14 | `/team-ecosystem-ca-agent` | `anthropics/skills`, `claude-mem` (Core) |
+| **1. Discovery** | Group 1 (Team 2) + Team 12 (+13 Brand) | `/plan-ca-agent` | `grill-me` (Phase-Gate) |
+| **2. Architecture** | Group 1 (Team 2) | `/plan-ca-agent` → `/task-ca-agent` | `find-skill` (Phase-Gate), `serena` (Core) |
+| **3. Sensory Demo** | Group 2 (Team 3 + Team 4) | `/implement-ca-agent` (UI) → `/run-ca-agent` (`:3000`) | `vercel-labs` / `modern-web-guidance`, `recharts` / `motion-dev` (Domain) |
+| **4. Kanban Sync** | Group 1 (Team 1) | `/dashboard-ca-agent` (`#ecosystem` + `/api/kanban-export`) | — |
+| **5. Spec Lock & TDD** | Group 2 (Team 4) | `/spec-check-ca-agent` → `/testing-ca-agent` → `/tdd-ca-agent` | `playwright` (Core), `dify` / `openhands` / `REA` (Domain) |
+| **6. Audit & QA** | Group 3 (Teams 5, 6, 7, 8) | `/review-ca-agent` → `/verify-ca-agent` → `/security-audit-ca-agent` | `gitleaks` (Core), `semgrep` · `trivy` · `trufflehog` (Phase-Gate) |
+| **7. Docs & Brand** | Group 4 (Team 11 + Team 13) | `/handoff-ca-agent` | `ppt-master` (Phase-Gate), `claude-seo` · `postiz-app` (Domain) |
+| **8. Deploy Ops** | Group 3 (Team 9) | `/release-check-ca-agent` | — |
+| **9. 24×7 Ops** | Group 3 (Team 10) + Teams 12, 13 | `/errorlogs-ca-agent` • `/gitlogs-ca-agent` | — |
+
+### Adding New Custom Features Later & Preset Multi-IDE Chat Tabs
+- **New Custom Features (Mid-Project or Post-Launch):** Run `/change-request-ca-agent` if touching an `APPROVED` spec, then invoke `/team-ecosystem-ca-agent` for the new feature so Team 14 guides it through `/plan-ca-agent` → `/task-ca-agent` → `/run-ca-agent` → `/dashboard-ca-agent` → `/spec-check-ca-agent` → `/testing-ca-agent` → `/tdd-ca-agent` → `/review-ca-agent` → `/security-audit-ca-agent`.
+- **Preset Multi-IDE Chat Tabs:** Run `python scripts/sync_ide_adapters.py --ides all` (or `python scripts/init_project.py --ides all`) to preset all `17` commands and `19` skills in **Claude Code** (`.claude/`), **Antigravity** (`.agents/workflows/`), **Cursor**, **Windsurf**, **Codex**, and **Copilot**. Use separate chat tabs per Group/Step to keep context windows lean.
+
+---
+
 ## 🔄 Spec-to-Code Traceability Contract
 
 Every line of production code traces back to a root business capability:
@@ -187,7 +212,7 @@ All custom commands carry the `-ca-agent` namespace to guarantee zero collisions
 | `/errorlogs-ca-agent` | Diagnostics | Structured runtime error triage and stack trace analysis. |
 | `/gitlogs-ca-agent` | Diagnostics | Commit history and git traceability validation against task IDs. |
 | `/handoff-ca-agent` | Handoff | Generates verifiable engineering handoff report for team transfer. |
-| `/team-ecosystem-ca-agent` | Orchestration | Activates the optional 14-team `agentic-team-ecosystem` skill step by step. |
+| `/team-ecosystem-ca-agent` | Orchestration | **First-choice** 14-team `agentic-team-ecosystem` orchestrator across Steps 0–9. |
 
 ---
 

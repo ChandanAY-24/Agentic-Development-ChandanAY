@@ -42,7 +42,7 @@ When an agent session begins, defer to the canonical framework instructions:
 
 ### Directive 2: Mandatory Step 0 Slash Command Activation
 Before creating any application code or directories:
-- **Chat Dropdown:** Verify that all 16 `*-ca-agent` custom slash commands appear in the autocomplete palette when typing `/`.
+- **Chat Dropdown:** Verify that all 17 `*-ca-agent` custom slash commands appear in the autocomplete palette when typing `/` (including `/team-ecosystem-ca-agent` as the first-choice orchestrator for `agentic-team-ecosystem`).
 - **Terminal CLI:** Verify command contracts exist via `ls .agents/commands/*-ca-agent.md`.
 
 ### Directive 3: Canonical Agent Authority

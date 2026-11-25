@@ -49,7 +49,7 @@
 ## 2. Mandatory Verification Gate: Step 0 Activation
 
 Before creating or altering codebase files:
-- **Chat Dropdown:** Verify all 16 `*-ca-agent` commands appear when typing `/`.
+- **Chat Dropdown:** Verify all 17 `*-ca-agent` commands appear when typing `/` (including `/team-ecosystem-ca-agent` for `agentic-team-ecosystem`).
 - **Terminal CLI:** Verify command contracts: `ls .agents/commands/*-ca-agent.md`.
 
 ---

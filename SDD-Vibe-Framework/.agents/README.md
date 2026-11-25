@@ -117,4 +117,4 @@ Typing '/' Displays All 17 Commands`"]:::ui
 When copying this framework into another project:
 1. Place `.agents/` (and `AGENTS.md`, `docs/`, `scripts/`) at the **workspace/git root**.
 2. Run `python scripts/init_project.py --ides antigravity` (or `--ides all` / `--ides claude,cursor,windsurf,copilot`) to sync native adapters.
-3. Verify that typing `/` in your chat palette displays all 16 custom `-ca-agent` commands.
+3. Verify that typing `/` in your chat palette displays all 17 custom `-ca-agent` commands (with `/team-ecosystem-ca-agent` as the first-choice orchestrator for `skills/agentic-team-ecosystem/`).

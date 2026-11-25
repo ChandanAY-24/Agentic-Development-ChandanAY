@@ -8,11 +8,11 @@
   "files": [
     {
       "path": ".agents/README.md",
-      "sha256": "14ae895b0657c5203aacf5652aa4141b163cf318ac15f143d8de0dc69f34db61"
+      "sha256": "7c2c02b25c98cd2bf30e1ef30f07b1d1519107de57b7fe7f72a6839a59f7d131"
     },
     {
       "path": ".agents/commands/README.md",
-      "sha256": "568c45c99a89f35c5a363a9b0699cfaa28f6869cdad5bc703f4897692d78fe1f"
+      "sha256": "a70cf2e639b34cd33786e22ce86cc13bc35b2a6b5cb15de765fb4888f35e62f0"
     },
     {
       "path": ".agents/commands/change-request-ca-agent.md",
@@ -336,7 +336,7 @@
     },
     {
       "path": "GEMINI.md",
-      "sha256": "9ebbdf09669d94a1374960b82583cd1edfed0e2ccdb398f9e98dc7684fa207c7"
+      "sha256": "93baae9c769b847402af8e53de816281a5ec0bab155531b408489914f1583081"
     },
     {
       "path": "LICENSE-DECISION.md",
@@ -384,7 +384,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "dc171ef3218990677cf61cadbf677347091adeb2cbea79548800ccccb01fb53a"
+      "sha256": "4823753450fce65d6ec0233c4e4a7e1737cdb9023dad517b0c6c6eca3029c77c"
     },
     {
       "path": "SOURCE-NOTES.md",
@@ -396,7 +396,7 @@
     },
     {
       "path": "docs/INDEX.md",
-      "sha256": "d13c99e5e877e0e1e2cc73ba05411a4dea653e215acf2dd0a8450d7304c66d12"
+      "sha256": "2abf4df80d34567297baa05a3c8e4c4eb776cc506ff9fc687579786e38f75764"
     },
     {
       "path": "docs/acceptance-criteria.md",

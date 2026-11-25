@@ -50,4 +50,12 @@ All 17 custom slash commands carry the `-ca-agent` suffix to prevent collisions 
 | `/errorlogs-ca-agent` | Continuous | Analyzes `logs/error.log` and `docs/error-tracker.md` for root-cause triage. |
 | `/gitlogs-ca-agent` | Continuous | Audits git commits against authorized task IDs and spec references. |
 | `/handoff-ca-agent` | Continuous | Generates verifiable engineering handoff dossier (`docs/handoff.md`). |
-| `/team-ecosystem-ca-agent` | Continuous | Activates the optional 14-team `agentic-team-ecosystem` skill step by step across SaaS, E-commerce, Brand, Software, App, ML/DL/DS, CV, and OS builds. |
+| `/team-ecosystem-ca-agent` | Continuous (First Choice) | Activates the **first-choice** 14-team `agentic-team-ecosystem` skill step by step across SaaS, E-commerce, Brand, Software, App, ML/DL/DS, CV, and OS builds, triggering SDD-Vibe commands at each gate. |
+
+---
+
+## 3. Invoking `/team-ecosystem-ca-agent` (First Choice & Custom Features)
+
+- **New Project / Full Feature Build:** `/team-ecosystem-ca-agent saas` (or `ecommerce`, `brand`, `software`, `app`, `ml`, `cv`, `os`) — starts Step 0 with Team 14 guiding Steps 0–9 and triggering `/plan-ca-agent`, `/task-ca-agent`, `/run-ca-agent`, `/dashboard-ca-agent`, `/spec-check-ca-agent`, `/testing-ca-agent`, `/tdd-ca-agent`, `/review-ca-agent`, `/security-audit-ca-agent`, and `/release-check-ca-agent` at their exact gates.
+- **Jump to a Specific Step:** `/team-ecosystem-ca-agent step-3` (Frontend Sensory Demo) or `/team-ecosystem-ca-agent ml step-5` (TDD & ML Evals).
+- **Adding a Custom Feature Mid-Project or Post-Launch:** Run `/change-request-ca-agent` (if altering an `APPROVED` spec), then `/team-ecosystem-ca-agent <feature-or-domain>` so the new feature follows the complete SDD-Vibe + external-skill workflow.

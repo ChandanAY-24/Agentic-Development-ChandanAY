@@ -12,7 +12,7 @@
 **Engineering Lead:** Chandan Adhikary · **Standard:** Production-Grade Universal Release  
 **Supported Platforms:** Claude Code · Cursor · Windsurf · Antigravity · OpenCode · Codex · Trae · VS Code
 
-[🌟 Executive Overview](#-executive-overview) • [🧭 1-in-2 Single Workflow](#-the-1-in-2-single-workflow-framework) • [🔄 Hybrid Pipeline](#-prompt-workflow-diagram) • [📁 Blueprint](#-repository-architecture-blueprint) • [⚡ Quick-Start](#-quick-start-guide-step-by-step-for-any-project) • [🖥️ Dashboard](#-in-ide-project-manager-dashboard) • [📖 Catalog](#-complete-documentation-catalog)
+[🌟 Executive Overview](#-executive-overview) • [🧭 1-in-2 Single Workflow](#-the-1-in-2-single-workflow-framework) • [🔄 Hybrid Pipeline](#-prompt-workflow-diagram) • [🤖 Agentic Skill Workflow](#-agentic-team-ecosystem-skill-workflow-first-choice) • [📁 Blueprint](#-repository-architecture-blueprint) • [⚡ Quick-Start](#-quick-start-guide-step-by-step-for-any-project) • [🖥️ Dashboard](#-in-ide-project-manager-dashboard) • [📖 Catalog](#-complete-documentation-catalog)
 
 </div>
 
@@ -169,6 +169,86 @@ IN REVIEW → APPROVED`"]:::step
 
 ---
 
+## 🤖 Agentic Team Ecosystem Skill Workflow (First Choice)
+
+> **First-Choice Development Model:** Whole features are developed through the bundled [`agentic-team-ecosystem`](SDD-Vibe-Framework/.agents/skills/agentic-team-ecosystem/SKILL.md) skill (`/team-ecosystem-ca-agent`). **SDD-Vibe's 17 `-ca-agent` slash commands, spec locks, and Red-Green-Refactor TDD gates trigger automatically at each step**, while **Team 14 (Manual Workflow Guider)** tells you the exact next command and gate at every turn.
+
+```mermaid
+%%{init: {'flowchart': {'curve': 'basis', 'padding': 16, 'nodeSpacing': 24, 'rankSpacing': 40}}}%%
+flowchart TB
+    classDef human fill:#451a03,stroke:#fbbf24,stroke-width:2px,color:#fffbeb;
+    classDef guide fill:#2e1065,stroke:#c084fc,stroke-width:1.5px,color:#faf5ff;
+    classDef grp fill:#082f49,stroke:#38bdf8,stroke-width:1.5px,color:#f0f9ff;
+    classDef sdd fill:#064e3b,stroke:#34d399,stroke-width:1.5px,color:#ecfdf5;
+
+    Dev(["`**👤 Developer**
+Invokes /team-ecosystem-ca-agent`"]):::human --> Orch["`**🤖 Main Agent + Team 14**
+Manual Workflow Guider & Domain Intake`"]:::guide
+
+    Orch --> G1["`**Group 1: Strategy & PM**
+Team 1 (Kanban) • Team 2 (Arch/REA)`"]:::grp
+    Orch --> G2["`**Group 2: Design & Build**
+Team 3 (UI/UX) • Team 4 (Dev/AI/OS)`"]:::grp
+    Orch --> G3["`**Group 3: Verify & Ops**
+Teams 5–8 (Test/Sec/Rev/QA) • 9–10 (Ops)`"]:::grp
+    Orch --> G4["`**Group 4: Docs & Growth**
+Team 11 (Docs) • 12 (BI) • 13 (Marketing)`"]:::grp
+
+    G1 -->|"Triggers"| S1["`/plan-ca-agent` • `/task-ca-agent`"]:::sdd
+    G2 -->|"Triggers"| S2["`/implement-ca-agent` • `/run-ca-agent` • `/tdd-ca-agent`"]:::sdd
+    G3 -->|"Triggers"| S3["`/testing-ca-agent` • `/review-ca-agent` • `/security-audit-ca-agent` • `/release-check-ca-agent`"]:::sdd
+    G4 -->|"Triggers"| S4["`/dashboard-ca-agent` • `/handoff-ca-agent`"]:::sdd
+```
+
+### 1. Step-by-Step Development Flow (Steps 0–9) & SDD-Vibe Triggers
+
+| Step | Active Teams | What Happens in Development | SDD-Vibe Commands Triggered |
+|---|---|---|---|
+| **Step 0: Intake** | Main Agent + Team 14 | Classifies domain (`SaaS`, `E-commerce`, `Brand`, `Software`, `App`, `ML/DL/DS`, `CV`, `OS`) and activates only needed teams | `/team-ecosystem-ca-agent` |
+| **Step 1: Discovery** | Team 2 + Team 12 (+13 if Brand) | Requirements grilling, ROI/risk analysis, domain vocabulary | `/plan-ca-agent` (Read-Only) |
+| **Step 2: Architecture** | Team 2 | HLD/LLD, DB schema, DFD/UML, `docs/plan.md`, `docs/system-architecture.md` | `/plan-ca-agent` → `/task-ca-agent` |
+| **Step 3: Sensory Demo** | Team 3 + Team 4 | Frontend-first UI shell (`PROTOTYPE` → `DRAFT`) with mock state | `/implement-ca-agent` (UI) → `/run-ca-agent` (`:3000`) |
+| **Step 4: Kanban Sync** | Team 1 | Initializes Kanban + exports Google Sheet CSV after UI sign-off | `/dashboard-ca-agent` (`#ecosystem` + `/api/kanban-export`) |
+| **Step 5: Spec Lock & TDD** | Team 4 | Promotes spec to `APPROVED`, writes failing tests (`RED`), implements backend/auth (`GREEN`) | `/spec-check-ca-agent` → `/testing-ca-agent` → `/tdd-ca-agent` |
+| **Step 6: Audit & QA** | Teams 5, 6, 7, 8 | Unit/E2E/API testing, SAST/secret scan, code review, QA scorecard | `/review-ca-agent` → `/verify-ca-agent` → `/security-audit-ca-agent` → `/release-check-ca-agent` |
+| **Step 7: Docs & Brand** | Team 11 + Team 13 | PRDs, pitch decks, brand guidelines, SEO/AEO/GEO | `/handoff-ca-agent` |
+| **Step 8: Deploy Ops** | Team 9 | Docker, Nginx, Redis, cloud/VPS deploy, scaling & rate limits | `/release-check-ca-agent` |
+| **Step 9: 24×7 Ops** | Team 10 + Teams 12, 13 | Monitoring, error triage, vulnerability escalation back to Team 4 | `/errorlogs-ca-agent` • `/gitlogs-ca-agent` |
+
+### 2. External Skill Mapping & Exact Trigger Timing
+
+External skills are **optional (Developer Choice)** and **never loaded randomly**. Follow the registry in [`07-curated-external-skills-registry.md`](SDD-Vibe-Framework/.agents/skills/agentic-team-ecosystem/references/07-curated-external-skills-registry.md): activate **at most 1–3 external skills per step**, pick **Rank #1 only** per category, and pass the **5-Point Security Vetting Checklist** before installing.
+
+| Trigger Timing | Task / Bottleneck | Rank #1 External Skill | Frequency Tier | Owning Team |
+|---|---|---|---|---|
+| **Always-On Core** | Cross-IDE skill baseline & persistent memory | `anthropics/skills` · `claude-mem` | Every-Project Core | Team 2, Team 4, Team 14 |
+| **Always-On Core** | Semantic symbol-level code navigation & editing | `serena` | Every-Project Core | Team 2, Team 4 |
+| **Step 1 (Discovery)** | Relentless requirement & design-decision grilling | `grill-me` | Phase-Gate (Step 1) | Team 2, Team 14 |
+| **Step 2 (Architecture)** | On-demand verified skill discovery | `find-skill` | Phase-Gate (Step 2) | Team 2 |
+| **Step 3 (UI Demo)** | React/Next.js performance & UI/UX craft | `vercel-labs` / `modern-web-guidance` (Fallback: `ui-ux-pro-max`) | Every-Project Core | Team 3 |
+| **Step 3 (Domain UI)** | Charts, spring animations, 3D hero (only if needed) | `recharts` · `motion-dev` · `react-spline` | Domain-Intuition | Team 3 |
+| **Step 5 (AI/LLM Build)** | LLM agent pipelines or reverse-engineering legacy APIs | `dify` / `openhands` · `REA` | Domain-Intuition | Team 2, Team 4 |
+| **Step 5–6 (E2E & Pre-Commit)** | Deterministic E2E tests & secret-leak prevention | `playwright` · `gitleaks` | Every-Project Core | Team 5, Team 6, Team 8 |
+| **Step 6 (Security Gate)** | SAST (OWASP Top 10), CVE scan & git secret history | `semgrep` · `trivy` · `trufflehog` | Phase-Gate (Step 6) | Team 6 |
+| **Step 7 (Docs & Growth)** | Pitch decks, technical SEO/AEO/GEO, social scheduling | `ppt-master` · `claude-seo` · `postiz-app` | Phase-Gate / Domain | Team 11, Team 13 |
+
+### 3. Adding New Custom Features Later or Mid-Development
+
+When adding any new custom feature during an active project or after launch, **Agentic Skill remains First Choice**:
+1. **Check Spec Impact:** If modifying an already-`APPROVED` feature, run `/change-request-ca-agent` (`CR-###`) first.
+2. **Re-Enter via Agentic Skill:** Run `/team-ecosystem-ca-agent <domain-or-feature>` to classify the new feature and let **Team 14** guide the scope.
+3. **Run the SDD-Vibe Loop for That Feature:** `/plan-ca-agent` → `/task-ca-agent` → new spec in `docs/features/NNN-name.md` (`PROTOTYPE`) → `/implement-ca-agent` + `/run-ca-agent` (sensory UI) → `/dashboard-ca-agent` (Kanban sync) → `/spec-check-ca-agent` (`APPROVED`) → `/testing-ca-agent` (`RED`) → `/tdd-ca-agent` (`GREEN/REFACTOR`) → `/review-ca-agent` → `/verify-ca-agent` → `/security-audit-ca-agent`.
+
+### 4. Preset Multi-IDE Chat Tabs (Claude Code, Antigravity, Cursor, Windsurf, Codex, Copilot)
+
+Run `python scripts/sync_ide_adapters.py --ides all` (inside `SDD-Vibe-Framework/`) to preset all `17` `/-ca-agent` commands, `19` skills, and lifecycle hooks into every host IDE:
+- **Claude Code:** `.claude/commands/`, `.claude/skills/`, `.claude/settings.json`
+- **Antigravity:** `.agents/workflows/` + `.agents/hooks.json`
+- **Cursor / Windsurf / Codex / Copilot:** `.cursor/`, `.windsurf/`, `.codex/`, `.github/prompts/`
+- **Multi-Tab Pattern:** Keep separate chat tabs per Group or Step (e.g., Tab 1: `/team-ecosystem-ca-agent` + `/plan-ca-agent`, Tab 2: `/run-ca-agent`, Tab 3: `/tdd-ca-agent`, Tab 4: `/dashboard-ca-agent`) so each context window stays focused and token-efficient.
+
+---
+
 ## 📁 Repository Architecture Blueprint
 
 ```text
@@ -224,7 +304,7 @@ All custom commands carry the `-ca-agent` namespace to guarantee zero collisions
 | **Quality & Security** | `/review-ca-agent` · `/verify-ca-agent` · `/security-audit-ca-agent` · `/release-check-ca-agent` | Git diff review, criteria verification scorecard, SAST security scan, production release gate |
 | **Diagnostics & Handoff** | `/errorlogs-ca-agent` · `/gitlogs-ca-agent` · `/handoff-ca-agent` | Stack trace root-cause triage, git commit audit trails, engineering handoff dossiers |
 | **Visual Mission Control** | `/dashboard-ca-agent` | Launches portable, fluid In-IDE Bento Grid dashboard on port `4200` |
-| **Agentic Team Ecosystem** | `/team-ecosystem-ca-agent` | Optional default-installed 14-team orchestrator (`agentic-team-ecosystem`) across SaaS, E-commerce, Brand, Software, App, ML/DL/DS, CV & OS builds |
+| **Agentic Team Ecosystem** | `/team-ecosystem-ca-agent` | **First-choice** 14-team orchestrator (`agentic-team-ecosystem`) across SaaS, E-commerce, Brand, Software, App, ML/DL/DS, CV & OS builds |
 
 ---
 
@@ -246,7 +326,7 @@ The in-built **Project-Manager-Dashboard** is a zero-dependency, Apple/Linear an
 ### 1. Unified 1-in-2 Framework Master Guides
 - **[PROJECT-MANAGER-DASHBOARD-GUIDE.md](PROJECT-MANAGER-DASHBOARD-GUIDE.md)** — In-IDE Project-Manager-Dashboard step-by-step launch, docking, AC engine, and token telemetry guide.
 - **[SDD-Vibe-Production-Guide-Universal.md](SDD-Vibe-Production-Guide-Universal.md)** — Universal 1-in-2 production guide with variable mapping for any SaaS, web app, or enterprise platform.
-- **[SDD-Vibe-Custom-Slash-Command-Universal.md](SDD-Vibe-Custom-Slash-Command-Universal.md)** — Tabular operational reference for all 16 commands across the 4-phase hybrid pipeline.
+- **[SDD-Vibe-Custom-Slash-Command-Universal.md](SDD-Vibe-Custom-Slash-Command-Universal.md)** — Tabular operational reference for all 17 commands across the 4-phase hybrid pipeline.
 
 ### 2. Concrete Reference Implementations (EduSphere School Management System Demo)
 - **[SDD-Vibe-Production-Guide-SMS.md](SDD-Vibe-Production-Guide-SMS.md)** — Step-by-step 1-in-2 production guide for building EduSphere (Frontend Sensory Demo → PostgreSQL RLS, TDD & FERPA compliance).
