@@ -14,6 +14,14 @@ assert.strictEqual(eco.groups.length, 4, 'Expected 4 ecosystem groups');
 const totalTeams = eco.groups.reduce((sum, g) => sum + g.teams.length, 0);
 assert.strictEqual(totalTeams, 14, 'Expected 14 specialized teams');
 
+const group4 = eco.groups.find(g => g.id === 'Group 4');
+const team12 = group4 && group4.teams.find(t => t.id === 'Team 12');
+assert.ok(team12, 'Expected Team 12 in Group 4');
+assert.ok(
+  Array.isArray(team12.subAgents) && team12.subAgents.some(a => /Finance Management Agent/i.test(a)),
+  'Expected Team 12 to define Finance Management Agent'
+);
+
 const requiredDomains = [
   'SaaS',
   'E-commerce',

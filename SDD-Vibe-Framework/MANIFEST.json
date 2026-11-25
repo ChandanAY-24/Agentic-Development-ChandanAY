@@ -4,11 +4,11 @@
   "created": "2026-11-04",
   "license": "Guideline package: MIT (repository root LICENSE); instantiated project: select per LICENSE-DECISION.md",
   "hash_note": "sha256 of file bytes; text files normalized to LF line endings before hashing",
-  "file_count_excluding_manifest": 179,
+  "file_count_excluding_manifest": 180,
   "files": [
     {
       "path": ".agents/README.md",
-      "sha256": "7c2c02b25c98cd2bf30e1ef30f07b1d1519107de57b7fe7f72a6839a59f7d131"
+      "sha256": "2c0c5cc2892ca9b2fffd33829f83b479833f90a40cdfbaae6c5eafe572dafe41"
     },
     {
       "path": ".agents/commands/README.md",
@@ -100,7 +100,7 @@
     },
     {
       "path": ".agents/skills/agentic-team-ecosystem/references/01-hierarchy-and-auto-triggers.md",
-      "sha256": "2bd8741615587a5c589a85649fa4354b1c9f32ce09f55e3f04f372852c5a385f"
+      "sha256": "2eb875dd7559fb74105157a88562d01447c951e9583ba48dfbe3182838b738db"
     },
     {
       "path": ".agents/skills/agentic-team-ecosystem/references/02-discovery-design-dev-teams.md",
@@ -112,7 +112,7 @@
     },
     {
       "path": ".agents/skills/agentic-team-ecosystem/references/04-docs-business-marketing-teams.md",
-      "sha256": "ca304f095e2c35d7ce523f7219ca1cf6ade8d3854f8fe4ce986f8578ee6513d9"
+      "sha256": "704c5f071cc6e1cfc266fa4cc0af696cf9304298ae1d006c70fbe0a12b0542a4"
     },
     {
       "path": ".agents/skills/agentic-team-ecosystem/references/05-brand-marketing-proposals.md",
@@ -376,15 +376,15 @@
     },
     {
       "path": "Project-Manager-Dashboard/parser.js",
-      "sha256": "b2bd9c305986610f6827886c273dc99406f5b138da376b8fcc49c77ecfd6d129"
+      "sha256": "7a55f47767d9f0026e4fa56ee663cf4e96ffd55db07bf32bb48afb3a34dba79c"
     },
     {
       "path": "Project-Manager-Dashboard/server.js",
-      "sha256": "248cb3a6f0b4d56c0eff962c929d4c1aaf44eae7ab3b4e3668b4bec44b36720a"
+      "sha256": "6f6a10e35802a0a1cfd303872dc7e36ecac8a2e90990f99ca68dc09b74c7afc7"
     },
     {
       "path": "README.md",
-      "sha256": "4823753450fce65d6ec0233c4e4a7e1737cdb9023dad517b0c6c6eca3029c77c"
+      "sha256": "a9e8683bc56e812f22ad8b45c28ba3fe0d4a07521b8c06fce5f22594bbdaee9c"
     },
     {
       "path": "SOURCE-NOTES.md",
@@ -396,7 +396,7 @@
     },
     {
       "path": "docs/INDEX.md",
-      "sha256": "2abf4df80d34567297baa05a3c8e4c4eb776cc506ff9fc687579786e38f75764"
+      "sha256": "b7ccf28a5ad0a53b6ee4e6ccbf936fb159de22e718eb0c339a4eebcd910ca161"
     },
     {
       "path": "docs/acceptance-criteria.md",
@@ -492,7 +492,7 @@
     },
     {
       "path": "docs/error-tracker.md",
-      "sha256": "4076bb33016d5cf4cf027e54416f9e2a5d7b566838f300954a12f82302839d57"
+      "sha256": "3ba044bd6163d2d6f47eb3e1a7f4b8149fcb2fd8a2cb50094e2feba155a70549"
     },
     {
       "path": "docs/features/001-example-feature/acceptance.md",
@@ -696,7 +696,7 @@
     },
     {
       "path": "tests/test_agent_ecosystem.js",
-      "sha256": "8b64395cc8e8a2fcbcc1db5b44003898dd62738b879f3e2167dd3a0923f2813a"
+      "sha256": "38c1822976c752bc7d0d80452156f3923d03445ad5075c8474875dbf717a0b72"
     },
     {
       "path": "tests/test_architecture_feature.js",
@@ -717,6 +717,10 @@
     {
       "path": "tests/test_logs_feature.js",
       "sha256": "c9437602403226e90dc7824d14d14ff85ba5da316959e6c6f740ee0ddae8ce0a"
+    },
+    {
+      "path": "tests/test_sse_stream.js",
+      "sha256": "4636f57e462d88fda5fe09598437c32381a17e00cee3569a436f4cc9ff8c871e"
     },
     {
       "path": "tests/test_token_telemetry.js",

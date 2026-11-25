@@ -21,6 +21,18 @@
   - **Business Risk Management:** Market, regulatory, vendor lock-in, and churn risks with mitigations.
   - **Sales & Data Strategy:** Funnel metrics, cohort retention, pricing tiers, and KPI dashboards reported to the Developer.
 
+### Sub-Agent: Finance Management Agent (`Finance Agent`)
+
+**Scope:** End-to-end financial governance, budgeting, cashflow/runway forecasting, unit economics, and payment/tax readiness across the project lifecycle.
+
+- **Core Responsibilities:**
+  - **Budgeting, Cashflow & Runway:** CapEx/OpEx forecasting, monthly burn rate, runway modeling, and milestone-based budget allocation.
+  - **Unit Economics & Pricing:** CAC, LTV, payback period, gross/net margin analysis, break-even modeling, and SaaS/E-commerce pricing tier validation.
+  - **Added & Hidden Cost Governance:** Audit payment gateway fees, cloud/egress spend, LLM/API token budgets, third-party licenses, and compliance overhead.
+  - **Payment Schedules & Tax Readiness:** Multi-stage payment breakdowns (aligned with [05-brand-marketing-proposals.md](05-brand-marketing-proposals.md)), invoicing milestones, and GST/VAT/tax reserve planning.
+- **Deliverables & Escalation:**
+  - Financial Plan & Budget Summary, Unit Economics & Margin Scorecard, and Cost-Overrun Alerts escalated to **Team 1** and the **Developer** before irreversible spend.
+
 ---
 
 ## Team 13 — Marketing & Brand Team

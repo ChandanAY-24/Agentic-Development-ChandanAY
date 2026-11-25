@@ -51,7 +51,7 @@ Review • Verify • SAST • Release Gate`"]:::sdd
     subgraph SharedCore ["🏛️ UNIFIED GOVERNANCE & MISSION CONTROL"]
         direction LR
         AgentEngine["`**🤖 .agents/ Asset Repository**
-17 Commands & 19 Deterministic Skills`"]:::core
+17 Commands & 18 Deterministic Skills`"]:::core
         DashboardEngine["`**🖥️ In-IDE Mission Control**
 Zero-Dependency Daemon (Port 4200)`"]:::core
         DocGovernance["`**📑 docs/ Governance Engine**
@@ -241,7 +241,7 @@ When adding any new custom feature during an active project or after launch, **A
 
 ### 4. Preset Multi-IDE Chat Tabs (Claude Code, Antigravity, Cursor, Windsurf, Codex, Copilot)
 
-Run `python scripts/sync_ide_adapters.py --ides all` (inside `SDD-Vibe-Framework/`) to preset all `17` `/-ca-agent` commands, `19` skills, and lifecycle hooks into every host IDE:
+Run `python scripts/sync_ide_adapters.py --ides all` (inside `SDD-Vibe-Framework/`) to preset all `17` `/-ca-agent` commands, `18` skills, and lifecycle hooks into every host IDE:
 - **Claude Code:** `.claude/commands/`, `.claude/skills/`, `.claude/settings.json`
 - **Antigravity:** `.agents/workflows/` + `.agents/hooks.json`
 - **Cursor / Windsurf / Codex / Copilot:** `.cursor/`, `.windsurf/`, `.codex/`, `.github/prompts/`

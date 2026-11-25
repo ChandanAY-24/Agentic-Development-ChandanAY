@@ -2011,7 +2011,12 @@ class DashboardParser {
           name: 'Documentation, Business, Marketing & Guidance',
           teams: [
             { id: 'Team 11', name: 'Documentation Team', scope: 'PPT/DOCS decks, Docs/PRD, README, LICENSE' },
-            { id: 'Team 12', name: 'Business & Data Analyst Team', scope: 'Business value, logistics, revenue, hidden cost audit, financial plan' },
+            {
+              id: 'Team 12',
+              name: 'Business & Data Analyst Team',
+              scope: 'Business value, logistics, revenue, hidden cost audit, financial plan & finance management',
+              subAgents: ['Business & Data Analyst', 'Finance Management Agent (Finance Agent)']
+            },
             { id: 'Team 13', name: 'Marketing & Brand Team', scope: 'Brand identity, SEO/AEO/GEO, CRM, WhatsApp/FB/IG/LinkedIn, proposals' },
             { id: 'Team 14', name: 'Manual Workflow Guider Agent', scope: 'Step-by-step developer guidance, next-action prompts, blocker resolution' }
           ]

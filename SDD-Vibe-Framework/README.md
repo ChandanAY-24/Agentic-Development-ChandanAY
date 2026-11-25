@@ -131,7 +131,7 @@ IN REVIEW → APPROVED`"]:::gov
 
 ### Adding New Custom Features Later & Preset Multi-IDE Chat Tabs
 - **New Custom Features (Mid-Project or Post-Launch):** Run `/change-request-ca-agent` if touching an `APPROVED` spec, then invoke `/team-ecosystem-ca-agent` for the new feature so Team 14 guides it through `/plan-ca-agent` → `/task-ca-agent` → `/run-ca-agent` → `/dashboard-ca-agent` → `/spec-check-ca-agent` → `/testing-ca-agent` → `/tdd-ca-agent` → `/review-ca-agent` → `/security-audit-ca-agent`.
-- **Preset Multi-IDE Chat Tabs:** Run `python scripts/sync_ide_adapters.py --ides all` (or `python scripts/init_project.py --ides all`) to preset all `17` commands and `19` skills in **Claude Code** (`.claude/`), **Antigravity** (`.agents/workflows/`), **Cursor**, **Windsurf**, **Codex**, and **Copilot**. Use separate chat tabs per Group/Step to keep context windows lean.
+- **Preset Multi-IDE Chat Tabs:** Run `python scripts/sync_ide_adapters.py --ides all` (or `python scripts/init_project.py --ides all`) to preset all `17` commands and `18` skills in **Claude Code** (`.claude/`), **Antigravity** (`.agents/workflows/`), **Cursor**, **Windsurf**, **Codex**, and **Copilot**. Use separate chat tabs per Group/Step to keep context windows lean.
 
 ---
 
@@ -232,7 +232,7 @@ flowchart LR
         AGENTS["`**🤖 Agent Master Directives**
 AGENTS.md • GEMINI.md • CLAUDE.md`"]:::agent
         AgentsDir["`**🛠️ .agents/ Canonical Asset Store**
-17 Commands • 19 Skills • Hooks`"]:::agent
+17 Commands • 18 Skills • Hooks`"]:::agent
         DocsDir["`**📑 docs/ Living Specs & Architecture**
 Plan • Prompts • Spec • ADRs • Approvals`"]:::doc
         DashboardDir["`**🖥️ Project-Manager-Dashboard**

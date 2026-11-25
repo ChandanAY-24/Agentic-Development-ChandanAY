@@ -101,7 +101,15 @@ function broadcastState() {
     const state = parser.getDashboardState('SDD');
     const data = `data: ${JSON.stringify(state)}\n\n`;
     sseClients.forEach(res => {
-      res.write(data);
+      if (res.destroyed || res.writableEnded) {
+        sseClients.delete(res);
+        return;
+      }
+      try {
+        res.write(data);
+      } catch (writeErr) {
+        sseClients.delete(res);
+      }
     });
   } catch (err) {
     console.error('[Dashboard] Error broadcasting state:', err.message);
@@ -170,6 +178,17 @@ const server = http.createServer((req, res) => {
 
   // 1. SSE Real-Time Stream Endpoint
   if (req.url === '/api/stream') {
+    const cleanup = () => {
+      sseClients.delete(res);
+    };
+    req.on('close', cleanup);
+    res.on('close', cleanup);
+    res.on('error', cleanup);
+
+    if (res.destroyed || res.writableEnded) {
+      return;
+    }
+
     res.writeHead(200, {
       'Content-Type': 'text/event-stream',
       'Cache-Control': 'no-cache, no-transform',
@@ -177,14 +196,15 @@ const server = http.createServer((req, res) => {
     });
 
     // Send initial state immediately
-    const initialState = parser.getDashboardState('SDD');
-    res.write(`data: ${JSON.stringify(initialState)}\n\n`);
-
-    sseClients.add(res);
-
-    req.on('close', () => {
-      sseClients.delete(res);
-    });
+    try {
+      const initialState = parser.getDashboardState('SDD');
+      if (!res.destroyed && !res.writableEnded) {
+        res.write(`data: ${JSON.stringify(initialState)}\n\n`);
+        sseClients.add(res);
+      }
+    } catch (err) {
+      cleanup();
+    }
     return;
   }
 

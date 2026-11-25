@@ -21,7 +21,7 @@ Developer (Human Authority & Final Sign-Off)
       │    └── Team 10 Coordinator & Sub-Agents (24x7 Maintenance & Vulnerability Escalation)
       └── Group 4 Main Agent: Documentation, Business & Marketing
            ├── Team 11 Coordinator & Sub-Agents (Documentation: PPT / DOCS / PRD)
-           ├── Team 12 Coordinator & Sub-Agents (Business & Data Analyst: ROI / Cost / Risk)
+           ├── Team 12 Coordinator & Sub-Agents (Business & Data Analyst + Finance Management Agent: ROI / Budget / Cost / Risk)
            └── Team 13 Coordinator & Sub-Agents (Marketing / Brand / SEO-AEO-GEO / CRM)
 ```
 

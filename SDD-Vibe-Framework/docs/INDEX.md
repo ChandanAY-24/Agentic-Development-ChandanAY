@@ -62,7 +62,7 @@
 - `docs/changes/`, `docs/approvals/`: change requests (`CR-###`) and approval records (`APR-###`); dashboard drafts `approval-phase-*.md` are gitignored until a human completes them.
 - `docs/domains/`: optional controlled domain extensions.
 - `playbooks/`: 11 operational workflow instructions.
-- `.agents/`: portable skills (`19` playbooks including `agentic-team-ecosystem`), `17` collision-free `-ca-agent` commands, lifecycle hooks and reporting templates.
+- `.agents/`: portable skills (`18` playbooks including `agentic-team-ecosystem`), `17` collision-free `-ca-agent` commands, lifecycle hooks and reporting templates.
 - `Project-Manager-Dashboard/`: local-only In-IDE dashboard reading `docs/task.md`, `docs/phases.md`, `docs/features/` and `docs/error-tracker.md` (launch with `/dashboard-ca-agent`).
 - `scripts/`: `check_docs.py` (documentation/spec conformance) and `manifest.py` (MANIFEST generation and verification), run in CI and pre-commit.
 

@@ -104,7 +104,7 @@ Replace these placeholders when adapting this guide to any project:
 
 ### Preset Multi-IDE Chat Tabs (Claude Code, Antigravity, Cursor, Windsurf, Codex, Copilot)
 1. Run `python scripts/sync_ide_adapters.py --ides all` inside `{{PROJECT_NAME}}/`.
-2. Every host IDE chat tab now has all `17` `/-ca-agent` commands and `19` skills preset (`.claude/`, `.agents/workflows/`, `.cursor/`, `.windsurf/`, `.codex/`, `.github/prompts/`).
+2. Every host IDE chat tab now has all `17` `/-ca-agent` commands and `18` skills preset (`.claude/`, `.agents/workflows/`, `.cursor/`, `.windsurf/`, `.codex/`, `.github/prompts/`).
 3. Use dedicated chat tabs per Group/Step (e.g., Tab 1: `/team-ecosystem-ca-agent` + `/plan-ca-agent`, Tab 2: `/run-ca-agent`, Tab 3: `/tdd-ca-agent`, Tab 4: `/dashboard-ca-agent`) to keep context windows lean.
 
 ### External Skill Mapping & Exact Trigger Timing (Max 1–3/Step, Rank #1 Only)

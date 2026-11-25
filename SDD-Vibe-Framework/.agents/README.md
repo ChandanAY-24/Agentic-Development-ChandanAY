@@ -36,7 +36,7 @@ flowchart LR
         Commands["`**⚡ commands/ Catalog**
 17 Collision-Free *-ca-agent.md Commands`"]:::asset
         Skills["`**📚 skills/ Playbooks**
-19 Reusable Skills & Ecosystem Playbooks`"]:::asset
+18 Reusable Skills & Ecosystem Playbooks`"]:::asset
         Hooks["`**🪝 hooks/ & hooks.json**
 SessionStart, PreToolUse, PostToolUse`"]:::asset
         Templates["`**📑 templates/ Contracts**
@@ -94,7 +94,7 @@ Typing '/' Displays All 17 Commands`"]:::ui
 | :--- | :--- |
 | `commands/` | 17 canonical, collision-free agent commands named `<name>-ca-agent.md` (see [`commands/README.md`](commands/README.md)). |
 | `workflows/` | Antigravity-native slash-command mirrors (`<name>-ca-agent.md`) synced from `commands/` so `/<name>-ca-agent` appears in the `/` dropdown. |
-| `skills/` | 19 domain-specific capability playbooks, each `skills/<name>/SKILL.md` with standardized `name`/`description` frontmatter. |
+| `skills/` | 18 domain-specific capability playbooks, each `skills/<name>/SKILL.md` with standardized `name`/`description` frontmatter. |
 | `hooks.json` | Executable Antigravity lifecycle hooks (`SessionStart`, `PreToolUse`, `PostToolUse`) backed by `scripts/hooks/*.py`. |
 | `hooks/` | Lifecycle hook execution contracts and security matrices ([`hooks/HOOK-MATRIX.md`](hooks/HOOK-MATRIX.md)). |
 | `templates/` | Standardized reporting artifacts (`AGENT-TASK-CONTRACT.md`, `AGENT-COMPLETION-REPORT.md`). |
