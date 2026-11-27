@@ -38,6 +38,7 @@ Multi-agent execution and delegation governance.
 ### 6. Handoffs
 
 - **MUST** — Transmit verified facts, links, changed files, test results and unresolved blockers.
+- **MUST** — Emit a compact **Memory Delta** (`Verified Fact`, `Decision`, `Blocker`, or `Do-Not-Repeat Lesson` with `source:` link and `DD-MM-YYYY` date) targeting the relevant **Related-Agent Memory Lane** in `docs/memory.md` so peer/successor agents inherit verified context without re-scanning the repository.
 
 ### 7. Untrusted content
 

@@ -3,7 +3,7 @@
 
 Purpose: Standardize structured error handling, safe client responses, logging, and incident recovery.
 Read trigger: MUST read when designing API error responses, retry logic, or incident runbooks.
-Applicability: SDD
+Applicability: SDD-Vibe (1-in-2 Single Workflow)
 
 Prerequisites:
 - Read `docs/error-tracker.md`, `docs/apis.md`, `docs/observability.md`, and `docs/runbook.md`.

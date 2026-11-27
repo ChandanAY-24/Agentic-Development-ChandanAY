@@ -40,9 +40,9 @@
    - Never write loose log files into source code or root folders.
    - Sanitize all credentials, tokens, and PII prior to logging. Keep directory tracked via `logs/.gitkeep` and git-ignore `logs/*.log`.
 
-7. **Pre-Step 5 Domain Knowledge & System Design Synthesis:**
-   - Before executing Step 5 (Prompt 1: Master Architecture), developers and agents must synthesize comprehensive domain knowledge (business rules, regulatory constraints) and system design (HLD/LLD, data models, entity relationships).
-   - If not manually provided, the developer **MUST ask the AI agent** about the overall system design during the planning phase, and integrate this synthesized design directly into the first prompt.
+7. **Pre-Step 5 Domain Knowledge, Pin-Point Grilling & Transparency Gate:**
+   - Before executing Step 5 (Prompt 1: Master Architecture) or creating any `FEAT-###` spec, run `/plan-ca-agent` (`requirements-analysis`) to execute **Adaptive Pin-Point Developer Grilling** and **Accurate Domain Research** until `0` `CRITICAL` ambiguities remain.
+   - Tag every domain/technical claim `[VERIFIED: <source>]` or `[ASSUMPTION — NEEDS CONFIRMATION]`, persist binding domain rules to `docs/domains/<domain>.md`, and consult `docs/skills.md` (§3) for **0-confusion skill selection** across Core, Antigravity, Vercel, Claude, and GitHub skills (never silently load Mode 2/3 skills).
 
 ---
 

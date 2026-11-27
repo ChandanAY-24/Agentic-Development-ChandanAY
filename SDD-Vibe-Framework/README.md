@@ -257,3 +257,5 @@ Structured Runtime Logs • Redacted PII`"]:::log
   - **Modular Format (`docs/features/NNN-name/{feature,acceptance,test-plan}.md`):** Tier 3 (Complex / Distributed) features.
 - **Traceability Requirement:** All tests must carry `TEST-FEAT###-## / AC-FEAT###-##: <behavior>` in their title.
 - **Development Logging:** All command runs and background test suites must write sanitized output to `logs/*.log`.
+- **Execution Playbooks (`playbooks/`):** Operational `.txt` runbooks (`01-Setup-Project.txt` through `11-Checklist.txt`) govern setup, implementation, feature specs, auth, MCP, integrations, QA, debugging, validation, error handling, and release checklists.
+- **Granular Feature Workflow & External Skills:** Follow [`docs/granular-feature-workflow.md`](docs/granular-feature-workflow.md) for Tier 1–3 feature pacing, and [`07-curated-external-skills-registry.md`](.agents/skills/agentic-team-ecosystem/references/07-curated-external-skills-registry.md) for verified GitHub/official external skills and plugins.

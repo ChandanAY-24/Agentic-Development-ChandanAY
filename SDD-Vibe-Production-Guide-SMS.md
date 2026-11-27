@@ -43,6 +43,16 @@ Before writing code, EduSphere establishes its domain taxonomy (`CAP-###` → `R
 ## 4. Quality Audit & Production Release (Phase 4)
 
 - Run `/review-ca-agent` and `/verify-ca-agent` to confirm `AC-*` → `TEST-*` traceability.
-- Run `/security-audit-ca-agent` to verify zero secret leaks and strict `school_id` RLS enforcement.
+- Run `/security-audit-ca-agent` (with `gitleaks`, `semgrep`, and `trivy`) to verify zero secret leaks and strict `school_id` RLS enforcement.
 - Run `python scripts/check_docs.py` and `python scripts/manifest.py --check`.
 - Execute `/release-check-ca-agent` for final production sign-off.
+
+---
+
+## 5. Recommended GitHub & Official Skills / Plugins for EduSphere SMS
+
+All external skills are **optional (Developer Choice)** and vetted per [`07-curated-external-skills-registry.md`](SDD-Vibe-Framework/.agents/skills/agentic-team-ecosystem/references/07-curated-external-skills-registry.md):
+- **Core Baseline:** [`anthropics/skills`](https://github.com/anthropics/skills), `claude-mem`, `serena`
+- **Discovery & Visual Plan Review:** `grill-me`, [`backnotprop/plannotator`](https://github.com/backnotprop/plannotator), [`cathrynlavery/diagram-design`](https://github.com/cathrynlavery/diagram-design)
+- **Next.js / React UI Demo:** [`vercel-labs/agent-skills`](https://github.com/vercel-labs/agent-skills), [`juxtopposed/realtimecolors`](https://github.com/juxtopposed/realtimecolors), [`ibelick/motion-primitives`](https://github.com/ibelick/motion-primitives)
+- **E2E & Security Gates:** [`microsoft/playwright`](https://github.com/microsoft/playwright), [`gitleaks/gitleaks`](https://github.com/gitleaks/gitleaks), [`semgrep/semgrep`](https://github.com/semgrep/semgrep), [`aquasecurity/trivy`](https://github.com/aquasecurity/trivy)

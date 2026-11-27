@@ -21,4 +21,11 @@ Canonical `.agents/` contracts (`.agents/commands/`, `.agents/skills/`) serve as
 - **MUST** request approval before modifying process guidelines or enabling external integrations.
 - **SHOULD** maintain portability across Claude Code, Cursor, Windsurf, Antigravity, OpenCode, Trae, Codex, and terminal agents.
 
+## Agent–Developer Transparency Contract
+
+- **MUST** tag every domain/technical claim as `[VERIFIED: <source/file>]` or `[ASSUMPTION — NEEDS CONFIRMATION]`; never present guesses as verified facts.
+- **MUST** complete **Pre-Start Pin-Point Grilling & Domain Research** (`requirements-analysis` / `/plan-ca-agent`) until `0` `CRITICAL` ambiguities remain before generating PRDs, architecture, or feature specs.
+- **MUST** follow the **Zero-Confusion Universal Skill Activation Policy** (`docs/skills.md` + `07-curated-external-skills-registry.md`): never silently load external skills; disclose `Skill | Ecosystem | Why Now | Mode` and wait for developer `"yes"` on Mode 2/3 skills.
+- **MUST** surface blockers, failed checks, and architectural trade-offs immediately (no silent workarounds) and log decisions in `docs/decision-log.md`.
+
 **Rule:** IDE switching must never silently change project specifications, engineering guidelines, testing policies, security controls, or repository structure.

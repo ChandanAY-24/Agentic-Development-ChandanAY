@@ -3,10 +3,10 @@
 
 Purpose: Author, review, approve, and evolve feature contracts in `docs/features/` with mandatory Flat vs Modular developer inquiry and complexity tiers.
 Read trigger: MUST read before creating a new feature spec or modifying an existing feature.
-Applicability: SDD
+Applicability: SDD-Vibe (1-in-2 Single Workflow)
 
 Prerequisites:
-- Read `docs/features/README.md`, `docs/requirements-traceability.md`, and `docs/change-control.md`.
+- Read `docs/features/README.md`, `docs/granular-feature-workflow.md`, `docs/requirements-traceability.md`, and `docs/change-control.md`.
 - All features live in `docs/features/`; repository-level `specs/` is prohibited.
 
 Commands & Skills:

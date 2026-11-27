@@ -51,25 +51,43 @@ Verified project-state recap, never source of new requirements.
 
 - **MUST** — End every agent session by updating the next authorized action, open questions and evidence links.
 
+### 10. Scoped Project Memory for Related Agents
+
+- **MUST** — Partition shared project memory into **Global Verified State** plus **Related-Agent Memory Lanes** so sub-agents and specialized teams read/write only their relevant lane without polluting unrelated context windows.
+- **MUST** — Include a `source:` file/commit link and `DD-MM-YYYY` date on every lane entry, and prune stale entries when a feature reaches `APPROVED` or a phase closes.
+
 ## Instantiation template
 
 Copy into the project instantiation (below this section or into a dedicated file) and replace every placeholder. Keep IDs from `docs/requirements-traceability.md`.
 
 ```markdown
+### Global Verified State
 | Field | Value |
 |---|---|
-| Last reconciled | YYYY-MM-DD by [agent/person] against commit [SHA] |
+| Last reconciled | DD-MM-YYYY by [agent/person] against commit [SHA] |
 | Current phase | Phase N (docs/phases.md) |
 | Active task | TASK-### for FEAT-### (version) |
+| Next authorized action | [Exact next approved step] |
 
-### Verified facts (each with source link)
-- [Fact] — source: [docs/... or commit]
+### Related-Agent Memory Lanes (Read/Write Scoped by Role)
+
+#### 1. Architecture & Domain Lane (Team 2, `/plan-ca-agent`, `architecture-review`)
+- [Verified HLD/LLD invariant or domain rule] — source: [docs/system-architecture.md or ADR-####] (DD-MM-YYYY)
+
+#### 2. UI/UX & Sensory Demo Lane (Team 3, `ui-fidelity-review`, `accessibility-auditor`)
+- [Design token, layout decision, or `:3000` sensory sign-off] — source: [docs/design.md or docs/plan.md] (DD-MM-YYYY)
+
+#### 3. Implementation & TDD Lane (Team 4, `/tdd-ca-agent`, `/implement-ca-agent`, `tdd-enforcer`)
+- [Active `AC-FEAT###-##` test state or API/DB contract note] — source: [docs/features/NNN-name.md] (DD-MM-YYYY)
+
+#### 4. Security, QA & Error Triage Lane (Team 5/6/7/8, `security-auditor`, `/errorlogs-ca-agent`)
+- [Open finding, bot-probe signature, or `ERR-###` do-not-repeat lesson] — source: [docs/error-tracker.md or logs/] (DD-MM-YYYY)
+
+#### 5. Ops, Release & GEO/Growth Lane (Team 9/10/11/13, `release-validator`)
+- [Deployment target, `llms.txt`/GEO endpoint, or store publishing state] — source: [docs/deployment.md] (DD-MM-YYYY)
 
 ### Open questions / assumptions
-- [Question] — owner: [Name] — raised: YYYY-MM-DD
-
-### Do not repeat (lessons)
-- [Lesson] — see ERR-### / DEC-###
+- [Question] — owner: [Name] — raised: DD-MM-YYYY
 ```
 
 ## Evidence and change control

@@ -3,7 +3,7 @@
 
 Purpose: Design, contract-test, and harden third-party APIs, webhooks, and database/service integrations.
 Read trigger: MUST read before adding or changing external API clients, webhooks, or schema migrations.
-Applicability: SDD
+Applicability: SDD-Vibe (1-in-2 Single Workflow)
 
 Prerequisites:
 - Read `docs/apis.md`, `docs/database.md`, `docs/dependencies.md`, and approved `FEAT-###`.

@@ -6,7 +6,7 @@
 
 - **Deliverables:**
   - `docs/PRD` (Product Requirements Document), `docs/features/`, `README.md`, `LICENSE`.
-  - **PPT / Pitch & Architecture Decks** (structured slide outlines + Mermaid diagrams for stakeholders/clients).
+  - **PPT / Pitch & Architecture Decks** (structured slide outlines + Mermaid or `diagram-design` editorial HTML+SVG diagrams for stakeholders/clients).
   - **User & Operator Docs:** Onboarding guides, API references, runbooks, and release handoff reports (`/handoff-ca-agent`).
 
 ---
@@ -40,12 +40,12 @@
 **Scope:** Premium, memorable brand building, customer psychology, search visibility, and lead/sales generation.
 
 - **Brand Identity & Strategy:**
-  - Discovery & research, strategy & concept building, identity development, brand applications & presentations, brand guideline revisions.
+  - Discovery & research, strategy & concept building, identity development (optionally using `Realtime-color` for palette/typography tokens and `Haikei` for SVG brand assets), brand applications & presentations, brand guideline revisions.
   - Customer psychology & emotional impression, brand voice/communications, consistent brand identity, market value, **packaging**, client feedback loops, and **terms & conditions**.
 - **Search & Content Engine:**
   - Keyword research across **SEO** (Search Engine Optimization), **AEO** (Answer Engine Optimization), and **GEO** (Generative Engine Optimization).
   - Content Writer, poster/ad creative briefs, landing page & campaign copy.
 - **CRM, Outreach & Sales Generation:**
   - Lead management & CRM workflows.
-  - Channel-ready messaging & campaign templates for **WhatsApp**, **Facebook**, **Instagram**, and **LinkedIn** (human-approved before sending).
+  - Channel-ready messaging & campaign templates for **WhatsApp** (optionally integrated via self-hosted `OpenWA` / `open-wa` after Team 6 vetting), **Facebook**, **Instagram**, and **LinkedIn** (human-approved before sending).
 - **Proposal Templates:** Use [05-brand-marketing-proposals.md](05-brand-marketing-proposals.md) for client discovery, brand proposals, and 5-stage payment breakdowns.

@@ -1,6 +1,27 @@
-# 07 — Curated, Trust-Tiered & Ranked External Skills Registry
+# 07 — Curated, Trust-Tiered & Zero-Confusion Universal Skills Registry
 
-**Policy:** All external skills, MCPs, and packages listed here are **optional (Developer Choice)** per `docs/skills.md`. Never pre-bundle, never load randomly, and **never install from unverified forks**. Always verify the official GitHub org / npm / Vercel / Anthropic source and pass the **5-Point Security Vetting Checklist** ([02-discovery-design-dev-teams.md](02-discovery-design-dev-teams.md)) before enabling.
+**Policy:** All external skills, MCPs, and packages listed here are **optional (Developer Choice)** per `docs/skills.md`. Never pre-bundle, never load randomly, and **never install from unverified forks**. Always verify the official GitHub org / npm / Vercel / Anthropic source, pass the **5-Point Security Vetting Checklist** ([02-discovery-design-dev-teams.md](02-discovery-design-dev-teams.md)), and emit the **Transparent Skill Disclosure** (`Skill | Ecosystem | Why Now | Mode`) before enabling.
+
+---
+
+## 0. Zero-Confusion Universal Feature-to-Skill & Timing Router
+
+Use this single table to know **with 0 confusion** which skill (Core, **Antigravity**, **Vercel**, **Claude**, or **GitHub**) applies to a feature at a **particular time**, vs. which ones wait for **Developer Instruction**:
+
+| Feature / Need | Exact Phase / Time | Core / Antigravity Native | External Rank #1 (Claude / Vercel / GitHub) | Activation Mode | Never Mix With |
+|---|---|---|---|---|---|
+| **Pre-Start Grilling & Domain Research** | Phase 1 / Step 1 (`/plan-ca-agent`) | `requirements-analysis` | `grill-me` *(GitHub, Tier 3)* | **Mode 2** (Suggest 1 if deep grilling needed) | Unverified guesses |
+| **Visual Plan & Spec Review** | Phase 1–3 / Steps 2 & 6 | `architecture-review`, `spec-validator` | `plannotator` *(GitHub `backnotprop/plannotator`, Tier 2)* | **Mode 2** (Suggest at Step 2/6 gate) | Silent plan edits |
+| **Architecture & System Diagrams** | Phase 1 & 4 / Steps 2 & 7 | Mermaid in `docs/system-architecture.md` | `diagram-design` *(GitHub `cathrynlavery/diagram-design`, Tier 3)* | **Mode 2** (Suggest when editorial HTML+SVG needed) | Duplicate text-only diagrams |
+| **React / Next.js / Vercel Web Craft** | Phase 2–3 / Steps 3 & 5 | Antigravity `modern-web-guidance` | `vercel-labs/agent-skills` *(Vercel, Tier 1)* | **Mode 1/2** (Auto-active on Next.js/Vercel stack) | Legacy React patterns |
+| **Cloud / Mobile / AI Platform Stacks** | Phase 2–3 / Steps 3 & 5 | Antigravity `firebase-*`, `flutter-*`, `gemini-api-*`, `bigquery-*` | `anthropics/skills` *(Claude, Tier 1)* | **Mode 1** (Active only when that stack is in repo) | Cross-platform conflicting SDKs |
+| **UI Color, Typography & SVG Assets** | Phase 2 / Step 3 (Sensory Demo) | `ui-fidelity-review` | `Realtime-color` *(GitHub, Tier 2)* / `Haikei` *(Ref)* | **Mode 2** (Suggest at Step 3 visual setup) | Hardcoded ad-hoc hex codes |
+| **UI Motion / Glassmorphism / 3D** | Phase 2 / Step 3 (Sensory Demo) | `ui-fidelity-review` | `motion-primitives` *(GitHub, Tier 2)*; `glass-ui` / `react-spline` *(Tier 3)* | **Mode 3** (**Developer-Instructed Only**) | Mixing glassmorphism + brutalist kits |
+| **Browser Perf, LCP & A11y Audit** | Phase 2 & 4 / Steps 3 & 6 | Antigravity `chrome-devtools`, `a11y-debugging`, `accessibility-auditor`, `performance-profiler` | `playwright` *(GitHub/MS, Tier 1)* | **Mode 1** (Antigravity native) / **Mode 2** (`playwright` for E2E) | `obscura` + `playwright` together |
+| **Headless Recon / Owned-Staging** | Phase 3–4 / Steps 5 & 6 | — | `obscura` *(GitHub `h4ckf0r0day/obscura`, Tier 3)* | **Mode 3** (**Developer-Instructed Only**, owned targets) | Auth/CAPTCHA bypass |
+| **SAST, Secrets & Dependency CVEs** | Phase 4 / Step 6 (`/security-audit-ca-agent`) | `security-auditor` | `gitleaks` (secrets) + `semgrep` (SAST) + `trivy` (CVEs) *(Tier 1)* | **Mode 2** (Suggest per audit type) | `SecLists` unless developer instructs |
+| **Cross-Session Memory & Symbol Search** | Any Phase (Large Repo) | `docs/memory.md` (Memory Lanes) | `serena` *(Tier 2)* / `claude-mem` *(Tier 3, cross-harness)* | **Mode 2** (Suggest only on large multi-session repos) | Unscoped global memory dumps |
+| **Reverse Engineering / WhatsApp / Bot / Social** | Domain-Specific | — | `REA`, `OpenWA`, `OpenBot`, `postiz-app`, `claude-seo`, `ppt-master` | **Mode 3** (**Developer-Instructed Only**, except `ppt-master` at Step 7) | Unapproved external sends |
 
 ---
 
@@ -10,8 +31,8 @@
 2. **Frequency Tiers:**
    - **Every-Project Core:** High-frequency baseline tools needed on almost every web/software build.
    - **Phase-Gate:** Triggered only at specific gates (Discovery, Security Audit, Docs/Release).
-   - **Domain-Intuition:** Triggered only when the domain or UI/data requirement demands it (e.g., 3D, charts, SEO, pentesting).
-3. **Category Ranking Rule (Pick Rank #1 Only):** Within each category below, tools are ranked `#1, #2, #3` by **Trust Tier → Cross-Harness Portability → Token Efficiency**. **Use Rank #1 by default**; only fall back to `#2` or `#3` if `#1` lacks a required capability. Never load two overlapping tools of the same kind at once.
+   - **Domain-Intuition / Developer-Instructed:** Triggered only when the domain demands it or the developer explicitly instructs it.
+3. **Unambiguous Sub-Category Ranking (One `#1` per Sub-Category):** Within each sub-category below, there is **exactly one Rank `#1`** ordered by **Trust Tier → Cross-Harness Portability → Token Efficiency**. **Use Rank `#1` by default**; only fall back to `#2` or `#3` if `#1` lacks a required capability. Never load two overlapping tools of the same sub-category at once.
 
 ---
 
@@ -20,8 +41,8 @@
 | Tier | Source Standard | Verification Requirement |
 |---|---|---|
 | **Tier 1 (Official / Vendor)** | Official vendor orgs (`anthropics/skills`, `vercel-labs/agent-skills`, `microsoft/playwright`, `semgrep`, `aquasecurity/trivy`, `gitleaks`, `trufflesecurity/trufflehog`) | Verify exact org/package name; standard lockfile/checksum check |
-| **Tier 2 (Established OSS)** | Well-known open-source ecosystems (`superpowers`, `serena`, `graphify`, `openhands`, `dify`, `mantine`, `recharts`, `anime.js`, `motion.dev`, `SecLists`, `PayloadsAllTheThings`) | Verify official repo & license; read scripts before running |
-| **Tier 3 (Trending / Community)** | Specialized community skills (`grill-me`, `claude-mem`, `ui-ux-pro-max`, `find-skill`, etc.) | **Mandatory 5-Point Security Vetting Checklist** + sandbox dry-run before use |
+| **Tier 2 (Established OSS)** | Well-known open-source ecosystems (`superpowers`, `serena`, `graphify`, `openhands`, `dify`, `CopilotKit/OpenBot`, `mantine`, `recharts`, `anime.js`, `motion.dev`, `ibelick/motion-primitives`, `backnotprop/plannotator`, `juxtopposed/realtimecolors`, `open-wa/wa-automate-nodejs`, `SecLists`, `PayloadsAllTheThings`) | Verify official repo & license; read scripts before running |
+| **Tier 3 (Trending / Community)** | Specialized community skills & tools (`grill-me`, `claude-mem`, `ui-ux-pro-max`, `find-skill`, `cathrynlavery/diagram-design`, `AndreyBegma/glass-ui`, `alexburlis/glassyui`, `h4ckf0r0day/obscura`, `rmyndharis/OpenWA`, `nightly-labs/openbot`, `haikei.app`) | **Mandatory 5-Point Security Vetting Checklist** + sandbox dry-run before use |
 
 ---
 
@@ -29,16 +50,18 @@
 
 ### A. Discovery, Grilling, Planning & Meta-Workflow (Team 1, Team 2, Team 14)
 
-| Rank | Tool / Skill | Tier | Frequency | Trigger Intuition & Cross-Harness Note |
-|---|---|---|---|---|
-| **#1** | `anthropic` skills (`anthropics/skills`) | Tier 1 | Every-Project Core | Official baseline skill patterns; portable across Claude, Codex, Antigravity, Cursor |
-| **#2** | `superpowers` | Tier 2 | Every-Project Core | Structured brainstorming, planning, and TDD discipline |
-| **#3** | `andrej-karpathy` skill | Tier 2 | Domain-Intuition | Minimal-complexity coding & verification discipline |
-| **#1** | `grill-me` | Tier 3 | Phase-Gate (Step 1) | **Team 2 + Team 14:** Relentless requirement & design-decision grilling before coding |
-| **#2** | `ai-weekend-build` / `gstack` | Tier 3 | Domain-Intuition | Rapid MVP scoping & founder-mode execution sprints |
-| **#1** | `find-skill` | Tier 3 | Phase-Gate (Step 2) | **Team 2:** Discover & verify official skills on demand (replaces guessing) |
-| **#2** | `awesome-skills` / `skillopt` | Tier 3 | Domain-Intuition | Skill discovery & prompt/token optimization auditing |
-| **#3** | `ponytail` / `i-have-adhd` / `bla` / `hallmark` / `godmod` / `openclaw` / `ruflo` / `claude-octopus` | Tier 3 | Domain-Intuition | Specialized workflow/orchestration helpers; adapt `.agents/` contracts for all harnesses |
+| Sub-Category | Rank | Tool / Skill | Tier | Frequency | Trigger Intuition & Cross-Harness Note |
+|---|---|---|---|---|---|
+| **Baseline Workflow** | **#1** | `anthropic` skills (`anthropics/skills`) | Tier 1 | Every-Project Core | Official baseline skill patterns; portable across Claude, Codex, Antigravity, Cursor |
+| **Baseline Workflow** | **#2** | `superpowers` | Tier 2 | Every-Project Core | Structured brainstorming, planning, and TDD discipline |
+| **Baseline Workflow** | **#3** | `andrej-karpathy` skill | Tier 2 | Domain-Intuition | Minimal-complexity coding & verification discipline |
+| **Grilling & Scoping** | **#1** | `grill-me` | Tier 3 | Phase-Gate (Step 1) | **Team 2 + Team 14:** Relentless requirement & design-decision grilling before coding |
+| **Grilling & Scoping** | **#2** | `ai-weekend-build` / `gstack` | Tier 3 | Domain-Intuition | Rapid MVP scoping & founder-mode execution sprints |
+| **Skill Discovery** | **#1** | `find-skill` | Tier 3 | Phase-Gate (Step 2) | **Team 2:** Discover & verify official skills on demand (replaces guessing) |
+| **Skill Discovery** | **#2** | `awesome-skills` / `skillopt` | Tier 3 | Domain-Intuition | Skill discovery & prompt/token optimization auditing |
+| **Visual Plan Review** | **#1** | `plannotator` (`backnotprop/plannotator`) | Tier 2 | Phase-Gate (Steps 2 & 6) | **Team 1, Team 2, Team 7:** Local-first visual plan, spec & diff annotation UI with structured feedback loop across Claude, Codex, Gemini CLI & Cursor |
+| **Architecture Diagrams** | **#1** | `diagram-design` (`cathrynlavery/diagram-design`) | Tier 3 | Phase-Gate (Steps 2 & 7) | **Team 2 & Team 11:** Zero-dependency editorial HTML+SVG diagrams (52+ types: HLD/LLD/DFD/UML/ER/Sankey; imports Mermaid/draw.io/PlantUML) |
+| **Meta-Orchestration** | **#3** | `ponytail` / `i-have-adhd` / `bla` / `hallmark` / `godmod` / `openclaw` / `ruflo` / `claude-octopus` | Tier 3 | Domain-Intuition | Specialized workflow/orchestration helpers; adapt `.agents/` contracts for all harnesses |
 
 ---
 
@@ -52,7 +75,8 @@
 | **#1** | `REA` (Reverse Engineering Anything) | Tier 3 | Domain-Intuition | **Team 2 (REA Agent):** Reverse-engineer legacy apps, APIs, or binaries |
 | **#2** | `cli-anything` / `EEC` | Tier 3 | Domain-Intuition | Wrap workflows/APIs into deterministic CLIs |
 | **#1** | `dify` / `openhands` | Tier 2 | Domain-Intuition | **Team 4 (AI Stack):** Trigger only when building LLM agent pipelines or autonomous workflows |
-| **#2** | `Mirofish` | Tier 3 | Domain-Intuition | Multi-agent simulation & scenario modeling |
+| **#2** | `OpenBot` (`CopilotKit/OpenBot` / `nightly-labs/openbot`) | Tier 2/3 | Domain-Intuition | **Team 4 (AI Stack & Agent Workspaces):** Self-hostable MCP agent workspace with human-in-the-loop governance (`CopilotKit/OpenBot`) or local-first persistent task-agent runner (`nightly-labs/openbot`) |
+| **#3** | `Mirofish` | Tier 3 | Domain-Intuition | Multi-agent simulation & scenario modeling |
 
 ---
 
@@ -64,11 +88,14 @@
 | **#2** | `ui-ux-pro-max` / `impeccable` | Tier 3 | Domain-Intuition | High-craft UI/UX design system & polish rules |
 | **#3** | `emilkowalski` skill / `awesome-design-skill` | Tier 3 | Domain-Intuition | Micro-interactions, tactile UI feel, and curated design patterns |
 | **#1** | `21st` (21st.dev) / `mantine` | Tier 2/3 | Domain-Intuition | Production component library (`mantine` for full app suite; `21st` for marketing/hero blocks) |
-| **#2** | `kokonut-ui` / `bklit-ui` | Tier 3 | Domain-Intuition | Lightweight animated React/Tailwind UI primitives |
-| **#1** | `motion-dev` (`motion`) | Tier 2 | Domain-Intuition | Spring physics & React layout animations |
+| **#2** | `glass-ui` (`AndreyBegma/glass-ui` / `alexburlis/glassyui`) | Tier 3 | Domain-Intuition | Glassmorphism / Liquid Glass React + Tailwind UI primitives (use only when frosted/glass surfaces fit the brand; never mix with flat/brutalist kits) |
+| **#3** | `kokonut-ui` / `bklit-ui` | Tier 3 | Domain-Intuition | Lightweight animated React/Tailwind UI primitives |
+| **#1** | `motion-dev` (`motion`) / `motion-primitives` (`ibelick/motion-primitives`) | Tier 2 | Domain-Intuition | Spring physics & layout animations (`motion-dev`) + copy-paste accessible React/Tailwind micro-interactions (`motion-primitives`) |
 | **#2** | `anime.js` (`anime`) / `reanimate` | Tier 2/3 | Domain-Intuition | Timeline/SVG choreography (`anime.js`) or programmatic video/motion (`reanimate`) |
+| **#1** | `Realtime-color` (`juxtopposed/realtimecolors`) | Tier 2 | Phase-Gate (Step 3) | Live UI color palette & typography playground with CSS/Tailwind token export for Team 3 & Team 13 |
 | **#1** | `recharts` | Tier 2 | Domain-Intuition | Data dashboards, SaaS analytics, ML/business charts |
 | **#1** | `react-spline` | Tier 3 | Domain-Intuition | Interactive 3D hero scenes (only when 3D adds clear product value) |
+| **Ref** | `Haikei` (`haikei.app`) | Reference | Domain-Intuition (Steps 3 & 7) | Organic SVG background, wave, blob, and gradient asset generator for React/Next.js & brand pages |
 | **Ref** | `Mobbin` / `Dribbble` | Reference | Phase-Gate (Step 3) | Visual inspiration & pattern benchmarking (read-only research) |
 
 ---
@@ -78,8 +105,9 @@
 | Rank | Tool / Skill | Tier | Frequency | Trigger Intuition |
 |---|---|---|---|---|
 | **#1** | `playwright` | Tier 1 | Every-Project Core | Deterministic E2E, cross-browser, and visual regression testing |
-| **#2** | `agent-browser` | Tier 3 | Domain-Intuition | Lightweight agent-driven browser inspection during Phase 2 sensory demo |
-| **#3** | `test-skill` | Tier 3 | Domain-Intuition | Supplementary test-case generation when framework defaults are insufficient |
+| **#2** | `obscura` (`h4ckf0r0day/obscura`, `obscura-mcp`, `obscura-plugin`) | Tier 3 | Domain-Intuition (Steps 1, 5, 6) | Lightweight Rust/V8 CDP headless browser (~30MB RAM) for fast research & owned-staging checks (**Team 6 authorized-targets only**; never bypass auth/CAPTCHAs) |
+| **#3** | `agent-browser` | Tier 3 | Domain-Intuition | Lightweight agent-driven browser inspection during Phase 2 sensory demo |
+| **#4** | `test-skill` | Tier 3 | Domain-Intuition | Supplementary test-case generation when framework defaults are insufficient |
 
 ---
 
@@ -100,7 +128,8 @@
 
 | Rank | Tool / Skill | Tier | Frequency | Trigger Intuition |
 |---|---|---|---|---|
-| **#1** | `ppt-master` | Tier 3 | Phase-Gate (Step 7) | **Team 11:** Client pitch decks, architecture slides, and executive PPTs |
+| **#1** | `ppt-master` | Tier 3 | Phase-Gate (Step 7) | **Team 11:** Client pitch decks, architecture slides, and executive PPTs (pair with `diagram-design` for editorial architecture visuals) |
 | **#2** | `github-profile-readme-maker` | Tier 3 | Domain-Intuition | Polished repository/org `README.md` presentation |
 | **#1** | `claude-seo` | Tier 3 | Domain-Intuition | **Team 13:** Technical SEO, AEO, and GEO audits for SaaS/E-commerce |
-| **#1** | `postiz-app` | Tier 3 | Domain-Intuition | **Team 13:** Scheduled social distribution (LinkedIn/IG/FB) after human approval |
+| **#1** | `OpenWA` (`rmyndharis/OpenWA` / `open-wa/wa-automate-nodejs`) | Tier 2/3 | Domain-Intuition (Steps 5, 7, 9) | **Team 13 & Team 4:** Self-hosted WhatsApp REST/webhook gateway & automation toolkit (**human-approved sends only**; strict Team 6 session/credential isolation) |
+| **#2** | `postiz-app` | Tier 3 | Domain-Intuition | **Team 13:** Scheduled social distribution (LinkedIn/IG/FB) after human approval |

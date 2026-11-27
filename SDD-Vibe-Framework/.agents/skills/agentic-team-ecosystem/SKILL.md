@@ -11,11 +11,24 @@ description: "Optional default-installed 14-team Agentic AI Development Ecosyste
 
 ---
 
-## Trigger & Auto-Activation
+## Trigger & Just-In-Time (JIT) Opt-In Activation
 
 - **Explicit Trigger:** Invoke via `/team-ecosystem-ca-agent` or by referencing `agentic-team-ecosystem`.
-- **Automatic Context Trigger:** When active on a project, the **Main Agent (Orchestrator)** inspects the project domain and current SDD-Vibe phase, then activates only the relevant **Group Main Agent(s)** and **Team Sub-Agents**—never loading all 14 teams into context at once.
+- **Never Trigger All Teams at Once:** At Step 0, **only the Main Agent (Orchestrator) and Team 14 (Manual Workflow Guider)** are active. All other teams (Teams 1–13) remain **DORMANT** and consume zero context.
+- **Strict Opt-In / Consent Gate:** A team may **ONLY** be triggered when:
+  1. The **Developer explicitly asks** for that team or step (e.g., *"activate Team 5 testing"*), **OR**
+  2. The **Main Agent / Team 14 notifies the Developer** at the exact step where that team is needed using the **Team Activation Notice** below and receives **Developer confirmation** before activating it.
 - **Intuition, Frequency & Ranking Rule:** Never load references, skills, or external plugins randomly. Activate **at most 1–3 curated tools per step** based on project frequency and bottleneck intuition, picking **Rank #1** per category from trusted sources only (see [07-curated-external-skills-registry.md](references/07-curated-external-skills-registry.md)).
+
+### Standard Team Activation Notice (Output at Every Step Gate)
+
+```markdown
+### 🔔 Team Activation Notice (Step X → Step Y)
+- **Completed:** Step X ([Summary + real evidence])
+- **Next Recommended Team(s):** Team N ([Role]) — *[Reason why it is needed now]*
+- **Dormant Teams (Not Triggered):** [Remaining teams kept inactive]
+- **Action Needed:** Reply **"yes / activate Team N"** to proceed, **"skip"** to bypass, or name a specific team you want to trigger instead.
+```
 
 ### Supported Domain Tracks (Auto-Detected)
 
@@ -64,7 +77,8 @@ Never skip steps. Each step ends with a **Developer Report & Gate Check**:
 - [04-docs-business-marketing-teams.md](references/04-docs-business-marketing-teams.md) — **Team 11** (Documentation), **Team 12** (Business & Data Analyst), **Team 13** (Marketing & Brand).
 - [05-brand-marketing-proposals.md](references/05-brand-marketing-proposals.md) — Brand discovery prompts, 5-phase proposal, 5-stage payment breakdown, and brand research checklist.
 - [06-kanban-gsheet-and-token-ops.md](references/06-kanban-gsheet-and-token-ops.md) — Google Sheet Kanban schema (post-Frontend Design), token optimization, context window switching, and model switching.
-- [07-curated-external-skills-registry.md](references/07-curated-external-skills-registry.md) — Trust-tiered, category-ranked, intuition & frequency-driven external skills/tools registry (`grill-me`, `superpowers`, `claude-mem`, `playwright`, `semgrep`, `ui-ux-pro-max`, etc.).
+- [07-curated-external-skills-registry.md](references/07-curated-external-skills-registry.md) — Trust-tiered, category-ranked, intuition & frequency-driven external skills/tools registry (`grill-me`, `plannotator`, `diagram-design`, `Realtime-color`, `Haikei`, `motion-primitives`, `glass-ui`, `obscura`, `OpenWA`, `OpenBot`, `superpowers`, `claude-mem`, `playwright`, `semgrep`, `ui-ux-pro-max`, etc.).
+- [08-production-security-geo-checklist.md](references/08-production-security-geo-checklist.md) — Concrete 27-point pre-launch security audit (including 2FA & hidden file extension checks), free-tier production stack matrix, AI-agent discoverability (GEO / `llms.txt`), and Google Play publishing & ASO gates.
 
 ---
 

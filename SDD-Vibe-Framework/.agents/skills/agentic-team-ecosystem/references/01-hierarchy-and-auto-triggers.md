@@ -32,9 +32,29 @@ Developer (Human Authority & Final Sign-Off)
 
 ---
 
-## 2. Auto-Trigger Decision Matrix
+## 2. Just-In-Time (JIT) Team Trigger Schedule & Domain Matrix
 
-| Project Type | Auto-Activated Teams | Domain-Specific Deliverables |
+> [!IMPORTANT]
+> **Never Trigger All Teams at Once:** The domain table below lists which teams are *eligible* for a project type—**NOT** teams that run simultaneously. Every team (Teams 1–13) stays **DORMANT** until either the **Developer explicitly requests it** or **confirms a Team Activation Notice** at its exact step below.
+
+### Exact "When Which Team Triggers" Schedule (Steps 0–9)
+
+| Step | Exact Trigger Moment (Prerequisite Gate) | Team(s) Eligible to Trigger | Conditionality (Domain-Dependent) |
+|---|---|---|---|
+| **Step 0** | On `/team-ecosystem-ca-agent` start | **Main Agent + Team 14** (Guider) | Always active as lightweight coordinator |
+| **Step 1** | After Step 0 domain classification + confirmation | **Team 2** (Research), **Team 12** (Business/Finance), **Team 13** (Marketing) | **Team 12** if ROI/budget needed; **Team 13** only if Brand/Product/E-commerce/SaaS GTM |
+| **Step 2** | After Step 1 discovery sign-off + confirmation | **Team 2** (Architecture, HLD/LLD, DB, Diagrams) | Needed for architecture & `FEAT-###` spec planning |
+| **Step 3** | After Step 2 architecture sign-off + confirmation | **Team 3** (UI/UX Design) + **Team 4 [UI only]** | **Team 3** skipped for headless/OS/pure-ML unless dashboard UI requested |
+| **Step 4** | **Immediately after Step 3 UI Demo approval** + confirmation | **Team 1** (PM / Kanban & GSheet CSV export) | Triggered right after Frontend/Interface Demo approval |
+| **Step 5** | After `FEAT-###` is `APPROVED` + `APR-###` locked + confirmation | **Team 4** (Core Backend / AI / CV / OS under TDD) | Strictly one `FEAT-###` at a time (`Red -> Green -> Refactor`) |
+| **Step 6** | After Step 5 unit tests pass (notify between each gate) | **Team 5** (Test) → **Team 6** (Security) → **Team 7** (Review) → **Team 8** (QA) | **Sequential** (one team at a time); **Team 6** mandatory if auth/PII/OS/web |
+| **Step 7** | After Step 6 QA gate passes + confirmation | **Team 11** (Docs/PPT/PRD) + **Team 13** (SEO/AEO/GEO/Ads) | **Team 13** only if public-facing Brand/E-commerce/SaaS |
+| **Step 8** | After Step 7 docs/release checklist ready + confirmation | **Team 9** (Deployment Ops: Docker/Cloud/Scaling) | Triggered only when deploying to staging/production |
+| **Step 9** | After Step 8 production deploy is live + confirmation | **Team 10** (24×7 Maintenance) + **Team 12/13** (Growth) | Optional post-launch; escalates CVEs/bugs back to Team 4 |
+
+### Domain Eligibility Matrix (Eligible Teams, Activated JIT)
+
+| Project Type | Eligible Teams (Activated JIT Only) | Domain-Specific Deliverables |
 |---|---|---|
 | **SaaS** | Teams 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 | Multi-tenancy, billing/subscriptions, RBAC, API gateway, onboarding, SaaS metrics |
 | **E-commerce** | Teams 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 | Catalog/cart/checkout, payment gateways, inventory, SEO/AEO/GEO, CRM/WhatsApp/social |

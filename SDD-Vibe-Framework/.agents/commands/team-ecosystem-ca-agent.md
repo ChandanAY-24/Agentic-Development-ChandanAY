@@ -18,9 +18,9 @@ argument-hint: "[project-type or step number, e.g. saas | ecommerce | cv | os | 
 
 ## Procedure
 
-1. **MUST** execute **Step 0 (Intake & Domain Classification)** and present the active team roster + **Team 14 (Manual Workflow Guider)** next-action summary to the Developer.
-2. **MUST** proceed strictly **step-by-step (Steps 0–9)**, completing each step's exit gate and reporting real evidence before advancing.
-3. **MUST** trigger **Team 1** Kanban & Google Sheet CSV export (`Project-Manager-Dashboard` `/api/kanban-export`) immediately after **Step 3 (Frontend / Interface Sensory Demo)**.
+1. **MUST** execute **Step 0 (Intake & Domain Classification)** with **only Main Agent + Team 14 (Manual Workflow Guider)** active—never trigger Teams 1–13 at once.
+2. **MUST** proceed strictly **step-by-step (Steps 0–9)** using **Just-In-Time (JIT) Opt-In Activation**: before activating any team, either wait for the Developer's explicit request or emit a **Team Activation Notice** (`01-hierarchy-and-auto-triggers.md`) and wait for Developer confirmation.
+3. **MUST** notify and ask to trigger **Team 1** Kanban & Google Sheet CSV export (`Project-Manager-Dashboard` `/api/kanban-export`) immediately after **Step 3 (Frontend / Interface Sensory Demo)** is approved.
 4. **MUST** obey SDD-Vibe spec-lock, Red-Green-Refactor TDD, `logs/*.log` hygiene, and security-first vetting before installing any external skill/MCP/plugin.
 
 ## Stop conditions

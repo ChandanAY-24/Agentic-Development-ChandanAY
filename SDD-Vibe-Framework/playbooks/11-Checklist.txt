@@ -3,7 +3,7 @@
 
 Purpose: Final end-to-end release, handoff, and governance checklist before shipping or transferring work.
 Read trigger: MUST read before final release sign-off or engineering handoff.
-Applicability: SDD
+Applicability: SDD-Vibe (1-in-2 Single Workflow)
 
 Prerequisites:
 - Read `docs/release-checklist.md`, `docs/handoff.md`, `docs/deployment.md`, and `docs/CHANGELOG.md`.

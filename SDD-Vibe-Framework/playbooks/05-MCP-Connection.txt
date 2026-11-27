@@ -3,7 +3,7 @@
 
 Purpose: Safely configure, verify, and operate MCP servers and external tool connectors.
 Read trigger: MUST read before adding, enabling, or calling any MCP server or connector.
-Applicability: SDD
+Applicability: SDD-Vibe (1-in-2 Single Workflow)
 
 Prerequisites:
 - Read `docs/connectors.md`, `docs/plugins.md`, and `docs/security.md`.

@@ -3,7 +3,7 @@
 
 Purpose: Execute the full SDD test pyramid and map every acceptance criterion to passing test evidence.
 Read trigger: MUST read before running QA suites or signing off on feature verification.
-Applicability: SDD
+Applicability: SDD-Vibe (1-in-2 Single Workflow)
 
 Prerequisites:
 - Read `docs/code-testing.md`, `docs/acceptance-criteria.md`, and `docs/accessibility.md`.

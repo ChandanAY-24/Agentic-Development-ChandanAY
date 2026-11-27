@@ -23,7 +23,7 @@
   - Cyber security & OWASP Top 10 audit (SQLi, XSS, CSRF, SSRF, IDOR, broken authz).
   - Ethical hacking / penetration simulation & **Bruteforce / Rate-limit** verification.
   - **Secrets Leak Scanning:** `.env`, API keys, tokens, private keys, git history, and `logs/` PII redaction.
-  - **Supply-Chain & Skill Audit:** Verify third-party packages, MCP servers, and GitHub skills before installation.
+  - **Supply-Chain & Skill Audit:** Verify third-party packages, MCP servers, and GitHub skills before installation; enforce **authorized-targets-only** rules for headless browser tools (e.g., `obscura`) and **human-approved sends + session isolation** for messaging gateways (e.g., `OpenWA`).
 - **Reporting:** Severity-ranked findings (`CRITICAL` / `HIGH` / `MEDIUM` / `LOW`) reported directly to Developer and Team 4.
 
 ---
@@ -33,7 +33,7 @@
 **Scope:** Independent pre-commit and pre-merge code review.
 
 - Verify spec conformance (`docs/features/`), no dead code/hardcoding, clean coupling/cohesion, error handling, and logging hygiene.
-- Reject unverified claims or out-of-scope edits; report review verdict to Developer.
+- Reject unverified claims or out-of-scope edits; report review verdict to Developer (optionally using `plannotator` for local-first visual diff annotation before `/review-ca-agent`).
 
 ---
 

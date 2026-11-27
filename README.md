@@ -328,9 +328,9 @@ The in-built **Project-Manager-Dashboard** is a zero-dependency, Apple/Linear an
 - **[SDD-Vibe-Production-Guide-Universal.md](SDD-Vibe-Production-Guide-Universal.md)** — Universal 1-in-2 production guide with variable mapping for any SaaS, web app, or enterprise platform.
 - **[SDD-Vibe-Custom-Slash-Command-Universal.md](SDD-Vibe-Custom-Slash-Command-Universal.md)** — Tabular operational reference for all 17 commands across the 4-phase hybrid pipeline.
 
-### 2. Concrete Reference Implementations (EduSphere School Management System Demo)
-- **[SDD-Vibe-Production-Guide-SMS.md](SDD-Vibe-Production-Guide-SMS.md)** — Step-by-step 1-in-2 production guide for building EduSphere (Frontend Sensory Demo → PostgreSQL RLS, TDD & FERPA compliance).
-- **[SDD-Vibe-Custom-Slash-Command-SMS.md](SDD-Vibe-Custom-Slash-Command-SMS.md)** — Dedicated 1-in-2 slash command SMS demo.
+### 2. Concrete Reference Implementations (Hospital & School Management System Guides)
+- **[SDD-Vibe-Custom-Slash-Command-SMS.md](SDD-Vibe-Custom-Slash-Command-SMS.md)** — Complete, layman-friendly, step-by-step granular SDLC guide for building a **Role-Based Hospital Management System (CityCare HMS)** with `/-ca-agent` slash commands, GitHub/official skills & plugins, and `"In Case of Scenario..."` walkthroughs.
+- **[SDD-Vibe-Production-Guide-SMS.md](SDD-Vibe-Production-Guide-SMS.md)** — Step-by-step 1-in-2 production guide for building **EduSphere SMS** (Frontend Sensory Demo → PostgreSQL RLS, TDD & FERPA compliance).
 
 ---
 

@@ -3,7 +3,7 @@
 
 Purpose: Execute SDD implementation strictly from an APPROVED feature specification using TDD and step-by-step spec pacing.
 Read trigger: MUST read before writing any production code in SDD.
-Applicability: SDD
+Applicability: SDD-Vibe (1-in-2 Single Workflow)
 
 Prerequisites:
 - Feature spec in `docs/features/` MUST have `Status: APPROVED` and a valid `APR-###` record in `docs/approvals/`, and MUST be indexed in `docs/spec.md`.

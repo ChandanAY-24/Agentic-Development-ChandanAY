@@ -17,15 +17,16 @@
 **Scope:** 100% domain confidence, critical thinking, developer grilling, system design, and evaluation planning.
 
 ### Sub-Agent Capabilities
-1. **Domain & Market Intelligence:** Multi-source web research, competitor/reference gathering, target user/customer personas, lead finding/generation, problem statements, pain points, and **unique differentiators** (why this product beats existing alternatives).
-2. **Developer Grilling Protocol:** Challenge every assumption (scale, budget, latency, compliance, edge cases, failure modes) until requirements are unambiguous.
+1. **Domain & Market Intelligence:** Multi-source web research, competitor/reference gathering, target user/customer personas, lead finding/generation, problem statements, pain points, and **unique differentiators** (why this product beats existing alternatives). Tag every finding `[VERIFIED: <source>]` or `[ASSUMPTION — NEEDS CONFIRMATION]` and persist binding domain rules to `docs/domains/<domain>.md`.
+2. **Adaptive Pin-Point Developer Grilling Protocol:** Challenge every assumption across 6 dimensions—*(1) Problem & Personas, (2) Core Flows & Edge Cases, (3) Scale / Latency / Cost Budget, (4) Data Ownership, Security & Compliance, (5) Failure Modes & Rollback, (6) Explicit Non-Goals*—until `0` `CRITICAL` ambiguities remain. Use **1-question-at-a-time** for single blocking architectural forks, or a **focused batch (3–5 pin-point questions)** for independent baseline parameters.
 3. **Engineering Modes:**
    - **Forward Engineering:** Problem → Requirements (FRs & NFRs) → Architecture → Spec.
    - **Reverse Engineering (REA Agent):** Existing codebase/product/binary → Dependency & API extraction → Architecture & Gap recovery.
-4. **Architecture & Diagrams (Mermaid/Markdown in `docs/system-architecture.md`):**
+4. **Architecture & Diagrams (Mermaid/Markdown in `docs/system-architecture.md` + optional `diagram-design` HTML+SVG):**
    - HLD (High-Level Design) & LLD (Low-Level Design)
    - DFD (Data Flow Diagram), Use Case Diagram, Workflow Diagram, UML (Class/Sequence), Control Flow Diagram
    - Coupling & Cohesion analysis, Anti-Hardcoding rules, Risk Management register
+   - *Optional Visual Upgrade:* Use `diagram-design` (`cathrynlavery/diagram-design`) for publication-grade HTML+SVG editorial architecture diagrams, and `plannotator` (`backnotprop/plannotator`) for interactive Step 2 Plan & Spec gate review.
 5. **Technical Deep-Dive:** Tech stack selection, Algorithms & Data Structures, Mathematical/logical problem solving, Database design (schema, indexing, storage), Resource Gathering (vetted skills, MCPs, plugins).
 6. **AI/Agent Governance & Evals:** Token optimization planning, context window switching, model switching, agent guidelines, **Model Evals** & **Project Evals** (accuracy, latency, cost, hallucination rate).
 7. **Domain-Specific Research Extensions:**
@@ -39,7 +40,7 @@
 **Scope:** Research-backed UI/UX, brand-aligned visual systems, copywriting, and interactive sensory demos.
 
 - **Design Motivation & UI/UX Research:** User flows, wireframes, information architecture, accessibility (WCAG).
-- **Visual System:** Logo, typography, font pairing, color palette (semantic tokens), spacing scale, alignment, grid, restraint & white space, visual hierarchy, texture, imagery, illustrations, graphic language, motion/animations, data visualizations.
+- **Visual System:** Logo, typography, font pairing, color palette (semantic tokens via optional `Realtime-color`), spacing scale, alignment, grid, restraint & white space, visual hierarchy, texture, imagery, SVG waves/blobs/patterns (via optional `Haikei`), illustrations, graphic language, motion/animations (via optional `motion-primitives`), glassmorphism surfaces (via optional `glass-ui` when brand-appropriate), data visualizations.
 - **Conversion & Layout Principles:** Hero sections, social proof, clear CTAs, responsive breakpoints (mobile → 4K), reusable component patterns, design templates, and UX copywriting.
 - **Domain Adaptation:**
   - *SaaS / E-commerce / Brand:* Landing/storefront, pricing, checkout, brand mockups.

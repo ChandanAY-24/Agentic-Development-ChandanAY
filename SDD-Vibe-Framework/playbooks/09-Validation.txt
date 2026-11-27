@@ -3,7 +3,7 @@
 
 Purpose: Run objective pre-merge and pre-release validation gates across code, specs, docs, and manifest.
 Read trigger: MUST read before opening a PR, merging, or advancing a release phase.
-Applicability: SDD
+Applicability: SDD-Vibe (1-in-2 Single Workflow)
 
 Prerequisites:
 - Read `docs/code-review.md`, `docs/release-checklist.md`, `docs/phases.md`, and `docs/requirements-traceability.md`.

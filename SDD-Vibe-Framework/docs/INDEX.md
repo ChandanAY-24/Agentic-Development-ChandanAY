@@ -52,6 +52,7 @@
 - [`release-checklist.md`](release-checklist.md) — Evidence-based final ship/no-ship approval.
 - [`runbook.md`](runbook.md) — Incident response and operating procedures.
 - [`handoff.md`](handoff.md) — Verifiable project transfer to another engineer or team.
+- [`granular-feature-workflow.md`](granular-feature-workflow.md) — Granular Agent & Developer feature development loop (`FEAT-###`).
 - [`CHANGELOG.md`](CHANGELOG.md) — Product/feature changelog (Keep a Changelog).
 - [`guideline-CHANGELOG.md`](guideline-CHANGELOG.md) — Process/guideline baseline revisions.
 

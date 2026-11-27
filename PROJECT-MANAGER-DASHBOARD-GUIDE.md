@@ -286,17 +286,17 @@ stateDiagram-v2
 
 ### 6. Prev Error Tracking (Preventive & Defect Matrix)
 
-### 7. 14-Team Agentic Ecosystem & Google Sheet Kanban Export (`#ecosystem` & `/api/kanban-export`)
-
-- **4-Group / 14-Team Overview:** Displays the optional default-installed `agentic-team-ecosystem` hierarchy and auto-trigger domain tracks (`SaaS`, `E-commerce`, `Brand`, `Software`, `App`, `ML/DL/DS`, `Computer Vision`, `OS`).
-- **Google Sheet Kanban CSV Export:** Click **Export GSheet CSV** in the Tasks & Kanban view (or fetch `GET /api/kanban-export`) to download `kanban-gsheet-export.csv` (`task_id,group,team,title,status,start_date,stop_date,sign_off,spec_ref`) after the Frontend Design phase.
-
 - **Dedicated Navigation Bar Item:** Quick access with a real-time red badge showing active defect counts (`#nav-errors`, hotkey `7` or `E`).
 - **4-Card Bento Summary:** Visual metrics displaying Active Defects, Resolved count, P0 Blocker alerts, and SLA Triage Health percentage.
 - **Filter Tabs & Instant Search:** Filter defects instantly by `ALL`, `ACTIVE`, `RESOLVED`, `P0/P1`, or by typing keywords (ID, path, summary).
 - **Interactive Radix Sheet Defect Inspector:** Click any defect row to view full root cause analysis, stack traces, impacted paths, and toggle status between `ACTIVE` and `RESOLVED` with 1-click Markdown persistence back to `docs/error-tracker.md`.
 
-### 7. One-Click Pipeline Action Terminal
+### 7. 14-Team Agentic Ecosystem & Google Sheet Kanban Export (`#ecosystem` & `/api/kanban-export`)
+
+- **4-Group / 14-Team Overview:** Displays the optional default-installed `agentic-team-ecosystem` hierarchy and auto-trigger domain tracks (`SaaS`, `E-commerce`, `Brand`, `Software`, `App`, `ML/DL/DS`, `Computer Vision`, `OS`).
+- **Google Sheet Kanban CSV Export:** Click **Export GSheet CSV** in the Tasks & Kanban view (or fetch `GET /api/kanban-export`) to download `kanban-gsheet-export.csv` (`task_id,group,team,title,status,start_date,stop_date,sign_off,spec_ref`) after the Frontend Design phase.
+
+### 8. One-Click Pipeline Action Terminal
 
 The dashboard features an integrated command center for triggering automated actions:
 
@@ -306,7 +306,7 @@ The dashboard features an integrated command center for triggering automated act
 - **Security Audit (`btn-security-audit`):** Scans for exposed API keys, secret leaks, and insecure dependencies.
 - **Release Verification (`btn-release-verify`):** Runs pre-flight ship/no-ship quality gate checks.
 
-### 8. Live Development Logs Explorer (`logs/` Directory)
+### 9. Live Development Logs Explorer (`logs/` Directory)
 
 The dashboard includes a dedicated Live Development Logs Explorer integrated directly into the navigation bar (`#nav-logs`, hotkey `8` or `L`):
 

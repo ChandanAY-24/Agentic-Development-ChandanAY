@@ -3,14 +3,14 @@
 
 Purpose: Diagnose root causes using real logs and minimal reproduction tests without breaking SDD contracts.
 Read trigger: MUST read when investigating bugs, test failures, or runtime regressions.
-Applicability: SDD
+Applicability: SDD-Vibe (1-in-2 Single Workflow)
 
 Prerequisites:
 - Read `docs/error-tracker.md`, `docs/observability.md`, and `docs/runbook.md`.
 
 Commands & Skills:
 - Commands: `/errorlogs-ca-agent`, `/gitlogs-ca-agent`, `/tdd-ca-agent`, `/verify-ca-agent`
-- Skills: `debugging-analyst`, `core-engineering-skills`
+- Skills: `debugging-analyst`, `tdd-enforcer`
 
 Procedure:
 1. Capture Evidence:

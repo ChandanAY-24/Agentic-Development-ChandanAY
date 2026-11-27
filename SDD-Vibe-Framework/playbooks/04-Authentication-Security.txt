@@ -3,7 +3,7 @@
 
 Purpose: Enforce authentication, authorization, secret hygiene, and security auditing across SDD changes.
 Read trigger: MUST read before implementing auth, RBAC, session/token handling, or handling secrets.
-Applicability: SDD
+Applicability: SDD-Vibe (1-in-2 Single Workflow)
 
 Prerequisites:
 - Read `docs/security.md`, `docs/apis.md`, and the approved `FEAT-###` spec.

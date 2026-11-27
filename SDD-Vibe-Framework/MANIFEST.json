@@ -4,11 +4,11 @@
   "created": "2026-11-04",
   "license": "Guideline package: MIT (repository root LICENSE); instantiated project: select per LICENSE-DECISION.md",
   "hash_note": "sha256 of file bytes; text files normalized to LF line endings before hashing",
-  "file_count_excluding_manifest": 180,
+  "file_count_excluding_manifest": 182,
   "files": [
     {
       "path": ".agents/README.md",
-      "sha256": "2c0c5cc2892ca9b2fffd33829f83b479833f90a40cdfbaae6c5eafe572dafe41"
+      "sha256": "f7401f7ae4f040214dc20a4c9765d766f3aa1ef8f4ab2102de1727464201b691"
     },
     {
       "path": ".agents/commands/README.md",
@@ -24,7 +24,7 @@
     },
     {
       "path": ".agents/commands/errorlogs-ca-agent.md",
-      "sha256": "9a97f8029139b1aa582097da41cd5aabd0996f52b87427c6b07c8ab8d409957c"
+      "sha256": "68de4c649d831deba6fefe067ab6e8abe7a54489a478d4af8e0266cee9ee6c1e"
     },
     {
       "path": ".agents/commands/gitlogs-ca-agent.md",
@@ -40,7 +40,7 @@
     },
     {
       "path": ".agents/commands/plan-ca-agent.md",
-      "sha256": "eae09f77e83241e5c6879f5d1cf72b84053fd40138bd06f08d9bc914442bde8e"
+      "sha256": "0184095b1f9721584287bc7667815addc0ed543d5e643d9286f782b83f8ba40d"
     },
     {
       "path": ".agents/commands/release-check-ca-agent.md",
@@ -72,7 +72,7 @@
     },
     {
       "path": ".agents/commands/team-ecosystem-ca-agent.md",
-      "sha256": "a10ca6ca472c659fe725607d80464a622b89c78dc21d3f9c82683bf3567712f5"
+      "sha256": "1d87cb92331c6dbe8ee0f938bdccb66d2dce585a403fa9df4a852fefa35bdeee"
     },
     {
       "path": ".agents/commands/testing-ca-agent.md",
@@ -96,23 +96,23 @@
     },
     {
       "path": ".agents/skills/agentic-team-ecosystem/SKILL.md",
-      "sha256": "ec988406b3df349eb9800518510f6b04f4affd94513e3e9e799381cd828cec4a"
+      "sha256": "5c396f15fb4597a333c002ed669229442804d0d929285e7e95ca74faad7939e6"
     },
     {
       "path": ".agents/skills/agentic-team-ecosystem/references/01-hierarchy-and-auto-triggers.md",
-      "sha256": "2eb875dd7559fb74105157a88562d01447c951e9583ba48dfbe3182838b738db"
+      "sha256": "c885996c44009bac5f5d39e267ee517d25d1f11ba07f96cf8a7784d4ebedf9cc"
     },
     {
       "path": ".agents/skills/agentic-team-ecosystem/references/02-discovery-design-dev-teams.md",
-      "sha256": "c8707bea4eb57ab5491c91b0cac31c51ec902fe5580093c35e8f5651ab489bf1"
+      "sha256": "50ddd46ee1b8ba22b3cdbee5f3db13a3da143c5266dcf68887f54ce4b701bbc8"
     },
     {
       "path": ".agents/skills/agentic-team-ecosystem/references/03-testing-security-review-qa-ops-teams.md",
-      "sha256": "5c3decd318ccde1079bb39300cda4b7e0857ec09e7606bfb3566a2daf7e83273"
+      "sha256": "219366d8b07fe0c28ef0b96b99522c6c7f565fa058ef63118d65b7412e694bc5"
     },
     {
       "path": ".agents/skills/agentic-team-ecosystem/references/04-docs-business-marketing-teams.md",
-      "sha256": "704c5f071cc6e1cfc266fa4cc0af696cf9304298ae1d006c70fbe0a12b0542a4"
+      "sha256": "2840da9e97e5c072a19f249f342ec6378bcce53f93e9834ec3a79d8f72a5fd8b"
     },
     {
       "path": ".agents/skills/agentic-team-ecosystem/references/05-brand-marketing-proposals.md",
@@ -124,7 +124,11 @@
     },
     {
       "path": ".agents/skills/agentic-team-ecosystem/references/07-curated-external-skills-registry.md",
-      "sha256": "3882523f9b1ddf1c38ee2e3a7a3bd3c4bd330da1dbbe830ea4e71018fe905463"
+      "sha256": "c43a2cef11f579924180f31bd0bb82dadbf81807e84b85979460d2a4f9b53ee6"
+    },
+    {
+      "path": ".agents/skills/agentic-team-ecosystem/references/08-production-security-geo-checklist.md",
+      "sha256": "42c7f6d59b154b07c72742dfbf2a7352dc4b550f9561fdf83779af3294a1452a"
     },
     {
       "path": ".agents/skills/api-contract-review/SKILL.md",
@@ -164,15 +168,15 @@
     },
     {
       "path": ".agents/skills/release-validator/SKILL.md",
-      "sha256": "b1c4d795df15443bca47693d3205ca41aca25b7c1e6d2fbdaa6061e5fcc3bf21"
+      "sha256": "068fc905d49d1310fe200083334a9670c5f5a656ac36eb6e11cec07159ee9ce2"
     },
     {
       "path": ".agents/skills/requirements-analysis/SKILL.md",
-      "sha256": "2e92a9dfbde167346b340b846272e258c5a2de86651011a1b934973a2258ff91"
+      "sha256": "525e7c4c05eb0cbf3ba3c0cfa1a3b4f72c8eee4b10839d5ff09195fcdf53c573"
     },
     {
       "path": ".agents/skills/security-auditor/SKILL.md",
-      "sha256": "b0b8b5970fa2306ec632081e57f0bf249d682b59f3f0e6b6d4728f99f844369a"
+      "sha256": "6701511491d31631865194823a1045969e11d70eb2e1c8f48a115a93ba7af5e4"
     },
     {
       "path": ".agents/skills/spec-validator/SKILL.md",
@@ -256,7 +260,7 @@
     },
     {
       "path": ".agents/workflows/team-ecosystem-ca-agent.md",
-      "sha256": "a10ca6ca472c659fe725607d80464a622b89c78dc21d3f9c82683bf3567712f5"
+      "sha256": "1d87cb92331c6dbe8ee0f938bdccb66d2dce585a403fa9df4a852fefa35bdeee"
     },
     {
       "path": ".agents/workflows/testing-ca-agent.md",
@@ -328,15 +332,15 @@
     },
     {
       "path": "AGENTS.md",
-      "sha256": "921a9ccade0d9d36f1d0170451510ad0c2f0051d86669d8738cae6be7322b0fb"
+      "sha256": "5e7da6e84dcf58c8b236de87f927cc92be776c81cb3927b93b864038f04a53b3"
     },
     {
       "path": "CLAUDE.md",
-      "sha256": "119dc4b554b2902f4e7c31d8ccd12224b77b706476c3671c7ac94b7c0173d897"
+      "sha256": "b5f857a09e786edae68932779c856a37a641d6e7e61cc4050e54c17334b436d2"
     },
     {
       "path": "GEMINI.md",
-      "sha256": "93baae9c769b847402af8e53de816281a5ec0bab155531b408489914f1583081"
+      "sha256": "c09f706ae74bb3b4afbefa4c715055a784786a1f14b3ae8ade3ee9bf4832d203"
     },
     {
       "path": "LICENSE-DECISION.md",
@@ -384,7 +388,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "a9e8683bc56e812f22ad8b45c28ba3fe0d4a07521b8c06fce5f22594bbdaee9c"
+      "sha256": "3854e0156a3288ba6cd50f9df99cdb693329c564af3586aa3f65cc6a79f678b7"
     },
     {
       "path": "SOURCE-NOTES.md",
@@ -396,7 +400,7 @@
     },
     {
       "path": "docs/INDEX.md",
-      "sha256": "b7ccf28a5ad0a53b6ee4e6ccbf936fb159de22e718eb0c339a4eebcd910ca161"
+      "sha256": "c46f4f029bb058901397198e3e75ddbaecb83d7e7d20ecc37bedbb04265a74aa"
     },
     {
       "path": "docs/acceptance-criteria.md",
@@ -420,7 +424,7 @@
     },
     {
       "path": "docs/agents.md",
-      "sha256": "95c8c6f28e679e99e35a74e557c79664b98b3f02fb1fab0cab7b237028bd61c4"
+      "sha256": "19d3ef59e67ac27696713029769e26821982c3d7309f7ff0060513bd4482ba3d"
     },
     {
       "path": "docs/apis.md",
@@ -519,8 +523,12 @@
       "sha256": "166f59c49829ec7dd3f6c3dc657903fe0e79ba7389044efd308fca62d7f5ce4c"
     },
     {
+      "path": "docs/granular-feature-workflow.md",
+      "sha256": "85f75573d42d6036d51ba9a84b78b7ef77e2bb9b5f985d9a6e6ea085f101da29"
+    },
+    {
       "path": "docs/guideline-CHANGELOG.md",
-      "sha256": "c515c752de294e00e8d515ce353919481c5e3f2f2aeb55c11c7e4346f4de2bb3"
+      "sha256": "a82738344d05c1a4501098bcc9659a5d2bdf982ab8d825e9911b353347e3f0d9"
     },
     {
       "path": "docs/handoff.md",
@@ -532,7 +540,7 @@
     },
     {
       "path": "docs/memory.md",
-      "sha256": "2bbd39e7e7564962db25c2bc85a6864d2c52c837e89b715116073bac835f55fb"
+      "sha256": "58b3a2039277cb67fa8647c8cb1579792d732b22d0c6aca51784d8f2d0df2a0d"
     },
     {
       "path": "docs/observability.md",
@@ -592,7 +600,7 @@
     },
     {
       "path": "docs/skills.md",
-      "sha256": "88150006e8bca3d9a10fdb195438999921b07f5bc55878e01554cff07d3b0f81"
+      "sha256": "9b25a2649dbfbed2918ddd9dfb668429230b7efcb8e7e952ac8310f3f7a5d1d3"
     },
     {
       "path": "docs/spec.md",
@@ -616,47 +624,47 @@
     },
     {
       "path": "playbooks/01-Setup-Project.txt",
-      "sha256": "e75eb2bc0ffd57c7ad1c86c8eb007872a04d091ee59170cb4a3d0a03cc33ff1e"
+      "sha256": "e9ead0f8501a6f545c957b3e427c055bacea920b44f195e6b00ab3712ce4f21a"
     },
     {
       "path": "playbooks/02-Project-Implementation.txt",
-      "sha256": "0fedbf1feab1df4c48b8c09518c88bc6682a75012d38a1c78ba72074854df129"
+      "sha256": "39e4b7a516da416e843159fd375833c91dd3c142cb60a449c8a677c3332f3ac2"
     },
     {
       "path": "playbooks/03-Features-Development.txt",
-      "sha256": "93f1fc1cf537d4685231221c04e007171024e6c23316dad92df0a89845e587ec"
+      "sha256": "17ef361f1a16cd5512cc2ecd6e7a5e96ebb3dcf069f50c6e3a028d9283e16e34"
     },
     {
       "path": "playbooks/04-Authentication-Security.txt",
-      "sha256": "2ffaa5b30070d15513293103e77532a2ab5fd1072afaece5d14716605b0a5909"
+      "sha256": "2f3870aba9b82eb261651c91f2807578f7c6b44d1a6cd0c053d5a41c82b0e38e"
     },
     {
       "path": "playbooks/05-MCP-Connection.txt",
-      "sha256": "386851626e87a69e1907ff8638d0d27798725281c433b5c3066d50af676719e3"
+      "sha256": "e459efc18710781f2bbe8949f09cef1a06bca042def20ccfaaa3ef46690f2c18"
     },
     {
       "path": "playbooks/06-Integrations.txt",
-      "sha256": "49a464fa2c258c76a285f1e256380712b7756bdec2125ec2fa505edb6911afca"
+      "sha256": "239a794314a5d6e5f8f50f9cb45b09054c99b25bb0f331fec74ccb5fd66c272f"
     },
     {
       "path": "playbooks/07-Testing-QA.txt",
-      "sha256": "c558706f06ee9431e2186cb58ae06ef2ff9bde08e6b682c2581db48461bbf9c2"
+      "sha256": "6320fbd68472a27d1d8fec03b07ec4f17fb97a8f96e47ada237ae3831fdbd308"
     },
     {
       "path": "playbooks/08-Debugging.txt",
-      "sha256": "4dd1e4fb5d0f0c7ad90d891571a1cc609aeaee328b3d696ca27da77c7169e620"
+      "sha256": "c2eab8e28a89b6ce6a221f9a8ef756617969f16e93b18303949a5ad72d9e51c5"
     },
     {
       "path": "playbooks/09-Validation.txt",
-      "sha256": "462000173d3288269f1a44be5850c46cfbc3f2426fd9ee12f15a3edb609bfe59"
+      "sha256": "82522b2970d1145aea66616c644a4b164a64e04c9767598899fa2ddcd0eb8668"
     },
     {
       "path": "playbooks/10-Error-Handling.txt",
-      "sha256": "fa79dd663a4112db8a30f8d5eed81f4afdf28675196819da290c7d665095c991"
+      "sha256": "3299c74d6e56b4b8e86600cf3eaf1756961f6a1920095c4067bcd469a1fabae3"
     },
     {
       "path": "playbooks/11-Checklist.txt",
-      "sha256": "910788fed533467c9e1407b173c0916af662a8e99c14660014398e8934ece23b"
+      "sha256": "4322e538c6115abf39195e90daf1e7587e6da11ca6c1dbe5ba2480d532aade5a"
     },
     {
       "path": "scripts/check_docs.py",

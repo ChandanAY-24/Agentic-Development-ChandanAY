@@ -5,10 +5,10 @@
 
 [![Agent Layer](https://img.shields.io/badge/Agent_Engine-Canonical_Source_of_Truth-blue?style=for-the-badge&logo=probot)](.)
 [![Commands](https://img.shields.io/badge/Commands-17_Collision--Free_(ca--agent)-indigo?style=for-the-badge)](commands/README.md)
-[![Skills](https://img.shields.io/badge/Skills-19_Deterministic_Playbooks-teal?style=for-the-badge)](skills/)
+[![Skills](https://img.shields.io/badge/Skills-18_Deterministic_Skills-teal?style=for-the-badge)](skills/)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](../LICENSE.md)
 
-**Framework Track:** Spec-Driven Development · **Standard:** Cross-IDE Portability Release 2.0.0  
+**Framework Track:** SDD-Vibe (1-in-2 Single Workflow) · **Standard:** Cross-IDE Portability Release 2.0.0  
 **Supported Hosts:** Claude Code · Cursor · Windsurf · Antigravity · OpenCode · Codex · VS Code
 
 [🌟 Purpose](#-purpose) • [🏛️ Architecture](#️-agent-asset-architecture) • [🔄 Discovery Pipeline](#-multi-ide-discovery--dispatch-pipeline) • [🛡️ Collision Prevention](#️-collision-prevention-policy) • [📦 Activation](#-active-agent-activation)
