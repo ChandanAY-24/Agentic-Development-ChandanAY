@@ -5,25 +5,29 @@ description: "Keep docs consistent: product.md, prd.md, docs/features, spec.md i
 
 # Skill: documentation-sync
 
-**Purpose:** Apply the controlled documentation sync workflow to a clearly scoped project task.
+**Purpose:** Maintain 100% synchronization across living documentation, traceability matrices, registries, and changelogs after any feature, spec, or architectural change.
 
 ## Trigger
 
-- **MUST** use only when current task requires this capability.
+- **MUST** invoke after any feature spec transition, task completion, architecture decision (`ADR-####`), change request (`CR-###`), or before committing/releasing.
+
 ## Inputs
 
-- **MUST** read `AGENTS.md`, relevant `docs/` policy, current approved feature/spec and task.
-- **MUST** check, after any change: `docs/product.md` capability map ⇄ `docs/prd.md` ⇄ `docs/features/` headers ⇄ `docs/spec.md` index (SDD) ⇄ `docs/requirements-traceability.md` matrix ⇄ `docs/INDEX.md` registry.
-- **MUST** run `python scripts/check_docs.py` and `python scripts/manifest.py --check` and report real output.
+- **MUST** read `AGENTS.md`, `docs/INDEX.md`, `docs/spec.md`, `docs/requirements-traceability.md`, `docs/CHANGELOG.md`, and `docs/guideline-CHANGELOG.md`.
+
 ## Workflow
 
-1. **MUST** state assumptions, required facts, authorization and intended output.
-2. **MUST** inspect authoritative source and project-specific constraints.
-3. **MUST** execute domain checks without inventing facts, specs or test evidence.
-4. **MUST** flag conflicts, incomplete acceptance criteria or high-risk side effects.
-5. **MUST** produce findings, evidence links, blocking status and next approved step.
+1. **Cross-Reference Traceability Chain:**
+   - Verify end-to-end consistency: `docs/product.md` (`CAP-###`) ⇄ `docs/prd.md` (`REQ-###`) ⇄ `docs/features/` (`FEAT-###` / `AC-FEAT###-##`) ⇄ `docs/spec.md` ⇄ `docs/requirements-traceability.md` ⇄ `tests/`.
+2. **Orphan & Stale Version Detection:**
+   - Identify any `docs/*.md` file missing from `docs/INDEX.md`, any `FEAT-###` missing from `docs/spec.md`, or any stale spec version references in `docs/task.md`.
+3. **Changelog & Memory Update:**
+   - Record feature/behavior changes in `docs/CHANGELOG.md`, process changes in `docs/guideline-CHANGELOG.md`, and verified state recaps in `docs/memory.md`.
+4. **Automated Gate Execution:**
+   - Run `python scripts/check_docs.py` and `python scripts/manifest.py --check` and confirm **0 errors** before reporting completion.
+
 ## Restrictions
 
-- **MUST** not alter controlled guidelines without recorded approved revision.
-- **MUST** not implement feature behavior absent from the approved spec.
-- **SHOULD** maintain repeatable examples/evaluations before promoting this skill to automated use.
+- **MUST NOT** report documentation as synced without running `check_docs.py` and `manifest.py --check` and observing 0 errors.
+- **MUST NOT** duplicate canonical definitions across docs (link to the authoritative source instead).
+- **MUST NOT** alter controlled guidelines without recorded approved revision.

@@ -275,7 +275,10 @@ SDD-Vibe/
 
 ## ⚡ Quick-Start Guide (Step-by-Step for Any Project)
 
-### Step 1: Copy & Rename the Unified Blueprint
+### Option A: 1-Click GitHub Template
+Click **Use this template → Create a new repository** on GitHub *(enabled via Repo Settings → Template repository)*, then rename or open `SDD-Vibe-Framework/` in your IDE.
+
+### Option B: Copy & Rename the Unified Blueprint
 1. Copy `SDD-Vibe-Framework/` to your clean workspace.
 2. Rename the directory to your target application name in lowercase `kebab-case` (e.g. `my-awesome-saas/`).
 3. Open the directory at the root in your AI coding IDE (Cursor, Windsurf, Claude Code, Antigravity, VS Code).
@@ -332,7 +335,8 @@ The in-built **Project-Manager-Dashboard** is a zero-dependency, Apple/Linear an
 - **[SDD-Vibe-Production-Guide-Universal.md](SDD-Vibe-Production-Guide-Universal.md)** — Universal 1-in-2 production guide with variable mapping for any SaaS, web app, or enterprise platform.
 - **[SDD-Vibe-Custom-Slash-Command-Universal.md](SDD-Vibe-Custom-Slash-Command-Universal.md)** — Tabular operational reference for all 17 commands across the 4-phase hybrid pipeline.
 
-### 2. Concrete Reference Implementations (Hospital & School Management System Guides)
+### 2. Concrete Reference Implementations
+- **[examples/taskflow-saas/](examples/taskflow-saas/README.md)** — **Runnable Reference SaaS App** built end-to-end with SDD-Vibe using **Next.js 15 (App Router), React 19, TypeScript, Tailwind CSS v4, Zod, SQLite (`node:sqlite`), and Vitest** — complete with Phase 1–4 `docs/`, `APPROVED` Flat & Modular specs, `APR-001`, and `AC-* → TEST-*` TDD suites.
 - **[SDD-Vibe-Custom-Slash-Command-SMS.md](SDD-Vibe-Custom-Slash-Command-SMS.md)** — Complete, layman-friendly, step-by-step granular SDLC guide for building a **Role-Based Hospital Management System (CityCare HMS)** with `/-ca-agent` slash commands, GitHub/official skills & plugins, and `"In Case of Scenario..."` walkthroughs.
 - **[SDD-Vibe-Production-Guide-SMS.md](SDD-Vibe-Production-Guide-SMS.md)** — Step-by-step 1-in-2 production guide for building **EduSphere SMS** (Frontend Sensory Demo → PostgreSQL RLS, TDD & FERPA compliance).
 

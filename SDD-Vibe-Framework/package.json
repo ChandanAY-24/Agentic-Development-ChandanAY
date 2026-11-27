@@ -1,0 +1,33 @@
+{
+  "name": "sdd-vibe-framework",
+  "version": "2.0.0",
+  "description": "Unified 1-in-2 Single Workflow Framework: Vibe-Coding + Spec-Driven Development (SDD) & TDD",
+  "private": true,
+  "scripts": {
+    "test": "node scripts/run-tests.js",
+    "test:unit": "node scripts/run-tests.js --filter unit",
+    "test:dashboard": "node scripts/run-tests.js --filter dashboard",
+    "test:parser": "node scripts/run-tests.js --filter parser",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "check:docs": "python scripts/check_docs.py",
+    "check:manifest": "python scripts/manifest.py --check",
+    "dashboard": "node Project-Manager-Dashboard/server.js"
+  },
+  "keywords": [
+    "sdd",
+    "tdd",
+    "vibe-coding",
+    "ai-agents",
+    "framework",
+    "spec-driven-development"
+  ],
+  "author": "Chandan Adhikary",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {}
+}

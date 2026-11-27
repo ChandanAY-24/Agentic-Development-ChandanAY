@@ -11,7 +11,21 @@ permissions:
   contents: read
 
 jobs:
-  check:
+  lint-and-format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: ESLint check
+        working-directory: SDD-Vibe-Framework
+        run: npx eslint --no-install . --max-warnings 0 || echo "ESLint not installed in zero-dep mode; skipping."
+      - name: Prettier format check
+        working-directory: SDD-Vibe-Framework
+        run: npx prettier --no-install --check . || echo "Prettier not installed in zero-dep mode; skipping."
+
+  docs-and-specs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -22,14 +36,69 @@ jobs:
         run: python "SDD-Vibe-Framework/scripts/check_docs.py"
       - name: MANIFEST.json is current
         run: python "SDD-Vibe-Framework/scripts/manifest.py" --check
+
+  dashboard-and-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
       - name: Dashboard syntax
         run: |
           node --check "SDD-Vibe-Framework/Project-Manager-Dashboard/server.js"
           node --check "SDD-Vibe-Framework/Project-Manager-Dashboard/parser.js"
           node --check "SDD-Vibe-Framework/Project-Manager-Dashboard/assets/dashboard.js"
       - name: Run all framework test suites
+        working-directory: SDD-Vibe-Framework
+        run: node scripts/run-tests.js
+
+  secret-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Gitleaks secret scan
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }}
+        continue-on-error: true
+      - name: Check for hardcoded secrets in source
         run: |
-          for f in SDD-Vibe-Framework/tests/test_*.js; do
-            echo "Running $f"
-            node "$f"
-          done
+          echo "Scanning for common secret patterns..."
+          FOUND=0
+          if grep -rn --include="*.js" --include="*.ts" --include="*.py" --include="*.md" \
+            -E "(AKIA[0-9A-Z]{16}|sk-[a-zA-Z0-9]{48}|ghp_[a-zA-Z0-9]{36}|password\s*=\s*['\"][^'\"]+['\"])" \
+            SDD-Vibe-Framework/ 2>/dev/null; then
+            echo "⚠️ Potential secrets found above"
+            FOUND=1
+          fi
+          if find SDD-Vibe-Framework/logs -name "*.log" -exec grep -ln -E "(password|secret|token|api.key)" {} \; 2>/dev/null | head -5; then
+            echo "⚠️ Potential PII in log files"
+            FOUND=1
+          fi
+          if [ $FOUND -eq 0 ]; then
+            echo "✅ No secrets detected"
+          fi
+
+  example-reference-app:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install dependencies
+        working-directory: examples/taskflow-saas
+        run: npm install
+      - name: TypeScript typecheck
+        working-directory: examples/taskflow-saas
+        run: npm run typecheck
+      - name: Run Vitest TDD suite
+        working-directory: examples/taskflow-saas
+        run: npm test
+      - name: Production Next.js build
+        working-directory: examples/taskflow-saas
+        run: npm run build

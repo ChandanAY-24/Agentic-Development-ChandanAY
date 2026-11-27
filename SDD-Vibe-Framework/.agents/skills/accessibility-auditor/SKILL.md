@@ -5,23 +5,29 @@ description: "Audit UI features against docs/accessibility.md targets and NFR-FE
 
 # Skill: accessibility-auditor
 
-**Purpose:** Apply the controlled accessibility auditor workflow to a clearly scoped project task.
+**Purpose:** Audit user-facing interfaces against WCAG 2.1 AA standards and `docs/accessibility.md` for semantic structure, keyboard operability, screen-reader clarity, and contrast compliance.
 
 ## Trigger
 
-- **MUST** use only when current task requires this capability.
+- **MUST** invoke during Phase 2/4 UI verification (`/verify-ca-agent`, `/release-check-ca-agent`) and whenever interactive components, forms, or navigation views are added or changed.
+
 ## Inputs
 
-- **MUST** read `AGENTS.md`, relevant `docs/` policy, current approved feature/spec and task.
+- **MUST** read `AGENTS.md`, `docs/accessibility.md`, `docs/design.md`, and `NFR-FEAT###-##` accessibility criteria in `docs/features/`.
+
 ## Workflow
 
-1. **MUST** state assumptions, required facts, authorization and intended output.
-2. **MUST** inspect authoritative source and project-specific constraints.
-3. **MUST** execute domain checks without inventing facts, specs or test evidence.
-4. **MUST** flag conflicts, incomplete acceptance criteria or high-risk side effects.
-5. **MUST** produce findings, evidence links, blocking status and next approved step.
+1. **Semantic HTML & Landmark Audit:**
+   - Verify proper heading hierarchy (`h1`–`h6` without skipped levels), `<main>`, `<nav>`, `<header>`, `<button>`, and `<label>` associations (no clickable `<div>` without role/keyboard handlers).
+2. **Keyboard Navigation & Focus Management:**
+   - Confirm full Tab/Shift+Tab/Enter/Space/Escape operability, visible `:focus-visible` outlines, logical tab order, and focus trapping/restoration in modals/sheets.
+3. **ARIA & Screen Reader Parity:**
+   - Validate `aria-label`, `aria-describedby`, `aria-expanded`, `aria-live` regions for dynamic updates, and `alt` text on informative images (`alt=""` on decorative).
+4. **Color Contrast & Motion:**
+   - Check text contrast (`>= 4.5:1` normal, `>= 3:1` large/UI) across both dark and light themes and honor `prefers-reduced-motion`.
+
 ## Restrictions
 
-- **MUST** not alter controlled guidelines without recorded approved revision.
-- **MUST** not implement feature behavior absent from the approved spec.
-- **SHOULD** maintain repeatable examples/evaluations before promoting this skill to automated use.
+- **MUST NOT** sign off on accessibility without verifying keyboard navigation and ARIA semantics in the actual markup.
+- **MUST NOT** use color alone to convey status or error states.
+- **MUST NOT** alter controlled guidelines without recorded approved revision.

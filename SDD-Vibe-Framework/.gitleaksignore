@@ -1,0 +1,5 @@
+# Sample/example values in documentation and templates
+docs/features/001-example-feature/
+docs/features/002-student-enrollment.md
+docs/error-tracker.md
+tests/fixtures/

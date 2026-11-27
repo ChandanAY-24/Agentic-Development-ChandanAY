@@ -1,0 +1,6 @@
+node_modules/
+coverage/
+Project-Manager-Dashboard/assets/anime.min.js
+Project-Manager-Dashboard/assets/motion.min.js
+*.min.js
+*.min.css

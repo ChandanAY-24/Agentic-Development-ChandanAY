@@ -5,23 +5,34 @@ description: "Enforce red-green-refactor: failing tests mapped to AC-FEAT IDs be
 
 # Skill: tdd-enforcer
 
-**Purpose:** Apply the controlled tdd enforcer workflow to a clearly scoped project task.
+**Purpose:** Enforce strict Red-Green-Refactor test-driven development, ensuring failing automated tests mapped to `AC-FEAT###-##` exist and fail for the expected reason before any production backend, persistence, or business logic is written.
 
 ## Trigger
 
-- **MUST** use only when current task requires this capability.
+- **MUST** invoke during Phase 3 (`/tdd-ca-agent`, `/testing-ca-agent`, `/implement-ca-agent`) and before modifying or creating any production source file under `src/`, `api/`, or `services/`.
+
 ## Inputs
 
-- **MUST** read `AGENTS.md`, relevant `docs/` policy, current approved feature/spec and task.
+- **MUST** read `AGENTS.md`, `docs/code-testing.md`, `docs/requirements-traceability.md`, the `APPROVED` feature spec in `docs/features/`, and the active `TASK-###` in `docs/task.md`.
+
 ## Workflow
 
-1. **MUST** state assumptions, required facts, authorization and intended output.
-2. **MUST** inspect authoritative source and project-specific constraints.
-3. **MUST** execute domain checks without inventing facts, specs or test evidence.
-4. **MUST** flag conflicts, incomplete acceptance criteria or high-risk side effects.
-5. **MUST** produce findings, evidence links, blocking status and next approved step.
+1. **Gate Check — Spec & Test-First Verification:**
+   - Confirm the target `FEAT-###` spec has `Status: APPROVED` and a valid `Approval reference` in `docs/approvals/`.
+   - Verify no production code changes exist for the target `AC-FEAT###-##` prior to test creation (`git diff --name-only`).
+2. **RED Phase — Failing Test Authoring & Execution:**
+   - Require each test title to explicitly declare `TEST-FEAT###-## / AC-FEAT###-##`.
+   - Run the test runner (`npm test` / `pytest` / `node scripts/run-tests.js`) and pipe output to `logs/test.log`.
+   - Confirm the new test fails due to missing/unimplemented behavior (not syntax or import errors) and record the failing evidence.
+3. **GREEN Phase — Minimal Implementation:**
+   - Implement the smallest possible production code change within `Allowed files` to turn the failing tests green.
+   - Re-run the targeted suite and full regression suite; verify 0 skipped/relaxed assertions.
+4. **REFACTOR Phase — Clean & Verify:**
+   - Remove duplication, enforce shallow nesting and clear naming without altering behavior.
+   - Re-run tests and coverage check; update `docs/requirements-traceability.md` and `docs/task.md` with observed pass counts.
+
 ## Restrictions
 
-- **MUST** not alter controlled guidelines without recorded approved revision.
-- **MUST** not implement feature behavior absent from the approved spec.
-- **SHOULD** maintain repeatable examples/evaluations before promoting this skill to automated use.
+- **MUST NOT** write production implementation code before a failing test mapped to `AC-FEAT###-##` is observed.
+- **MUST NOT** weaken, skip, or mock out assertions to make a failing test pass.
+- **MUST NOT** alter controlled guidelines or `APPROVED` specs without `/change-request-ca-agent`.

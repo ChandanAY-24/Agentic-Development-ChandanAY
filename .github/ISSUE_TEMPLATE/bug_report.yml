@@ -1,0 +1,80 @@
+name: 🐛 Bug Report
+description: Report a bug in SDD-Vibe Framework
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! Please fill out the sections below.
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear description of the bug.
+      placeholder: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Minimal steps to reproduce the behavior.
+      value: |
+        1. Run `...`
+        2. Open `...`
+        3. See error
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What you expected to happen.
+    validations:
+      required: true
+  - type: dropdown
+    id: component
+    attributes:
+      label: Affected Component
+      options:
+        - Dashboard (Project-Manager-Dashboard)
+        - Agent Commands (.agents/commands/)
+        - Agent Skills (.agents/skills/)
+        - Documentation Checks (scripts/check_docs.py)
+        - IDE Sync (scripts/sync_ide_adapters.py)
+        - CI Pipeline (.github/workflows/)
+        - Documentation (docs/)
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: ide
+    attributes:
+      label: IDE / Platform
+      options:
+        - VS Code
+        - Cursor
+        - Windsurf
+        - Claude Code
+        - Antigravity
+        - Codex
+        - OpenCode
+        - Trae
+        - Terminal CLI
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Operating System
+      placeholder: "e.g., Windows 11, macOS 14.5, Ubuntu 24.04"
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error Output / Logs
+      description: Paste relevant terminal output or error messages.
+      render: shell
