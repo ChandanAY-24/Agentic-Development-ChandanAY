@@ -1,5 +1,8 @@
 # ADR-[####]: [Decision title]
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![5-Tier System Architecture & Clean Layers 3D](../diagrams/3d-system-architecture.svg)
+
 | Field | Value |
 |---|---|
 | Status | Proposed / Accepted / Rejected / Superseded by ADR-#### / Deprecated |

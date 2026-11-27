@@ -36,3 +36,12 @@ Procedure:
 
 Required output:
 - Validated feature spec in `docs/features/`, updated `docs/spec.md`, approval record `APR-###`.
+
+=== 3D AXONOMETRIC WORKFLOW DIAGRAM ===
+      ╔─────────────────────────────────────────────────╗
+     ╱                FEATURE LIFECYCLE                ╱│
+    ╔─────────────────────────────────────────────────╗ │
+    ║   PROTOTYPE -> DRAFT -> IN REVIEW -> APPROVED   ║ │
+    ║               (3D Isometric Layer)              ║╱
+    ╚─────────────────────────────────────────────────╝
+    Visual SVG: ../docs/diagrams/3d-feature-lifecycle.svg

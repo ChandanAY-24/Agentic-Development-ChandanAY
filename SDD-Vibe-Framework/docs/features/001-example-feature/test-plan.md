@@ -1,5 +1,8 @@
 # FEAT-001 Test Plan (SAMPLE)
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![3D Isometric Testing Pyramid & AC Traceability](../../diagrams/3d-testing-pyramid.svg)
+
 **Spec version:** 1.0.0 · **Status:** APPROVED (sample) · Header and history: [`feature.md`](feature.md)
 
 ## Verification mapping

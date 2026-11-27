@@ -3,7 +3,10 @@
 > **Document class:** Living feature/specification  
 > **Framework:** SDD-Vibe  
 > **Guideline baseline:** 1.0.0  
-> **Status:** Template; project-specific content requires review  
+> **Status:** Template; project-specific content requires review
+
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![API Contract & Request Lifecycle 3D Stack](diagrams/3d-api-gateway.svg)
 
 ## Purpose
 

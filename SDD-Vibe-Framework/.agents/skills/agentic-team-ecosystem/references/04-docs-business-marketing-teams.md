@@ -1,5 +1,8 @@
 # 04 — Group 4 Teams (Documentation, Business & Data Analyst, Marketing)
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![14-Team Agentic Ecosystem 3D Topology](../../../../docs/diagrams/3d-agentic-ecosystem.svg)
+
 ## Team 11 — Documentation Team
 
 **Scope:** Executive, technical, and product documentation synchronized with the codebase.

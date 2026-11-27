@@ -2,6 +2,9 @@
 
 > **Canonical specification:** this file, `docs/constitution.md` and `docs/rules.md` govern every AI coding agent session across Claude Code, Cursor, Windsurf, Antigravity, OpenCode, Codex, Trae, and VS Code.
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![Cross-IDE Portability Engine 3D Sync Hub](docs/diagrams/3d-cross-ide-portability.svg)
+
 - Autonomous, non-interactive agents (e.g. CI, batch runs) **MUST NOT** make speculative changes without human approval.
 - An interactive agent working on a task **MUST** stop and ask when an edit touches protected policy (`docs/constitution.md`, `docs/rules.md`, `AGENTS.md`) or when an ambiguity affects architecture, security or data isolation.
 

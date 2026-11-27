@@ -5,6 +5,9 @@ argument-hint: "[log path or time window]"
 
 # /errorlogs-ca-agent
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![3D Isometric Testing Pyramid & AC Traceability](../../docs/diagrams/3d-testing-pyramid.svg)
+
 **Purpose:** Analyze recurring errors from safe logs and link regression preventative tests.
 
 ## When to run

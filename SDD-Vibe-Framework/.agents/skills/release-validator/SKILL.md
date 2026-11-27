@@ -5,6 +5,9 @@ description: "Validate release readiness against docs/release-checklist.md, the 
 
 # Skill: release-validator
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![CI/CD & Quality Gate Pipeline 3D Flow](../../../docs/diagrams/3d-cicd-devops.svg)
+
 **Purpose:** Apply the controlled release validator workflow to a clearly scoped project task.
 
 ## Trigger

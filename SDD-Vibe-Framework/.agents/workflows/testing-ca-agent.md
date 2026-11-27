@@ -5,6 +5,9 @@ argument-hint: "[test path, suite or AC ID]"
 
 # /testing-ca-agent
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![3D Isometric Testing Pyramid & AC Traceability](../../docs/diagrams/3d-testing-pyramid.svg)
+
 **Purpose:** Choose relevant test suite, seek approval for disruptive runs, execute and report real results.
 
 ## When to run

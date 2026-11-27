@@ -1,5 +1,8 @@
 # 06 — Post-Design Kanban, Google Sheet Sync & Token/Model Ops
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![Dual-Budget Token Optimization 3D Stack](../../../../docs/diagrams/3d-token-optimization.svg)
+
 ## 1. Post-Frontend Design Kanban & Google Sheet Tracker (Team 1)
 
 **Activation Rule:** Triggered automatically immediately after **Step 3 (Frontend / Interface Design & Sensory Demo)** is verified by the Developer.

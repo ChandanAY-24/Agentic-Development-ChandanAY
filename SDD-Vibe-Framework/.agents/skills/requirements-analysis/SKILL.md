@@ -5,6 +5,9 @@ description: "Analyze requests against docs/product.md boundaries and docs/prd.m
 
 # Skill: requirements-analysis
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![SDD-Vibe 1-in-2 Single Workflow 3D Stack](../../../docs/diagrams/3d-sdd-vibe-pipeline.svg)
+
 **Purpose:** Enforce accurate pre-start domain research, pin-point developer grilling, and zero-ambiguity requirements analysis before any architecture, PRD, prototype, or feature spec is written.
 
 ## Trigger

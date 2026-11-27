@@ -2,6 +2,9 @@
 
 ### Zero-Dependency, Real-Time Mission Control for SDD-Vibe (1-in-2 Single Workflow) Framework
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![In-IDE Project-Manager-Dashboard 3D Dataflow](docs/diagrams/3d-mission-control-dashboard.svg)
+
 <div align="center">
 
 [![Mission Control](https://img.shields.io/badge/Telemetry-In--IDE_Mission_Control-blue?style=for-the-badge&logo=visualstudiocode)](.)

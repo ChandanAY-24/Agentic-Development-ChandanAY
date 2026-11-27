@@ -1,5 +1,8 @@
 # Hook Execution Matrix
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![Cross-IDE Portability Engine 3D Sync Hub](../../docs/diagrams/3d-cross-ide-portability.svg)
+
 | Event | Config / Script | Required check | Fallback |
 |---|---|---|---|
 | `SessionStart` | `.agents/hooks.json` → `scripts/hooks/session_start.py` | MUST verify `AGENTS.md`, `docs/`, `.agents/workflows/`, `.agents/skills/` | Explicit human/agent checklist |

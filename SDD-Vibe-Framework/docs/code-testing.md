@@ -3,7 +3,10 @@
 > **Document class:** Controlled process guideline  
 > **Framework:** SDD-Vibe  
 > **Guideline baseline:** 1.0.0  
-> **Status:** Template; project-specific content requires review  
+> **Status:** Template; project-specific content requires review
+
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![3D Isometric Testing Pyramid & AC Traceability](diagrams/3d-testing-pyramid.svg)
 
 ## Purpose
 

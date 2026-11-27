@@ -1,5 +1,8 @@
 # FEAT-001 Acceptance Criteria (SAMPLE)
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![3D Isometric Testing Pyramid & AC Traceability](../../diagrams/3d-testing-pyramid.svg)
+
 **Spec version:** 1.0.0 · **Status:** APPROVED (sample) · Header and history: [`feature.md`](feature.md)
 
 ### AC-FEAT001-01: Valid credentials create a session

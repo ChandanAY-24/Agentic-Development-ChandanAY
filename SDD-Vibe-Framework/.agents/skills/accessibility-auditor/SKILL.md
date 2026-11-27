@@ -5,6 +5,9 @@ description: "Audit UI features against docs/accessibility.md targets and NFR-FE
 
 # Skill: accessibility-auditor
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![Defense-in-Depth Security 3D Stack](../../../docs/diagrams/3d-security-defense.svg)
+
 **Purpose:** Audit user-facing interfaces against WCAG 2.1 AA standards and `docs/accessibility.md` for semantic structure, keyboard operability, screen-reader clarity, and contrast compliance.
 
 ## Trigger

@@ -39,3 +39,12 @@ Procedure:
 Required output:
 - Active IDE slash commands in `/` dropdown, clean docs, and initialized `docs/product.md` + `docs/prd.md`.
 - MUST stop at missing approval, unresolved policy conflict, or unsafe credentials.
+
+=== 3D AXONOMETRIC WORKFLOW DIAGRAM ===
+      ╔───────────────────────────────────────────╗
+     ╱              SETUP & IDE SYNC             ╱│
+    ╔───────────────────────────────────────────╗ │
+    ║   init_project.py -> .agents/ -> 8 IDEs   ║ │
+    ║            (3D Isometric Layer)           ║╱
+    ╚───────────────────────────────────────────╝
+    Visual SVG: ../docs/diagrams/3d-sdd-vibe-pipeline.svg

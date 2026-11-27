@@ -5,6 +5,9 @@ description: "Review API changes against docs/apis.md and the contracts cited by
 
 # Skill: api-contract-review
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![API Contract & Request Lifecycle 3D Stack](../../../docs/diagrams/3d-api-gateway.svg)
+
 **Purpose:** Validate API endpoint additions and modifications against `docs/apis.md` and feature contracts for schema accuracy, backward compatibility, auth enforcement, and error consistency.
 
 ## Trigger

@@ -5,6 +5,9 @@ argument-hint: "[project-type or step number, e.g. saas | ecommerce | cv | os | 
 
 # /team-ecosystem-ca-agent
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![14-Team Agentic Ecosystem 3D Topology](../../docs/diagrams/3d-agentic-ecosystem.svg)
+
 **Purpose:** Activate the optional, default-installed `agentic-team-ecosystem` skill to run a step-by-step, multi-team Agentic AI workflow across Groups 1–4 and Teams 1–14.
 
 ## When to run

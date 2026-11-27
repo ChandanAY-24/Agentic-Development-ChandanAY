@@ -1,6 +1,9 @@
 # `.agents/` — Portable Autonomous Agent Assets & Engine
 ### Unified Cross-IDE Capability Layer for SDD-Vibe (1-in-2 Single Workflow)
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![SDD-Vibe 1-in-2 Single Workflow 3D Stack](../docs/diagrams/3d-sdd-vibe-pipeline.svg)
+
 <div align="center">
 
 [![Agent Layer](https://img.shields.io/badge/Agent_Engine-Canonical_Source_of_Truth-blue?style=for-the-badge&logo=probot)](.)

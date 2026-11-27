@@ -3,7 +3,10 @@
 > **Document class:** Living feature/specification  
 > **Framework:** SDD-Vibe  
 > **Guideline baseline:** 2.0.0  
-> **Status:** Active Standard  
+> **Status:** Active Standard
+
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![3D Isometric Testing Pyramid & AC Traceability](diagrams/3d-testing-pyramid.svg)
 
 ## Purpose
 

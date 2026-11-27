@@ -5,6 +5,9 @@ argument-hint: "[FEAT-### or docs/features path]"
 
 # /spec-check-ca-agent
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![Feature Spec Lifecycle & Change Control 3D Flow](../../docs/diagrams/3d-feature-lifecycle.svg)
+
 **Purpose:** Check latest approved version, internal consistency, explicit criteria and conflicts.
 
 ## When to run

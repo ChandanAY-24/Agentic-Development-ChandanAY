@@ -5,6 +5,9 @@ description: "Keep docs consistent: product.md, prd.md, docs/features, spec.md i
 
 # Skill: documentation-sync
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![SDD-Vibe 1-in-2 Single Workflow 3D Stack](../../../docs/diagrams/3d-sdd-vibe-pipeline.svg)
+
 **Purpose:** Maintain 100% synchronization across living documentation, traceability matrices, registries, and changelogs after any feature, spec, or architectural change.
 
 ## Trigger

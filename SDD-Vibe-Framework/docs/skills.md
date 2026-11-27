@@ -3,7 +3,10 @@
 > **Document class:** Controlled process guideline  
 > **Framework:** SDD-Vibe  
 > **Guideline baseline:** 2.0.0  
-> **Status:** Active Standard  
+> **Status:** Active Standard
+
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![SDD-Vibe 1-in-2 Single Workflow 3D Stack](diagrams/3d-sdd-vibe-pipeline.svg)
 
 ## Purpose
 

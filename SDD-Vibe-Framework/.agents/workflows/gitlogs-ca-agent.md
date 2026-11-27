@@ -5,6 +5,9 @@ argument-hint: "[branch, range or path]"
 
 # /gitlogs-ca-agent
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![SDD-Vibe 1-in-2 Single Workflow 3D Stack](../../docs/diagrams/3d-sdd-vibe-pipeline.svg)
+
 **Purpose:** Inspect repository history and report actual commits and changes; do not rewrite history without approval.
 
 ## When to run

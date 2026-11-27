@@ -2,6 +2,9 @@
 
 > **Illustrative sample.** Demonstrates the modular format and an `APPROVED` header. It does **not** authorize implementation in your project until the project owner adopts it with a project-specific approval record.
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![Feature Spec Lifecycle & Change Control 3D Flow](../../diagrams/3d-feature-lifecycle.svg)
+
 | Field | Value |
 |---|---|
 | Feature ID | FEAT-001 |

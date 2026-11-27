@@ -1,6 +1,9 @@
 # AI-Powered Project Development — Universal Custom Slash Commands for 1-in-2 Single Workflow (`SDD-Vibe`)
 ### Operational Reference for `.agents/commands/` Across All 4 Hybrid Pipeline Phases
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![SDD-Vibe 1-in-2 Single Workflow 3D Stack](docs/diagrams/3d-sdd-vibe-pipeline.svg)
+
 **Framework:** SDD-Vibe (1-in-2 Single Workflow)  
 **Author / Engineering Lead:** Chandan Adhikary  
 **Version:** 2.0.0 (Production-Grade Universal Release)  

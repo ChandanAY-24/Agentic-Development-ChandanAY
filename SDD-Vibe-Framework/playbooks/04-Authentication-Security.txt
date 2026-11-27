@@ -25,3 +25,12 @@ Procedure:
 
 Required output:
 - Passing security/negative tests, `/security-audit-ca-agent` report with zero unresolved Critical/High issues.
+
+=== 3D AXONOMETRIC WORKFLOW DIAGRAM ===
+      ╔─────────────────────────────────────────────╗
+     ╱               SECURITY & AUTH               ╱│
+    ╔─────────────────────────────────────────────╗ │
+    ║   Edge -> RBAC/2FA -> Zod -> RLS -> Audit   ║ │
+    ║             (3D Isometric Layer)            ║╱
+    ╚─────────────────────────────────────────────╝
+    Visual SVG: ../docs/diagrams/3d-security-defense.svg

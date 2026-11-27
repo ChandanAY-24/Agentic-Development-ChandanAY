@@ -5,6 +5,9 @@ description: "Validate feature specifications in docs/features/ for lifecycle st
 
 # Skill: spec-validator
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![Feature Spec Lifecycle & Change Control 3D Flow](../../../docs/diagrams/3d-feature-lifecycle.svg)
+
 **Purpose:** Apply the controlled spec validator workflow to a clearly scoped project task.
 
 ## Trigger

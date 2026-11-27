@@ -25,3 +25,12 @@ Procedure:
 
 Required output:
 - Exact commands executed, raw pass/fail counts, coverage/gate status, and updated `docs/task.md`.
+
+=== 3D AXONOMETRIC WORKFLOW DIAGRAM ===
+      ╔──────────────────────────────────────────────────╗
+     ╱                 TESTING PYRAMID                  ╱│
+    ╔──────────────────────────────────────────────────╗ │
+    ║   Unit (70%) -> Integration (20%) -> E2E (10%)   ║ │
+    ║               (3D Isometric Layer)               ║╱
+    ╚──────────────────────────────────────────────────╝
+    Visual SVG: ../docs/diagrams/3d-testing-pyramid.svg

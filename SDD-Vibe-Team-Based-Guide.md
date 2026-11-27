@@ -1,6 +1,9 @@
 # SDD-Vibe Detailed "When & What to Use" Team-Based Guide
 ### Complete Operational Playbook for the 4-Group / 14-Team `agentic-team-ecosystem`
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![14-Team Agentic Ecosystem 3D Topology](docs/diagrams/3d-agentic-ecosystem.svg)
+
 <div align="center">
 
 [![Ecosystem](https://img.shields.io/badge/Ecosystem-4_Groups_•_14_Teams-blue?style=for-the-badge)](.)

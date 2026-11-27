@@ -3,7 +3,10 @@
 > **Document class:** Living feature/specification  
 > **Framework:** SDD-Vibe  
 > **Guideline baseline:** 1.0.0  
-> **Status:** Template; project-specific content requires review  
+> **Status:** Template; project-specific content requires review
+
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![SDD-Vibe 1-in-2 Single Workflow 3D Stack](diagrams/3d-sdd-vibe-pipeline.svg)
 
 ## Purpose
 

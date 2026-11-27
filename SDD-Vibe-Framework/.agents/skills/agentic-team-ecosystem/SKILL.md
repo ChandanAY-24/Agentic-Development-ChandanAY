@@ -5,6 +5,9 @@ description: "Optional default-installed 14-team Agentic AI Development Ecosyste
 
 # Skill: agentic-team-ecosystem
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![14-Team Agentic Ecosystem 3D Topology](../../../docs/diagrams/3d-agentic-ecosystem.svg)
+
 **Purpose:** Provide a complete, **optional (developer-choice)**, cross-IDE 14-team Agentic AI Development Ecosystem bundled by default in `SDD-Vibe-Framework`. It auto-triggers only the required Group Main Agents, Team Coordinators, and Sub-Agents step by step based on project type and SDD-Vibe phase.
 
 > **Developer Choice & Cross-Harness Portability:** Installed by default in `.agents/skills/agentic-team-ecosystem/` so every developer using `SDD-Vibe-Framework` across **Claude Code, Codex, Antigravity, Cursor, Windsurf, OpenCode, Trae, or VS Code** can invoke it on demand—or ignore it and use standard SDD-Vibe commands.

@@ -1,6 +1,9 @@
 # Domain-Specific Engineering Extensions
 ### Industry Standards, Bounded Contexts & Regulatory Extensions for SDD-TDD
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![SDD-Vibe 1-in-2 Single Workflow 3D Stack](../diagrams/3d-sdd-vibe-pipeline.svg)
+
 <div align="center">
 
 [![Domain Extensions](https://img.shields.io/badge/Architecture-Bounded_Contexts-blue?style=for-the-badge&logo=codewars)](.)

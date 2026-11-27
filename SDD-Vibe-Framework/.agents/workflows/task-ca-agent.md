@@ -5,6 +5,9 @@ argument-hint: "[FEAT-### version and task summary]"
 
 # /task-ca-agent
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![Feature Spec Lifecycle & Change Control 3D Flow](../../docs/diagrams/3d-feature-lifecycle.svg)
+
 **Purpose:** Create a task linked to an approved spec version with clear file ownership, tests and Definition of Done.
 
 ## When to run

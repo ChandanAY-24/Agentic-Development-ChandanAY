@@ -4,6 +4,9 @@ description: Start or verify the in-IDE Project-Manager-Dashboard local daemon (
 
 # `/dashboard-ca-agent`
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![In-IDE Project-Manager-Dashboard 3D Dataflow](../../docs/diagrams/3d-mission-control-dashboard.svg)
+
 Launch or verify the strictly in-IDE **Project-Manager-Dashboard** for real-time visual tracking, 4-column drag-and-drop Kanban, Claude MOD context window token telemetry, and TDD heartbeat.
 
 ## Usage

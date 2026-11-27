@@ -3,7 +3,10 @@
 > **Document class:** Living feature/specification  
 > **Framework:** SDD-Vibe  
 > **Guideline baseline:** 2.0.0  
-> **Status:** Template; project-specific instantiation requires review  
+> **Status:** Template; project-specific instantiation requires review
+
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![5-Tier System Architecture & Clean Layers 3D](diagrams/3d-system-architecture.svg)
 
 ## Purpose
 

@@ -5,6 +5,9 @@ description: "Enforce red-green-refactor: failing tests mapped to AC-FEAT IDs be
 
 # Skill: tdd-enforcer
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![3D Isometric Testing Pyramid & AC Traceability](../../../docs/diagrams/3d-testing-pyramid.svg)
+
 **Purpose:** Enforce strict Red-Green-Refactor test-driven development, ensuring failing automated tests mapped to `AC-FEAT###-##` exist and fail for the expected reason before any production backend, persistence, or business logic is written.
 
 ## Trigger

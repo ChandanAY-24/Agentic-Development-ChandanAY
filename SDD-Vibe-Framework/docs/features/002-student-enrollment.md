@@ -2,6 +2,9 @@
 
 > **Illustrative sample.** Demonstrates the flat format and an `IN REVIEW` feature. It is the canonical version of the enrollment example used in the root SDD guides. It does **not** authorize implementation.
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![Feature Spec Lifecycle & Change Control 3D Flow](../diagrams/3d-feature-lifecycle.svg)
+
 | Field | Value |
 |---|---|
 | Feature ID | FEAT-002 |

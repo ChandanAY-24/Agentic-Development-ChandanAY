@@ -5,6 +5,9 @@ argument-hint: "[scope: path, service or dependency set]"
 
 # /security-audit-ca-agent
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![Defense-in-Depth Security 3D Stack](../../docs/diagrams/3d-security-defense.svg)
+
 **Purpose:** Perform approved scans/review, record vulnerabilities, severity and remediation.
 
 ## When to run

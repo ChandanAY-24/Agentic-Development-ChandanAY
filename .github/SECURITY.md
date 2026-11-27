@@ -1,5 +1,8 @@
 # Security Policy
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![Defense-in-Depth Security 3D Stack](../docs/diagrams/3d-security-defense.svg)
+
 ## Supported Versions
 
 We actively provide security patches and updates for the following releases:
@@ -36,4 +39,3 @@ When deploying agents or using `.agents/commands/`:
 1. **Never commit secrets:** Never hardcode API keys, database credentials, or private tokens in `.env` files or specifications.
 2. **Review Diffs:** Always execute `/review-ca-agent` before committing or merging AI-generated code.
 3. **Execute Security Audits:** Run `/security-audit-ca-agent` before any production release to identify potential secret leaks or vulnerable dependencies.
-

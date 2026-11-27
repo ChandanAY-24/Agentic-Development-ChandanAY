@@ -3,6 +3,9 @@
 
 > **Canonical System Instruction:** This document defines the primary behavioral contract and architectural entry point for Google Antigravity, Gemini CLI, and Gemini-powered autonomous coding agents operating within this repository.
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![Cross-IDE Portability Engine 3D Sync Hub](docs/diagrams/3d-cross-ide-portability.svg)
+
 ---
 
 ## 1. Repository 1-in-2 Single Workflow Architecture
@@ -113,4 +116,3 @@ Both tracks feature the zero-dependency, Apple/Linear & Shadcn UI-inspired Bento
 - **Ubiquitous Dates in DD-MM-YYYY:** Live real-time header clock, Task Start/Stop date chips (`🟢 Start: DD-MM-YYYY`, `⏹️ Stop: DD-MM-YYYY`), Kanban date spans, and Phase milestones strictly formatted in `DD-MM-YYYY`.
 - **Working AC Contract Engine:** Acceptance Criteria (AC-*) with Given/When/Then scenario inspection, test traceability mapping, automatic task correlation, and live interactive status cycling (`GREEN` / `RED` / `PENDING`).
 - **Port:** `http://127.0.0.1:4200` (SDD-Vibe Mission Control).
-

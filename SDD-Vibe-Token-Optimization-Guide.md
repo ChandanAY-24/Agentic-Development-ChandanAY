@@ -1,6 +1,9 @@
 # SDD-Vibe Token Optimization & Full-Potential Model Strategy Guide
 ### How to Burn 50–80% Fewer Tokens on Routine Work While Unleashing Full Reasoning Power Where It Matters Most
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![Dual-Budget Token Optimization 3D Stack](docs/diagrams/3d-token-optimization.svg)
+
 <div align="center">
 
 [![Framework](https://img.shields.io/badge/Framework-SDD--Vibe_(1--in--2)-blue?style=for-the-badge)](.)

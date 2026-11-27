@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 540" width="100%" role="img" aria-label="3D Isometric Testing Pyramid &amp; AC Traceability">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="55%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <pattern id="isoGrid" width="40" height="23.1" patternUnits="userSpaceOnUse">
+      <path d="M 0 11.55 L 20 0 L 40 11.55 L 20 23.1 Z" fill="none" stroke="#1e293b" stroke-width="0.6" opacity="0.55"/>
+    </pattern>
+    <filter id="glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+  <rect width="920" height="540" rx="14" fill="url(#bgGrad)" stroke="#1e293b" stroke-width="1.5"/>
+  <rect width="920" height="540" rx="14" fill="url(#isoGrid)"/>
+  <text x="32" y="38" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="19" font-weight="800" fill="#f8fafc">3D Isometric Testing Pyramid &amp; AC Traceability</text>
+  <text x="32" y="58" font-family="JetBrains Mono, Consolas, monospace" font-size="11.5" fill="#94a3b8">Red-Green-Refactor TDD Gate · Zero-Regression Verification</text>
+  <g filter="url(#glow)">
+  <polygon points="243.5,484.9 460.0,593.2 460.0,609.2 243.5,500.9" fill="#1e293b" stroke="#94a3b8" stroke-width="1.2" opacity="0.95"/>
+  <polygon points="676.5,484.9 460.0,593.2 460.0,609.2 676.5,500.9" fill="#0f172a" stroke="#94a3b8" stroke-width="1.2" opacity="0.95"/>
+  <polygon points="460.0,376.7 676.5,484.9 460.0,593.2 243.5,484.9" fill="#334155" stroke="#94a3b8" stroke-width="1.6"/>
+  <text x="460.0" y="480.9" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" fill="#f1f5f9">logs/test.log &amp; AC Traceability</text>
+  <text x="460.0" y="497.9" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="10.5" fill="#e2e8f0" opacity="0.92">AC-FEAT###-## -&gt; TEST-FEAT###-##</text>
+  <polygon points="278.1,424.9 460.0,515.9 460.0,559.9 278.1,468.9" fill="#0369a1" stroke="#38bdf8" stroke-width="1.2" opacity="0.95"/>
+  <polygon points="641.9,424.9 460.0,515.9 460.0,559.9 641.9,468.9" fill="#075985" stroke="#38bdf8" stroke-width="1.2" opacity="0.95"/>
+  <polygon points="460.0,334.0 641.9,424.9 460.0,515.9 278.1,424.9" fill="#0284c7" stroke="#38bdf8" stroke-width="1.6"/>
+  <text x="460.0" y="420.9" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" fill="#e0f2fe">UNIT TESTS (60-70%)</text>
+  <text x="460.0" y="437.9" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="10.5" fill="#e2e8f0" opacity="0.92">tests/unit/ · Pure Domain &amp; Contracts</text>
+  <polygon points="333.6,364.9 460.0,428.1 460.0,470.1 333.6,406.9" fill="#4338ca" stroke="#818cf8" stroke-width="1.2" opacity="0.95"/>
+  <polygon points="586.4,364.9 460.0,428.1 460.0,470.1 586.4,406.9" fill="#3730a3" stroke="#818cf8" stroke-width="1.2" opacity="0.95"/>
+  <polygon points="460.0,301.7 586.4,364.9 460.0,428.1 333.6,364.9" fill="#4f46e5" stroke="#818cf8" stroke-width="1.6"/>
+  <text x="460.0" y="360.9" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" fill="#e0e7ff">INTEGRATION (20-30%)</text>
+  <text x="460.0" y="377.9" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="10.5" fill="#e2e8f0" opacity="0.92">tests/integration/ · API &amp; DB</text>
+  <polygon points="392.5,308.9 460.0,342.7 460.0,380.7 392.5,346.9" fill="#6d28d9" stroke="#c084fc" stroke-width="1.2" opacity="0.95"/>
+  <polygon points="527.5,308.9 460.0,342.7 460.0,380.7 527.5,346.9" fill="#5b21b6" stroke="#c084fc" stroke-width="1.2" opacity="0.95"/>
+  <polygon points="460.0,275.2 527.5,308.9 460.0,342.7 392.5,308.9" fill="#7c3aed" stroke="#c084fc" stroke-width="1.6"/>
+  <text x="460.0" y="304.9" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" fill="#f3e8ff">E2E (10%)</text>
+  <text x="460.0" y="321.9" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="10.5" fill="#e2e8f0" opacity="0.92">Browser Journeys</text>
+  </g>
+  <rect x="36" y="506" width="12" height="12" rx="3" fill="#0284c7" stroke="#38bdf8" stroke-width="1.2"/><text x="54" y="516" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#cbd5e1">Unit</text>
+  <rect x="105.2" y="506" width="12" height="12" rx="3" fill="#4f46e5" stroke="#818cf8" stroke-width="1.2"/><text x="123.2" y="516" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#cbd5e1">Integration</text>
+  <rect x="222.0" y="506" width="12" height="12" rx="3" fill="#7c3aed" stroke="#c084fc" stroke-width="1.2"/><text x="240.0" y="516" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#cbd5e1">E2E</text>
+  <rect x="284.4" y="506" width="12" height="12" rx="3" fill="#334155" stroke="#94a3b8" stroke-width="1.2"/><text x="302.4" y="516" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#cbd5e1">Audit Log</text>
+  <text x="892" y="516" text-anchor="end" font-family="JetBrains Mono, Consolas, monospace" font-size="10" fill="#64748b">SDD-Vibe · 2:1 Axonometric 3D</text>
+</svg>

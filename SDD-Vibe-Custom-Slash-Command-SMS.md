@@ -1,5 +1,8 @@
 # Complete Layman-Friendly Guide: Role-Based Hospital Management System (HMS) Using SDLC & SDD-Vibe
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![SDD-Vibe 1-in-2 Single Workflow 3D Stack](docs/diagrams/3d-sdd-vibe-pipeline.svg)
+
 **Framework:** SDD-Vibe (1-in-2 Single Workflow: Visual Prototype + Spec-Driven Development & TDD)  
 **Reference Project:** CityCare Role-Based Hospital Management System (HMS)  
 **Target Audience:** Anyone — founders, hospital admins, students, or developers — explained in plain English with exact `/-ca-agent` slash commands, GitHub/official skill & plugin references, and `"In Case of Scenario..."` walkthroughs.

@@ -1,5 +1,8 @@
 # Contributing to SDD-Vibe
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![SDD-Vibe 1-in-2 Single Workflow 3D Stack](../docs/diagrams/3d-sdd-vibe-pipeline.svg)
+
 Thank you for your interest in contributing to SDD-Vibe! This guide covers the contribution process.
 
 ## Getting Started

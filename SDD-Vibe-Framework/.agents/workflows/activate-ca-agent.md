@@ -5,6 +5,9 @@ argument-hint: "[optional flags, e.g. --ides all | --clean-samples | --install-g
 
 # /activate-ca-agent
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![SDD-Vibe 1-in-2 Single Workflow 3D Stack](../../docs/diagrams/3d-sdd-vibe-pipeline.svg)
+
 **Purpose:** Zero-friction, idempotent workspace activation after copying or renaming `SDD-Vibe-Framework/` to a new project folder. Also triggered when the Developer prompts **`activate ca agents`** in chat.
 
 ## When to run

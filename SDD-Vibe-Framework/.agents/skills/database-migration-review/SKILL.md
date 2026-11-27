@@ -5,6 +5,9 @@ description: "Review schema and migration changes against docs/database.md for s
 
 # Skill: database-migration-review
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![Persistence & Migration 3D Stack](../../../docs/diagrams/3d-database-persistence.svg)
+
 **Purpose:** Audit database schema changes and migrations against `docs/database.md` for backward compatibility, reversibility, data integrity, and zero-downtime safety.
 
 ## Trigger

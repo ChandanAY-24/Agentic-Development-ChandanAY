@@ -3,7 +3,10 @@
 > **Document class:** Controlled process guideline  
 > **Framework:** SDD-Vibe  
 > **Guideline baseline:** 1.0.0  
-> **Status:** Template; project-specific content requires review  
+> **Status:** Template; project-specific content requires review
+
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![Defense-in-Depth Security 3D Stack](diagrams/3d-security-defense.svg)
 
 ## Purpose
 

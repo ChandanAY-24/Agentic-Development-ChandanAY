@@ -1,6 +1,9 @@
 # Project-Manager-Dashboard (In-IDE Subproject)
 ### Local-Only, Zero-Dependency Telemetry Mission Control for SDD-Vibe
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![In-IDE Project-Manager-Dashboard 3D Dataflow](../docs/diagrams/3d-mission-control-dashboard.svg)
+
 <div align="center">
 
 [![Port](https://img.shields.io/badge/Port-4200-blue?style=for-the-badge&logo=visualstudiocode)](.)

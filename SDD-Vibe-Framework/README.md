@@ -1,6 +1,9 @@
 # SDD-Vibe Framework (1-in-2 Single Workflow)
 ### Hybrid Sensory Prototyping + Spec-Driven Development (SDD) & TDD with AI Agents
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![SDD-Vibe 1-in-2 Single Workflow 3D Stack](docs/diagrams/3d-sdd-vibe-pipeline.svg)
+
 <div align="center">
 
 [![Framework](https://img.shields.io/badge/Framework-1--in--2_Single_Workflow-blue?style=for-the-badge&logo=shield)](.)

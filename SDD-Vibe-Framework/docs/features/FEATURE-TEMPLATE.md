@@ -1,5 +1,8 @@
 # FEAT-[NNN]: [Feature name]
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![Feature Spec Lifecycle & Change Control 3D Flow](../diagrams/3d-feature-lifecycle.svg)
+
 | Field | Value |
 |---|---|
 | Feature ID | FEAT-[NNN] |

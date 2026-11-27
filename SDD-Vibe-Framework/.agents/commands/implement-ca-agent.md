@@ -5,6 +5,9 @@ argument-hint: "[TASK-### and FEAT-### version]"
 
 # /implement-ca-agent
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![SDD-Vibe 1-in-2 Single Workflow 3D Stack](../../docs/diagrams/3d-sdd-vibe-pipeline.svg)
+
 **Purpose:** Implement only explicitly approved task behavior; in SDD require test-first red-green-refactor evidence.
 
 ## When to run

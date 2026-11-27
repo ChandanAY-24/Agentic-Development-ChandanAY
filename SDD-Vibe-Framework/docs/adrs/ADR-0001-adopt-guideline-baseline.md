@@ -1,5 +1,8 @@
 # ADR-0001: Adopt the documentation guideline baseline (EXAMPLE)
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![Cross-IDE Portability Engine 3D Sync Hub](../diagrams/3d-cross-ide-portability.svg)
+
 | Field | Value |
 |---|---|
 | Status | Proposed (example — set to Accepted when the project owner adopts the baseline) |

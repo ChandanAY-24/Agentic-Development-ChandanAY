@@ -5,6 +5,9 @@ description: "Diagnose failures from real logs and tests, link findings to docs/
 
 # Skill: debugging-analyst
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![3D Isometric Testing Pyramid & AC Traceability](../../../docs/diagrams/3d-testing-pyramid.svg)
+
 **Purpose:** Perform structured root-cause analysis from real logs and failing tests, classify defects, scaffold failing regression tests, and record findings in `docs/error-tracker.md`.
 
 ## Trigger

@@ -5,6 +5,9 @@ description: "Review diffs for scope fidelity to the approved feature version, t
 
 # Skill: code-reviewer
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![SDD-Vibe 1-in-2 Single Workflow 3D Stack](../../../docs/diagrams/3d-sdd-vibe-pipeline.svg)
+
 **Purpose:** Perform a deterministic pre-commit/pre-merge diff audit verifying scope fidelity, architectural boundaries, test coverage, secret hygiene, and maintainability against `docs/code-review.md`.
 
 ## Trigger

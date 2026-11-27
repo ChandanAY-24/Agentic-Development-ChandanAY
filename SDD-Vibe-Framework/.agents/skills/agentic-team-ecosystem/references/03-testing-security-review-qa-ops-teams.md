@@ -1,5 +1,8 @@
 # 03 — Group 3 Teams (Testing, Security, Review, QA, Ops, Maintenance)
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![14-Team Agentic Ecosystem 3D Topology](../../../../docs/diagrams/3d-agentic-ecosystem.svg)
+
 ## Team 5 — Testing Team
 
 **Scope:** Full SDLC & STLC test coverage—never mark a task complete without real passing evidence in `logs/test.log`.

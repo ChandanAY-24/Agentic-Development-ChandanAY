@@ -5,6 +5,9 @@ description: "Audit code, configuration and dependencies against docs/security.m
 
 # Skill: security-auditor
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![Defense-in-Depth Security 3D Stack](../../../docs/diagrams/3d-security-defense.svg)
+
 **Purpose:** Apply the controlled security auditor workflow to a clearly scoped project task.
 
 ## Trigger

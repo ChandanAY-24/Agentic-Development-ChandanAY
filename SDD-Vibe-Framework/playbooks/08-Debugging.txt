@@ -25,3 +25,11 @@ Procedure:
 Required output:
 - Root cause summary, regression test evidence, and `docs/error-tracker.md` entry (if P0/P1 or recurring).
 
+=== 3D AXONOMETRIC WORKFLOW DIAGRAM ===
+      ╔─────────────────────────────────────────────╗
+     ╱              ROOT CAUSE TRIAGE              ╱│
+    ╔─────────────────────────────────────────────╗ │
+    ║   logs/*.log -> 5-Whys -> Red Test -> Fix   ║ │
+    ║             (3D Isometric Layer)            ║╱
+    ╚─────────────────────────────────────────────╝
+    Visual SVG: ../docs/diagrams/3d-testing-pyramid.svg

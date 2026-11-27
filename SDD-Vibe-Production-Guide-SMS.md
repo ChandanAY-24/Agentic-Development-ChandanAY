@@ -1,5 +1,8 @@
 # AI-Powered Project Development — 1-in-2 Single Workflow (`SDD-Vibe`) Reference Guide: EduSphere SMS
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![Cross-IDE Portability Engine 3D Sync Hub](docs/diagrams/3d-cross-ide-portability.svg)
+
 **Framework:** SDD-Vibe (1-in-2 Single Workflow)  
 **Author:** Chandan Adhikary  
 **Reference Application:** EduSphere Multi-Tenant School Management System (SMS)  

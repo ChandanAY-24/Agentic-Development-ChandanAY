@@ -1,5 +1,8 @@
 # 02 — Group 1 & Group 2 Teams (PM, Research, Frontend Design, Dev)
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![14-Team Agentic Ecosystem 3D Topology](../../../../docs/diagrams/3d-agentic-ecosystem.svg)
+
 ## Team 1 — Project & Task Manager Team
 
 **Scope:** End-to-end orchestration, developer Q&A, recommendations, and Kanban task governance.

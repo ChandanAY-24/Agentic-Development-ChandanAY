@@ -1,6 +1,9 @@
 # Feature Specifications (`docs/features/`)
 ### Canonical Living Contracts & Acceptance Criteria Architecture
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![Feature Spec Lifecycle & Change Control 3D Flow](../diagrams/3d-feature-lifecycle.svg)
+
 <div align="center">
 
 [![Specifications](https://img.shields.io/badge/Contracts-Living_Feature_Specs-blue?style=for-the-badge&logo=gitbook)](.)

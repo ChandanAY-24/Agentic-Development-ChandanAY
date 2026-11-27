@@ -1,5 +1,8 @@
 # 05 — Brand & Marketing Proposals, Discovery Prompts & Research Playbook
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![14-Team Agentic Ecosystem 3D Topology](../../../../docs/diagrams/3d-agentic-ecosystem.svg)
+
 Use these canonical templates whenever **Team 13 (Marketing & Brand)** and **Team 3 (Frontend Design)** are activated for a Brand, Product, SaaS, or E-commerce engagement.
 
 ---

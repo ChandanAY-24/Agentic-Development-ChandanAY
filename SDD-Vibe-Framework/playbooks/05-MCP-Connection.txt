@@ -24,3 +24,12 @@ Procedure:
 
 Required output:
 - Updated `docs/connectors.md`, verified health/connectivity check, and explicit human approval for write/external actions.
+
+=== 3D AXONOMETRIC WORKFLOW DIAGRAM ===
+      ╔────────────────────────────────────────────╗
+     ╱               MCP CONNECTORS               ╱│
+    ╔────────────────────────────────────────────╗ │
+    ║   Agent -> Policy Guard -> Sandboxed MCP   ║ │
+    ║            (3D Isometric Layer)            ║╱
+    ╚────────────────────────────────────────────╝
+    Visual SVG: ../docs/diagrams/3d-sdd-vibe-pipeline.svg

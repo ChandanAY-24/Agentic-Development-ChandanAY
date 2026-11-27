@@ -5,6 +5,9 @@ description: "Compare implemented UI against docs/design.md and feature acceptan
 
 # Skill: ui-fidelity-review
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![Cross-IDE Portability Engine 3D Sync Hub](../../../docs/diagrams/3d-cross-ide-portability.svg)
+
 **Purpose:** Audit implemented frontend components and Phase 2 sensory demos against `docs/design.md` tokens, responsive breakpoints, interaction states, and `AC-FEAT###-##` UI criteria.
 
 ## Trigger

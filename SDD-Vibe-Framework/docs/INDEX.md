@@ -1,5 +1,8 @@
 # Documentation Index — SDD-Vibe (1-in-2 Single Workflow)
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![SDD-Vibe 1-in-2 Single Workflow 3D Stack](diagrams/3d-sdd-vibe-pipeline.svg)
+
 **MUST** start here before planning or development. Baseline: `1.0.0` (2026-11-04).
 
 ## Authority

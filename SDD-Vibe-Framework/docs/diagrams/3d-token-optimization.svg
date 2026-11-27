@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 540" width="100%" role="img" aria-label="Dual-Budget Token Optimization Architecture (3D)">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="55%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <pattern id="isoGrid" width="40" height="23.1" patternUnits="userSpaceOnUse">
+      <path d="M 0 11.55 L 20 0 L 40 11.55 L 20 23.1 Z" fill="none" stroke="#1e293b" stroke-width="0.6" opacity="0.55"/>
+    </pattern>
+    <filter id="glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+  <rect width="920" height="540" rx="14" fill="url(#bgGrad)" stroke="#1e293b" stroke-width="1.5"/>
+  <rect width="920" height="540" rx="14" fill="url(#isoGrid)"/>
+  <text x="32" y="38" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="19" font-weight="800" fill="#f8fafc">Dual-Budget Token Optimization Architecture (3D)</text>
+  <text x="32" y="58" font-family="JetBrains Mono, Consolas, monospace" font-size="11.5" fill="#94a3b8">50-80% Savings on Routine Work · Full-Potential Models on Planning &amp; Security</text>
+  <g filter="url(#glow)">
+  <line x1="460.0" y1="490.9" x2="460.0" y2="234.9" stroke="#475569" stroke-width="1.5" stroke-dasharray="5,5"/>
+  <polygon points="278.1,438.9 460.0,529.9 460.0,555.9 278.1,464.9" fill="#047857" stroke="#34d399" stroke-width="1.2" opacity="0.95"/>
+  <polygon points="641.9,438.9 460.0,529.9 460.0,555.9 641.9,464.9" fill="#065f46" stroke="#34d399" stroke-width="1.2" opacity="0.95"/>
+  <polygon points="460.0,348.0 641.9,438.9 460.0,529.9 278.1,438.9" fill="#059669" stroke="#34d399" stroke-width="1.6"/>
+  <text x="460.0" y="434.9" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" fill="#d1fae5">Tier 3: Context &amp; Cache Layer</text>
+  <text x="460.0" y="451.9" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="10.5" fill="#e2e8f0" opacity="0.92">Prompt Caching · Memory Lanes</text>
+  <polygon points="278.1,376.9 460.0,467.9 460.0,493.9 278.1,402.9" fill="#0369a1" stroke="#38bdf8" stroke-width="1.2" opacity="0.95"/>
+  <polygon points="641.9,376.9 460.0,467.9 460.0,493.9 641.9,402.9" fill="#075985" stroke="#38bdf8" stroke-width="1.2" opacity="0.95"/>
+  <polygon points="460.0,286.0 641.9,376.9 460.0,467.9 278.1,376.9" fill="#0284c7" stroke="#38bdf8" stroke-width="1.6"/>
+  <text x="460.0" y="372.9" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" fill="#e0f2fe">Tier 2: Routine Execution</text>
+  <text x="460.0" y="389.9" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="10.5" fill="#e2e8f0" opacity="0.92">Flash/Fast Tier · Bounded Edits</text>
+  <polygon points="278.1,314.9 460.0,405.9 460.0,431.9 278.1,340.9" fill="#6d28d9" stroke="#c084fc" stroke-width="1.2" opacity="0.95"/>
+  <polygon points="641.9,314.9 460.0,405.9 460.0,431.9 641.9,340.9" fill="#5b21b6" stroke="#c084fc" stroke-width="1.2" opacity="0.95"/>
+  <polygon points="460.0,224.0 641.9,314.9 460.0,405.9 278.1,314.9" fill="#7c3aed" stroke="#c084fc" stroke-width="1.6"/>
+  <text x="460.0" y="310.9" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" fill="#f3e8ff">Tier 1: Deep Reasoning Gates</text>
+  <text x="460.0" y="327.9" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="10.5" fill="#e2e8f0" opacity="0.92">Pro/Opus Tier · Plan &amp; Security</text>
+  <line x1="550.9" y1="494.4" x2="598.9" y2="494.4" stroke="#34d399" stroke-width="1.2" stroke-dasharray="3,3"/><circle cx="604.9" cy="494.4" r="11" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/><text x="604.9" y="498.4" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700" fill="#34d399">L1</text>
+  <line x1="550.9" y1="432.4" x2="598.9" y2="432.4" stroke="#38bdf8" stroke-width="1.2" stroke-dasharray="3,3"/><circle cx="604.9" cy="432.4" r="11" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/><text x="604.9" y="436.4" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700" fill="#38bdf8">L2</text>
+  <line x1="550.9" y1="370.4" x2="598.9" y2="370.4" stroke="#c084fc" stroke-width="1.2" stroke-dasharray="3,3"/><circle cx="604.9" cy="370.4" r="11" fill="#0f172a" stroke="#c084fc" stroke-width="1.5"/><text x="604.9" y="374.4" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700" fill="#c084fc">L3</text>
+  </g>
+  
+  <text x="892" y="516" text-anchor="end" font-family="JetBrains Mono, Consolas, monospace" font-size="10" fill="#64748b">SDD-Vibe · 2:1 Axonometric 3D</text>
+</svg>

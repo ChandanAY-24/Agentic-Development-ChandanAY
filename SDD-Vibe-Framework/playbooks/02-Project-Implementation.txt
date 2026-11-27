@@ -37,3 +37,12 @@ Procedure:
 Required output:
 - Passing test suite output, updated `docs/task.md`, clean git commit with HEAD commit on top in dashboard.
 - MUST stop if tests are skipped, spec is unapproved, or scope drifts outside allowed files.
+
+=== 3D AXONOMETRIC WORKFLOW DIAGRAM ===
+      ╔───────────────────────────────────────────────╗
+     ╱             PHASED IMPLEMENTATION             ╱│
+    ╔───────────────────────────────────────────────╗ │
+    ║   Phase 1 Plan -> Phase 2 UI -> Phase 3 TDD   ║ │
+    ║              (3D Isometric Layer)             ║╱
+    ╚───────────────────────────────────────────────╝
+    Visual SVG: ../docs/diagrams/3d-sdd-vibe-pipeline.svg

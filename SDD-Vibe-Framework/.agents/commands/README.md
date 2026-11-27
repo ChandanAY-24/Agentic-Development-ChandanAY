@@ -1,6 +1,9 @@
 # Portable Agent Slash Commands (`-ca-agent`)
 ### 18 Canonical, Collision-Free Command Contracts for Autonomous Coding Agents
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![SDD-Vibe 1-in-2 Single Workflow 3D Stack](../../docs/diagrams/3d-sdd-vibe-pipeline.svg)
+
 <div align="center">
 
 [![Namespace](https://img.shields.io/badge/Namespace-*-ca--agent-blue?style=for-the-badge)](.)

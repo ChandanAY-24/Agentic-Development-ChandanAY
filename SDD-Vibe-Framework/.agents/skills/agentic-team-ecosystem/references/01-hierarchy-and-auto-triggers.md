@@ -1,5 +1,8 @@
 # 01 — Ecosystem Hierarchy, Auto-Triggers & Manual Workflow Guider (Team 14)
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![14-Team Agentic Ecosystem 3D Topology](../../../../docs/diagrams/3d-agentic-ecosystem.svg)
+
 ## 1. Multi-Tier Agentic Hierarchy
 
 ```text

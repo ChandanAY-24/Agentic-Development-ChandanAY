@@ -5,6 +5,9 @@ description: "Evaluate ML/AI components against dataset lineage, evaluation thre
 
 # Skill: ml-evaluation
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![SDD-Vibe 1-in-2 Single Workflow 3D Stack](../../../docs/diagrams/3d-sdd-vibe-pipeline.svg)
+
 **Purpose:** Validate ML, Deep Learning, Computer Vision, and LLM/RAG pipelines for dataset lineage, leakage-free splits, metric thresholds, bias/drift monitoring, and reproducibility.
 
 ## Trigger

@@ -5,6 +5,9 @@ argument-hint: "[FEAT-### and proposed change summary]"
 
 # /change-request-ca-agent
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![Feature Spec Lifecycle & Change Control 3D Flow](../../docs/diagrams/3d-feature-lifecycle.svg)
+
 **Purpose:** Create CR, impact assessment and versioned approval path without coding.
 
 ## When to run

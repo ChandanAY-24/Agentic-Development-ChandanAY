@@ -5,6 +5,9 @@ description: "Measure and profile against approved NFR budgets in docs/performan
 
 # Skill: performance-profiler
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![CI/CD & Quality Gate Pipeline 3D Flow](../../../docs/diagrams/3d-cicd-devops.svg)
+
 **Purpose:** Benchmark application, API, query, and frontend performance against NFR budgets in `docs/performance.md`, reporting strictly measured metrics.
 
 ## Trigger

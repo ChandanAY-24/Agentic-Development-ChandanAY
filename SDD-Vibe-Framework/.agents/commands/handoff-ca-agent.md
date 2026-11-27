@@ -5,6 +5,9 @@ argument-hint: "[recipient and scope]"
 
 # /handoff-ca-agent
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![SDD-Vibe 1-in-2 Single Workflow 3D Stack](../../docs/diagrams/3d-sdd-vibe-pipeline.svg)
+
 **Purpose:** Summarize verified state, docs, test evidence, blockers and next authorized tasks.
 
 ## When to run

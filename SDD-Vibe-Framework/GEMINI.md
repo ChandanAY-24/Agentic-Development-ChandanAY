@@ -5,6 +5,9 @@
 >
 > **Collision-Free Activation:** When the developer prompts **`activate ca agents`** or **`/activate-ca-agent`** after renaming the codebase, immediately execute `.agents/commands/activate-ca-agent.md` (`python scripts/init_project.py --ides all`, `check_docs.py`, `manifest.py --check`, verify `logs/`). Never use bare `activate`, `start`, or `run` as shell/chat aliases to avoid conflicts with Python `venv`, PowerShell `Start-Process`, and IDE built-ins.
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![Cross-IDE Portability Engine 3D Sync Hub](docs/diagrams/3d-cross-ide-portability.svg)
+
 ---
 
 ## 1. Prime Directives for SDD-Vibe (1-in-2 Single Workflow)

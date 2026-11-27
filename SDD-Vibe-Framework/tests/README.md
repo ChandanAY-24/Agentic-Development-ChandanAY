@@ -1,6 +1,9 @@
 # Test Harness Contract & Verification Engine
 ### Zero-Regression Automated Testing Architecture for SDD-Vibe
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![3D Isometric Testing Pyramid & AC Traceability](../docs/diagrams/3d-testing-pyramid.svg)
+
 <div align="center">
 
 [![Testing](https://img.shields.io/badge/Testing-TDD_Test--First-blue?style=for-the-badge&logo=vitest)](.)

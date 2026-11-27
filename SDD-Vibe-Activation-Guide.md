@@ -1,6 +1,9 @@
 # SDD-Vibe Complete Activation Guide (`activate ca agents`)
 ### Zero-Conflict Bootstrap for All 18 Custom Slash Commands, `agentic-team-ecosystem`, IDE Adapters, Hooks & `.py` Scripts
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![Cross-IDE Portability Engine 3D Sync Hub](docs/diagrams/3d-cross-ide-portability.svg)
+
 <div align="center">
 
 [![Commands](https://img.shields.io/badge/Slash_Commands-18_*-ca--agent-blue?style=for-the-badge)](.)

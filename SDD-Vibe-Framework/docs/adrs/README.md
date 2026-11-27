@@ -1,6 +1,9 @@
 # Architecture Decision Records (ADRs)
 ### Immutable Architectural Governance & Technical Trade-Off Log
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![5-Tier System Architecture & Clean Layers 3D](../diagrams/3d-system-architecture.svg)
+
 <div align="center">
 
 [![Governance](https://img.shields.io/badge/Architecture-Immutable_Records-blue?style=for-the-badge&logo=git)](.)

@@ -5,6 +5,9 @@ description: "Review designs against docs/system-architecture.md and accepted AD
 
 # Skill: architecture-review
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![5-Tier System Architecture & Clean Layers 3D](../../../docs/diagrams/3d-system-architecture.svg)
+
 **Purpose:** Validate HLD/LLD designs and code changes against `docs/system-architecture.md` and `docs/adrs/` to preserve Clean Architecture boundaries, modularity, and scalability.
 
 ## Trigger

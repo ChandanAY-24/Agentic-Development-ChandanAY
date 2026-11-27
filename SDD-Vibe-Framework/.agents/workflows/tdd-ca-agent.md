@@ -5,6 +5,9 @@ argument-hint: "[AC-FEAT###-## or FEAT-###]"
 
 # /tdd-ca-agent
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![3D Isometric Testing Pyramid & AC Traceability](../../docs/diagrams/3d-testing-pyramid.svg)
+
 **Purpose:** Produce/execute tests derived from approved criteria before implementation; verify red then green.
 
 ## When to run

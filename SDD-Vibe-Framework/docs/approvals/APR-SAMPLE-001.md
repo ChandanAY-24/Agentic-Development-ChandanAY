@@ -2,6 +2,9 @@
 
 > **Illustrative sample.** Demonstrates a completed approval record for `FEAT-001` (`docs/features/001-example-feature/feature.md`). Replace or remove when initializing a real project (`python scripts/init_project.py --clean-samples`).
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![Feature Spec Lifecycle & Change Control 3D Flow](../diagrams/3d-feature-lifecycle.svg)
+
 | Field | Value |
 |---|---|
 | Approval ID | APR-SAMPLE-001 |

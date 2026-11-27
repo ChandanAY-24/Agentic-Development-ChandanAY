@@ -5,6 +5,9 @@ argument-hint: "[goal or TASK-###]"
 
 # /plan-ca-agent
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![Feature Spec Lifecycle & Change Control 3D Flow](../../docs/diagrams/3d-feature-lifecycle.svg)
+
 **Purpose:** Analyze scope, requirements, dependencies and risks; propose a bounded plan; obtain approval before production implementation.
 
 ## When to run

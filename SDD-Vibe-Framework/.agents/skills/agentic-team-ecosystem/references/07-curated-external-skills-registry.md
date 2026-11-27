@@ -1,5 +1,8 @@
 # 07 — Curated, Trust-Tiered & Zero-Confusion Universal Skills Registry
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![14-Team Agentic Ecosystem 3D Topology](../../../../docs/diagrams/3d-agentic-ecosystem.svg)
+
 **Policy:** All external skills, MCPs, and packages listed here are **optional (Developer Choice)** per `docs/skills.md`. Never pre-bundle, never load randomly, and **never install from unverified forks**. Always verify the official GitHub org / npm / Vercel / Anthropic source, pass the **5-Point Security Vetting Checklist** ([02-discovery-design-dev-teams.md](02-discovery-design-dev-teams.md)), and emit the **Transparent Skill Disclosure** (`Skill | Ecosystem | Why Now | Mode`) before enabling.
 
 ---

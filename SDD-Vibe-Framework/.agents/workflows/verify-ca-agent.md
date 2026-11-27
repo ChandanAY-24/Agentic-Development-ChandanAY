@@ -5,6 +5,9 @@ argument-hint: "[FEAT-### version or TASK-###]"
 
 # /verify-ca-agent
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![3D Isometric Testing Pyramid & AC Traceability](../../docs/diagrams/3d-testing-pyramid.svg)
+
 **Purpose:** Compare actual results to approved acceptance criteria and record deviations without claiming guaranteed 100% fidelity.
 
 ## When to run

@@ -5,6 +5,9 @@ argument-hint: "[file(s) or git diff range]"
 
 # /review-ca-agent
 
+<!-- SDD-VIBE-3D-DIAGRAM -->
+![SDD-Vibe 1-in-2 Single Workflow 3D Stack](../../docs/diagrams/3d-sdd-vibe-pipeline.svg)
+
 **Purpose:** Review for scope fidelity, architecture, tests, privacy, security, accessibility and maintainability.
 
 ## When to run
