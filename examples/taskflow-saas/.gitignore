@@ -1,9 +1,0 @@
-node_modules/
-.next/
-out/
-data/*.db
-data/*.db-*
-logs/*.log
-!logs/.gitkeep
-.env
-.env.*

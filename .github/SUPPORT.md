@@ -8,7 +8,6 @@ Need help using **SDD-Vibe** or instantiating `SDD-Vibe-Framework/` in your proj
 - **Workspace Activation:** [SDD-Vibe-Activation-Guide.md](../SDD-Vibe-Activation-Guide.md)
 - **14-Team Playbook:** [SDD-Vibe-Team-Based-Guide.md](../SDD-Vibe-Team-Based-Guide.md)
 - **In-IDE Dashboard:** [PROJECT-MANAGER-DASHBOARD-GUIDE.md](../PROJECT-MANAGER-DASHBOARD-GUIDE.md)
-- **Reference App Walkthrough:** [examples/taskflow-saas/README.md](../examples/taskflow-saas/README.md)
 
 ## Asking Questions & Reporting Issues
 

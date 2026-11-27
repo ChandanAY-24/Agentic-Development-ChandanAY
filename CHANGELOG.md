@@ -12,5 +12,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **18 Collision-Free `-ca-agent` Slash Commands & 18 Agent Skills:** Including `/activate-ca-agent`, `/team-ecosystem-ca-agent` (14-team `agentic-team-ecosystem`), and deepened domain-specific skill workflows.
 - **In-IDE Project-Manager-Dashboard (`:4200`):** Zero-dependency local telemetry mission control with live SSE streaming, AC contract engine, HEAD commit pinning, active task prioritization, and token telemetry.
 - **Automated Quality & Security Gates:** `check_docs.py`, `manifest.py`, `run-tests.js` (including fixture-driven behavioral parser tests), ESLint/Prettier configs, and Gitleaks secret scanning in CI.
-- **Reference SaaS Implementation (`examples/taskflow-saas/`):** Modern Next.js (App Router) + TypeScript + Tailwind CSS + Zod + SQLite + Vitest application built end-to-end through Phases 1–4.
 - **Open-Source Community Standards:** Added `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `SUPPORT.md`, `SECURITY.md`, GitHub Issue/PR templates, and template repository onboarding.

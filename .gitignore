@@ -30,4 +30,8 @@ logs/*.log
 !logs/.gitkeep
 !**/logs/.gitkeep
 
+# Local-only examples and Node dependencies (never pushed to GitHub)
+examples/
+**/node_modules/
+
 
