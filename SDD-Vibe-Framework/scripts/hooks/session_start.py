@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parent.parent.parent
 
 def main() -> int:
     is_sdd = (ROOT / "docs" / "spec.md").exists()
-    framework = "SDD" if is_sdd else "Vibe Coding"
+    framework = "SDD-Vibe" if is_sdd else "Vibe Coding"
     required = [
         ROOT / "AGENTS.md",
         ROOT / "docs" / "INDEX.md",
@@ -24,12 +24,20 @@ def main() -> int:
         required.append(ROOT / "docs" / "spec.md")
 
     missing = [str(p.relative_to(ROOT)) for p in required if not p.exists()]
+    adapters_synced = any((ROOT / d).exists() for d in (".claude", ".cursor", ".windsurf"))
     status = {
         "framework": framework,
         "root": str(ROOT),
         "git_present": (ROOT / ".git").exists(),
+        "adapters_synced": adapters_synced,
         "missing": missing,
     }
+    if not adapters_synced:
+        status["activation_hint"] = (
+            "Type 'activate ca agents' (or /activate-ca-agent) in chat, "
+            "or run .\\activate-ca-agents.bat / ./activate-ca-agents "
+            "(or python scripts/init_project.py --ides all) in terminal."
+        )
     if missing:
         print(f"[session_start] WARN ({framework}): missing {', '.join(missing)}", file=sys.stderr)
     else:

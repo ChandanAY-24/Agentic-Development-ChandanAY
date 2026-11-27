@@ -174,13 +174,19 @@ mv SDD-Vibe-Framework my-production-app
 cd my-production-app
 ```
 
-### Step 2: Verify Slash Commands
-Verify that your host IDE recognizes the `.agents/` contracts:
-1. Focus your AI agent chat and type `/`. Confirm all 17 `*-ca-agent` commands appear with descriptions.
-2. In terminal, verify command contracts:
+### Step 2: Collision-Free Activation (`activate ca agents`) & Slash Commands
+After renaming `SDD-Vibe-Framework/` to `my-production-app/`:
+1. **In AI Chat (Zero-Friction):** Type **`activate ca agents`** (or `/activate-ca-agent`) — automatically runs `python scripts/init_project.py --ides all`, verifies `logs/` + `check_docs.py` + `manifest.py --check`, and readies all `18` `*-ca-agent` commands. *(Uses `activate ca agents` instead of bare `activate`/`start`/`run` to avoid conflicts with Python `venv`, PowerShell `Start-Process`, and IDE built-ins.)*
+2. **In Terminal (Wrapper or `.py`):**
    ```bash
-   ls .agents/commands/*-ca-agent.md
+   # Windows (CMD / PowerShell)
+   .\activate-ca-agents.bat
+   # macOS / Linux
+   ./activate-ca-agents
+   # Direct Python method (always supported)
+   python scripts/init_project.py --ides all
    ```
+3. Focus your AI agent chat and type `/`. Confirm all `18` `*-ca-agent` commands appear with descriptions.
 
 ### Step 3: Launch In-IDE Project-Manager-Dashboard
 Launch the dedicated telemetry dashboard on port `4200`:

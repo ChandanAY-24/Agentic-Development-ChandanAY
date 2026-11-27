@@ -280,10 +280,11 @@ SDD-Vibe/
 2. Rename the directory to your target application name in lowercase `kebab-case` (e.g. `my-awesome-saas/`).
 3. Open the directory at the root in your AI coding IDE (Cursor, Windsurf, Claude Code, Antigravity, VS Code).
 
-### Step 2: Verify Slash Commands (Chat Palette & Terminal)
-Before generating any application code:
-1. **Chat Dropdown:** Focus your AI assistant chat box and type `/`. Verify all 17 `*-ca-agent` commands appear with descriptions.
-2. **Terminal Verification:** Run `ls .agents/commands/*-ca-agent.md` to ensure command contracts exist.
+### Step 2: Collision-Free Activation (`activate ca agents`) & Slash Commands
+After renaming `SDD-Vibe-Framework/` to your project folder:
+1. **In AI Chat (Zero-Friction):** Type **`activate ca agents`** (or `/activate-ca-agent`) — runs `python scripts/init_project.py --ides all`, verifies `logs/`, `check_docs.py`, and `manifest.py --check`. *(Avoids bare `activate`, `start`, or `run` which conflict with Python `venv`, PowerShell `Start-Process`, and IDE built-ins.)*
+2. **In Terminal (Wrapper or `.py`):** Run `.\activate-ca-agents.bat` (Windows), `./activate-ca-agents` (macOS/Linux), or `python scripts/init_project.py --ides all`.
+3. **Chat Dropdown:** Focus your AI assistant chat box and type `/`. Verify all `18` `*-ca-agent` commands appear with descriptions.
 
 ### Step 3: Launch Local Mission Control
 Start the zero-dependency telemetry dashboard:
@@ -325,6 +326,7 @@ The in-built **Project-Manager-Dashboard** is a zero-dependency, Apple/Linear an
 
 ### 1. Unified 1-in-2 Framework Master Guides
 - **[PROJECT-MANAGER-DASHBOARD-GUIDE.md](PROJECT-MANAGER-DASHBOARD-GUIDE.md)** — In-IDE Project-Manager-Dashboard step-by-step launch, docking, AC engine, and token telemetry guide.
+- **[SDD-Vibe-Token-Optimization-Guide.md](SDD-Vibe-Token-Optimization-Guide.md)** — Dual-Budget Token Strategy: burn 50–80% fewer tokens on routine work while unleashing Full-Potential models on planning, research, complex computations, and security.
 - **[SDD-Vibe-Production-Guide-Universal.md](SDD-Vibe-Production-Guide-Universal.md)** — Universal 1-in-2 production guide with variable mapping for any SaaS, web app, or enterprise platform.
 - **[SDD-Vibe-Custom-Slash-Command-Universal.md](SDD-Vibe-Custom-Slash-Command-Universal.md)** — Tabular operational reference for all 17 commands across the 4-phase hybrid pipeline.
 

@@ -283,6 +283,7 @@ stateDiagram-v2
 - **Model Profile Auto-Detection:** Automatically detects whether you are running Gemini (`gemini-2.5-pro`, `gemini-2.5-flash`), Claude (`claude-3-7-sonnet`), or GPT models.
 - **Context Capacity Gauges:** Visual progress bars displaying current context utilization against maximum capacity (e.g., 1M, 200k tokens).
 - **Multi-Window Rate Limiting:** Monitors 5-hour rolling windows, hourly limits, and daily consumption with automatic reset countdown timers.
+- **Full Token Optimization Playbook:** See [SDD-Vibe-Token-Optimization-Guide.md](SDD-Vibe-Token-Optimization-Guide.md) for the Dual-Budget Strategy (saving 50–80% on routine tasks while reserving Full-Potential Pro models for planning, research, complex computations, and security).
 
 ### 6. Prev Error Tracking (Preventive & Defect Matrix)
 

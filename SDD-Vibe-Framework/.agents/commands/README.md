@@ -1,11 +1,11 @@
 # Portable Agent Slash Commands (`-ca-agent`)
-### 17 Canonical, Collision-Free Command Contracts for Autonomous Coding Agents
+### 18 Canonical, Collision-Free Command Contracts for Autonomous Coding Agents
 
 <div align="center">
 
 [![Namespace](https://img.shields.io/badge/Namespace-*-ca--agent-blue?style=for-the-badge)](.)
 [![Collision Prevention](https://img.shields.io/badge/Collisions-Zero_Shadowing-green?style=for-the-badge)](.)
-[![Count](https://img.shields.io/badge/Commands-17_Standardized_Tools-indigo?style=for-the-badge)](.)
+[![Count](https://img.shields.io/badge/Commands-18_Standardized_Tools-indigo?style=for-the-badge)](.)
 [![Logging](https://img.shields.io/badge/Audit_Trail-Mandatory_logs/_Output-teal?style=for-the-badge)](.)
 
 [🌟 Overview](#-overview) • [🔄 Lifecycle State Machine](#-command-lifecycle-state-machine) • [⚡ Dispatch Pipeline](#-command-dispatch--authorization-pipeline) • [📋 Catalog](#-command-catalog-17)
@@ -92,10 +92,11 @@ Standardized Report to Chat & UI`"]):::report
 
 ---
 
-## 📋 Command Catalog (17)
+## 📋 Command Catalog (18)
 
 | Command | Category | Purpose | Required Evidence |
 | :--- | :--- | :--- | :--- |
+| **`/activate-ca-agent`** | Setup | Collision-free workspace activation (`activate ca agents`) after renaming `SDD-Vibe-Framework/`. | Synced IDE adapters, `check_docs.py`, `manifest.py --check`, `logs/`. |
 | **`/team-ecosystem-ca-agent`** | Orchestration | Step-by-step 14-team Agentic AI Development Ecosystem (`agentic-team-ecosystem`). | Domain classification, gated step report, `logs/*.log`. |
 | **`/plan-ca-agent`** | Planning | Scoped, read-only system design proposal. | Plan artifact, risk analysis, no code modified. |
 | **`/task-ca-agent`** | Planning | Atomic task harness initialization and contract tracking. | `docs/task.md` entry, sequential task ID. |

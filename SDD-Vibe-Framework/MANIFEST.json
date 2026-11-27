@@ -4,7 +4,7 @@
   "created": "2026-11-04",
   "license": "Guideline package: MIT (repository root LICENSE); instantiated project: select per LICENSE-DECISION.md",
   "hash_note": "sha256 of file bytes; text files normalized to LF line endings before hashing",
-  "file_count_excluding_manifest": 182,
+  "file_count_excluding_manifest": 186,
   "files": [
     {
       "path": ".agents/README.md",
@@ -12,7 +12,11 @@
     },
     {
       "path": ".agents/commands/README.md",
-      "sha256": "a70cf2e639b34cd33786e22ce86cc13bc35b2a6b5cb15de765fb4888f35e62f0"
+      "sha256": "028979fd1595046bed3790960da28374acad6c9896d2d5d23d61bef9737e8468"
+    },
+    {
+      "path": ".agents/commands/activate-ca-agent.md",
+      "sha256": "32c41926bedece91e9e74c97f7c1fd86ce49c98341960f86c4391cd071ca2bb3"
     },
     {
       "path": ".agents/commands/change-request-ca-agent.md",
@@ -120,7 +124,7 @@
     },
     {
       "path": ".agents/skills/agentic-team-ecosystem/references/06-kanban-gsheet-and-token-ops.md",
-      "sha256": "75c69728baef9b292eb1aa83922f69219724401fb752c0f559a667230073c496"
+      "sha256": "27415398a02c8afae637a305c17cce23c182ea64ab1ac09966bf2c29a190e797"
     },
     {
       "path": ".agents/skills/agentic-team-ecosystem/references/07-curated-external-skills-registry.md",
@@ -201,6 +205,10 @@
     {
       "path": ".agents/templates/AGENT-TASK-CONTRACT.md",
       "sha256": "ac96561358c5058dedc725235d69da433c560dcbee92fb2b1eb7525e8a59f484"
+    },
+    {
+      "path": ".agents/workflows/activate-ca-agent.md",
+      "sha256": "32c41926bedece91e9e74c97f7c1fd86ce49c98341960f86c4391cd071ca2bb3"
     },
     {
       "path": ".agents/workflows/change-request-ca-agent.md",
@@ -332,15 +340,15 @@
     },
     {
       "path": "AGENTS.md",
-      "sha256": "5e7da6e84dcf58c8b236de87f927cc92be776c81cb3927b93b864038f04a53b3"
+      "sha256": "b11eb3c8adf3227b040f8a037810481aa462227eac91475b47d351a961ff1f76"
     },
     {
       "path": "CLAUDE.md",
-      "sha256": "b5f857a09e786edae68932779c856a37a641d6e7e61cc4050e54c17334b436d2"
+      "sha256": "df4e6a3088acbd43faec7d569946df2510a8fc294cfe5c7dd36fc55941891321"
     },
     {
       "path": "GEMINI.md",
-      "sha256": "c09f706ae74bb3b4afbefa4c715055a784786a1f14b3ae8ade3ee9bf4832d203"
+      "sha256": "0b8c011bd4b5edba3ba7ca255351a5774e878abb2ca0c0ea0fdef0b80f7c5844"
     },
     {
       "path": "LICENSE-DECISION.md",
@@ -388,11 +396,19 @@
     },
     {
       "path": "README.md",
-      "sha256": "3854e0156a3288ba6cd50f9df99cdb693329c564af3586aa3f65cc6a79f678b7"
+      "sha256": "43193df56e081bea5273979bab53297e5895fa17dd4f29a9f1f8c7cabd092887"
     },
     {
       "path": "SOURCE-NOTES.md",
       "sha256": "8541dad548304f6f27c2e12a94db9e6d19db6369bd65ec0e357a81d4e34b44ea"
+    },
+    {
+      "path": "activate-ca-agents",
+      "sha256": "d36790680840fbd2eec5a6c2b875fe19842ef1ce29f7aadb8f1bdf22adbdbabc"
+    },
+    {
+      "path": "activate-ca-agents.bat",
+      "sha256": "607c62155439af015c3418c569c37057d95905ca9338a14399978f52211e45fd"
     },
     {
       "path": "docs/CHANGELOG.md",
@@ -400,7 +416,7 @@
     },
     {
       "path": "docs/INDEX.md",
-      "sha256": "c46f4f029bb058901397198e3e75ddbaecb83d7e7d20ecc37bedbb04265a74aa"
+      "sha256": "c00025a9eff4573a0da9aaebd5ce5739c543673430904da488fc4c8125a7807d"
     },
     {
       "path": "docs/acceptance-criteria.md",
@@ -624,7 +640,7 @@
     },
     {
       "path": "playbooks/01-Setup-Project.txt",
-      "sha256": "e9ead0f8501a6f545c957b3e427c055bacea920b44f195e6b00ab3712ce4f21a"
+      "sha256": "678f05a3d75b781eab3498fba76dd48058eaea3490fd35852008c84fc4f45940"
     },
     {
       "path": "playbooks/02-Project-Implementation.txt",
@@ -680,7 +696,7 @@
     },
     {
       "path": "scripts/hooks/session_start.py",
-      "sha256": "c1bc44b2ea572ac530a88f33fca72507989a96667cb1118d048fd6ea62538a93"
+      "sha256": "e6eaa40bca326a6ef75f82d8e0b89c1646a2589bf18509aeeb42828523a1af4a"
     },
     {
       "path": "scripts/init_project.py",

@@ -36,7 +36,8 @@
 - Load only `SKILL.md` + the **1–2 reference files** needed for the current step. Never dump all 14 team playbooks into a single prompt.
 - Summarize completed step outputs into concise handoff artifacts (`docs/plan.md`, `docs/task.md`, `.agents/templates/AGENT-COMPLETION-REPORT.md`) before switching context windows.
 
-### Model Switching Strategy
-- **Lightweight / Fast Models:** File discovery, log tailing, boilerplate generation, formatting, simple unit test scaffolding, repetitive checks.
-- **High-Reasoning / Pro Models:** System architecture (HLD/LLD/DFD/UML), developer grilling, security threat modeling, complex debugging, model/project evals, and final release gates.
-- **Context Window Switching:** When context approaches saturation, checkpoint state to `docs/task.md` + `logs/dev.log`, compact/start a fresh session, and resume from the exact `TASK-###` and `Step` number.
+### Model Switching Strategy (Dual-Budget: Lean-Burn vs. Full-Potential)
+- **Lean-Burn (Lightweight / Fast Models):** File discovery (`rg`), log tailing (`logs/*.log`), boilerplate generation, formatting, simple unit test scaffolding, and repetitive checks. Batch independent reads/edits in one turn and read 50–150 line slices instead of whole files.
+- **Full-Potential (High-Reasoning / Pro Models):** System architecture (HLD/LLD/DFD/UML), deep domain research & developer grilling (`/plan-ca-agent`), complex computations/algorithms, security threat modeling (`/security-audit-ca-agent`), hard root-cause debugging (`/errorlogs-ca-agent`), and final release gates (`/verify-ca-agent`).
+- **Context Window Switching:** When context approaches saturation, checkpoint state to `docs/task.md` + `docs/memory.md` (Memory Lanes) + `logs/dev.log`, run `/compact` or start a fresh session tab, and resume from the exact `TASK-###` and `Step` number.
+- **Detailed Guide:** See `SDD-Vibe-Token-Optimization-Guide.md` at the repository root for prompt templates and the 7-pillar playbook.

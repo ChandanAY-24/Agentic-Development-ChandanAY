@@ -2,6 +2,8 @@
 ### Hybrid Sensory Prototyping + Spec-Driven Development (SDD) & TDD Engineering Protocol
 
 > **Canonical System Instruction:** This document defines the operational directives for Google Antigravity, Gemini CLI, and autonomous coding agents operating within this **1-in-2 Single Workflow (`SDD-Vibe`)** project.
+>
+> **Collision-Free Activation:** When the developer prompts **`activate ca agents`** or **`/activate-ca-agent`** after renaming the codebase, immediately execute `.agents/commands/activate-ca-agent.md` (`python scripts/init_project.py --ides all`, `check_docs.py`, `manifest.py --check`, verify `logs/`). Never use bare `activate`, `start`, or `run` as shell/chat aliases to avoid conflicts with Python `venv`, PowerShell `Start-Process`, and IDE built-ins.
 
 ---
 

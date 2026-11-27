@@ -8,19 +8,20 @@ Applicability: SDD-Vibe (1-in-2 Single Workflow)
 Prerequisites:
 - Copy framework files to the **workspace/git root** (IDEs discover `.agents/` at the repo root, not nested subfolders).
 - Read `AGENTS.md`, `docs/INDEX.md`, and `LICENSE.md`.
-- **MANDATORY PRE-CODEBASE GATE:** Verify and activate custom slash commands in both the AI Chat dropdown (type `/` to see all 17 `*-ca-agent` commands) and Terminal CLI (`ls .agents/commands/*-ca-agent.md`) BEFORE creating any application directories.
+- **MANDATORY PRE-CODEBASE GATE:** Verify and activate custom slash commands in both the AI Chat dropdown (type `/` to see all 18 `*-ca-agent` commands) and Terminal CLI (`ls .agents/commands/*-ca-agent.md`) BEFORE creating any application directories.
+- **COLLISION-FREE ACTIVATION:** After copying/renaming `SDD-Vibe-Framework/`, type **`activate ca agents`** (or `/activate-ca-agent`) in chat, OR run `.\activate-ca-agents.bat` (Windows) / `./activate-ca-agents` (macOS/Linux), OR run `python scripts/init_project.py --ides all` directly. (Uses `activate ca agents` instead of bare `activate`/`start`/`run` to avoid conflicts with Python `venv`, PowerShell `Start-Process`, and IDE built-ins.)
 - **MANDATORY LOGS DIRECTORY:** Ensure `logs/` folder exists with `logs/.gitkeep` for development logs (`*.log`). Verify `logs/*.log` is ignored in `.gitignore`.
 - **PRE-STEP 5 DOMAIN & SYSTEM DESIGN GATE:** Establish thorough domain knowledge and system design before issuing Prompt 1. If not manually prepared, ask the AI agent to explain and formulate system design during planning, and integrate it into Prompt 1.
 
 Commands & Skills:
-- Commands: `/team-ecosystem-ca-agent`, `/plan-ca-agent`, `/dashboard-ca-agent`, `/spec-check-ca-agent`
+- Commands: `/activate-ca-agent`, `/team-ecosystem-ca-agent`, `/plan-ca-agent`, `/dashboard-ca-agent`, `/spec-check-ca-agent`
 - Skills: Core repo skills (`agentic-team-ecosystem`, `requirements-analysis`, `prd-writer`, `task-planner`). Third-party GitHub/official skills (e.g. `anthropics/skills`, `grill-me`, `find-skill`, `serena`) are developer choice installed on-demand per `.agents/skills/agentic-team-ecosystem/references/07-curated-external-skills-registry.md`.
 
 Procedure:
 1. Custom Slash Commands & Terminal Activation (Step 0):
-   - Open project root in IDE.
-   - Run `python scripts/sync_ide_adapters.py --ides all` (or `--ides antigravity,claude,cursor,windsurf,copilot`) if syncing native IDE adapters.
-   - Type `/` in chat: confirm all 17 `*-ca-agent` commands appear with descriptions.
+   - Open renamed project root in IDE.
+   - Type `activate ca agents` (or `/activate-ca-agent`) in chat, OR run `.\activate-ca-agents.bat` / `./activate-ca-agents` (or `python scripts/init_project.py --ides all`) in terminal.
+   - Type `/` in chat: confirm all 18 `*-ca-agent` commands appear with descriptions.
    - Run terminal check: confirm `.agents/commands/` files exist and are readable.
 2. Define Product & Technical Governance Baseline:
    - Populate `docs/product.md`, `docs/prd.md` (including Section 5 Technical Requirements), `docs/system-architecture.md`, and `docs/tech-stacks.md`.

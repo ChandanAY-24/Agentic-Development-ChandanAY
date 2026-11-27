@@ -11,6 +11,7 @@ Canonical `.agents/` contracts (`.agents/commands/`, `.agents/skills/`) serve as
 
 ## Sovereign Agent Configuration & Commands
 
+- **MUST** treat **`activate ca agents`** (natural-language prompt) or **`/activate-ca-agent`** as the collision-free workspace activation command: when invoked after copying/renaming the codebase, run `python scripts/init_project.py --ides all`, `python scripts/check_docs.py`, and `python scripts/manifest.py --check`, verify `logs/`, ask in 1 line whether to clean sample features (`--clean-samples`), and offer `/dashboard-ca-agent`.
 - **MUST** verify custom slash commands (`.agents/commands/*-ca-agent.md`) in the chat dropdown and terminal CLI before creating or altering application code.
 - **MUST** maintain proper development log files (`*.log`) during all development, test runs, and debugging inside a separate `logs/` directory.
 - **MUST** establish complete domain knowledge and system design before Step 5 (First Prompting); if not manually prepared, ask the agent to formulate system design during planning and integrate it into Prompt 1.
