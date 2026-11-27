@@ -46,6 +46,83 @@ Teams 5-8 (Test/Sec/Rev/QA) • Team 9 (Deploy) • Team 10 (24/7)`"]:::g3
 Team 11 (Docs/PPT) • Team 12 (ROI/Finance) • Team 13 (Marketing/GEO)`"]:::g4
 ```
 
+### How All 14 Teams Inter-Relate (Handoffs & Feedback Loops)
+
+```mermaid
+%%{init: {'flowchart': {'curve': 'basis', 'padding': 16, 'nodeSpacing': 24, 'rankSpacing': 42}}}%%
+flowchart TB
+    classDef dev fill:#451a03,stroke:#fbbf24,stroke-width:2px,color:#fffbeb;
+    classDef guide fill:#2e1065,stroke:#c084fc,stroke-width:1.5px,color:#faf5ff;
+    classDef g1 fill:#0f172a,stroke:#38bdf8,stroke-width:1.5px,color:#f8fafc;
+    classDef g2 fill:#082f49,stroke:#0284c7,stroke-width:1.5px,color:#f0f9ff;
+    classDef g3 fill:#064e3b,stroke:#34d399,stroke-width:1.5px,color:#ecfdf5;
+    classDef g4 fill:#1e1b4b,stroke:#818cf8,stroke-width:1.5px,color:#e0e7ff;
+    classDef loop fill:#4c0519,stroke:#fb7185,stroke-width:1.5px,color:#fff1f2;
+
+    Dev(["👤 Developer Sign-Off Gates"]):::dev
+    T14["🧭 Team 14: Manual Workflow Guider\n(Guides Every Step 0-9)"]:::guide
+
+    subgraph Group1 ["Group 1: Strategy & PM"]
+        T2["🔎 Team 2: Research, Arch & REA\n(Steps 1-2: HLD/LLD/DB)"]:::g1
+        T1["📋 Team 1: PM / Kanban / GSheet\n(Step 4: Task Sync & CSV)"]:::g1
+    end
+
+    subgraph Group2 ["Group 2: Design & Core Build"]
+        T3["🎨 Team 3: UI/UX & Brand Design\n(Step 3: Tokens & :3000 Demo)"]:::g2
+        T4["⚙️ Team 4: Core Dev / DB / AI / CV / OS\n(Step 3 UI & Step 5 TDD)"]:::g2
+    end
+
+    subgraph Group3 ["Group 3: Verify, Security & Ops"]
+        direction LR
+        T5["🧪 Team 5: Testing"]:::g3
+        T6["🛡️ Team 6: Security"]:::g3
+        T7["🔍 Team 7: Review"]:::g3
+        T8["✅ Team 8: QA"]:::g3
+        T9["🚀 Team 9: Deploy Ops\n(Step 8)"]:::g3
+        T10["📡 Team 10: 24/7 Ops\n(Step 9)"]:::g3
+    end
+
+    subgraph Group4 ["Group 4: Docs, Business & Growth"]
+        T12["📊 Team 12: BI / ROI / Finance\n(Step 1 & Step 9)"]:::g4
+        T11["📑 Team 11: Docs / PRD / PPT\n(Step 7)"]:::g4
+        T13["📣 Team 13: Brand / SEO / GEO\n(Steps 1, 7 & 9)"]:::g4
+    end
+
+    Dev <-->|"Step Gates"| T14
+    T14 -->|"Step 1 Intake"| T2
+    T12 -->|"ROI & Risk Input"| T2
+    T13 -.->|"Brand Context (Step 1)"| T2
+
+    T2 -->|"Design Tokens & Spec"| T3
+    T2 -->|"HLD/LLD & Schema"| T4
+    T3 -->|"UI Prototype (:3000)"| T4
+    T3 ==>|"UI Approved -> Step 4"| T1
+    T1 -->|"TASK-### & Spec Lock"| T4
+
+    T4 -->|"Step 5 Unit Tests Green"| T5
+    T5 -->|"Pass"| T6
+    T6 -->|"Clean"| T7
+    T7 -->|"Approved"| T8
+
+    T6 -.->|"Security Fix Needed"| T4
+    T7 -.->|"Review Changes"| T4
+
+    T8 -->|"Step 7 Packaging"| T11
+    T8 -->|"Step 7 GTM / GEO"| T13
+    T11 -->|"Release Ready -> Step 8"| T9
+    T9 -->|"Live in Prod -> Step 9"| T10
+
+    T10 -.->|"CVE / Bug Escalation"| T4
+    T10 -->|"Metrics & Feedback"| T12
+    T10 -->|"Growth Signals"| T13
+    T12 -.->|"Next Feature ROI"| T2
+
+    style Group1 fill:#0b1120,stroke:#334155,stroke-width:1.5px,color:#e2e8f0
+    style Group2 fill:#0b1120,stroke:#334155,stroke-width:1.5px,color:#e2e8f0
+    style Group3 fill:#0b1120,stroke:#334155,stroke-width:1.5px,color:#e2e8f0
+    style Group4 fill:#0b1120,stroke:#334155,stroke-width:1.5px,color:#e2e8f0
+```
+
 ---
 
 ## 2. Master "When & What to Use" Table (All 14 Teams)
