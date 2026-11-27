@@ -325,6 +325,8 @@ The in-built **Project-Manager-Dashboard** is a zero-dependency, Apple/Linear an
 ## 📖 Complete Documentation Catalog
 
 ### 1. Unified 1-in-2 Framework Master Guides
+- **[SDD-Vibe-Activation-Guide.md](SDD-Vibe-Activation-Guide.md)** — Complete guide to collision-free **`activate ca agents`** / `/activate-ca-agent`, terminal wrappers, `.py` scripts, and `agentic-team-ecosystem` registration.
+- **[SDD-Vibe-Team-Based-Guide.md](SDD-Vibe-Team-Based-Guide.md)** — Detailed **"When & What to Use"** playbook for all **4 Groups & 14 Teams** (`agentic-team-ecosystem`), domain maps, model tiers, and situation-based triggers.
 - **[PROJECT-MANAGER-DASHBOARD-GUIDE.md](PROJECT-MANAGER-DASHBOARD-GUIDE.md)** — In-IDE Project-Manager-Dashboard step-by-step launch, docking, AC engine, and token telemetry guide.
 - **[SDD-Vibe-Token-Optimization-Guide.md](SDD-Vibe-Token-Optimization-Guide.md)** — Dual-Budget Token Strategy: burn 50–80% fewer tokens on routine work while unleashing Full-Potential models on planning, research, complex computations, and security.
 - **[SDD-Vibe-Production-Guide-Universal.md](SDD-Vibe-Production-Guide-Universal.md)** — Universal 1-in-2 production guide with variable mapping for any SaaS, web app, or enterprise platform.

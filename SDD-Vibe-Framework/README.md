@@ -112,7 +112,7 @@ IN REVIEW → APPROVED`"]:::gov
 
 ## 🤖 Agentic Team Ecosystem Workflow (First Choice)
 
-> **First-Choice Feature Development:** Whole features are developed through [`.agents/skills/agentic-team-ecosystem/SKILL.md`](.agents/skills/agentic-team-ecosystem/SKILL.md) (`/team-ecosystem-ca-agent`), with **SDD-Vibe's 17 `-ca-agent` slash commands, spec locks, and TDD gates triggering at each step** and **Team 14 (Manual Workflow Guider)** coaching the developer at every gate.
+> **First-Choice Feature Development:** Whole features are developed through [`.agents/skills/agentic-team-ecosystem/SKILL.md`](.agents/skills/agentic-team-ecosystem/SKILL.md) (`/team-ecosystem-ca-agent`), with **SDD-Vibe's 18 `-ca-agent` slash commands, spec locks, and TDD gates triggering at each step** and **Team 14 (Manual Workflow Guider)** coaching the developer at every gate. *(See `SDD-Vibe-Team-Based-Guide.md` in the root repo for the detailed "When & What to Use" guide for all 14 teams.)*
 
 ### Steps 0–9 Execution & Trigger Matrix
 
@@ -175,7 +175,7 @@ cd my-production-app
 ```
 
 ### Step 2: Collision-Free Activation (`activate ca agents`) & Slash Commands
-After renaming `SDD-Vibe-Framework/` to `my-production-app/`:
+After renaming `SDD-Vibe-Framework/` to `my-production-app/` (see `SDD-Vibe-Activation-Guide.md` in the root repo for full details):
 1. **In AI Chat (Zero-Friction):** Type **`activate ca agents`** (or `/activate-ca-agent`) — automatically runs `python scripts/init_project.py --ides all`, verifies `logs/` + `check_docs.py` + `manifest.py --check`, and readies all `18` `*-ca-agent` commands. *(Uses `activate ca agents` instead of bare `activate`/`start`/`run` to avoid conflicts with Python `venv`, PowerShell `Start-Process`, and IDE built-ins.)*
 2. **In Terminal (Wrapper or `.py`):**
    ```bash
