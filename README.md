@@ -93,6 +93,11 @@ One unified starter blueprint (`SDD-Vibe-Framework/`) that scales smoothly from 
 
 ## 🔄 Prompt Workflow Diagram
 
+![SDD-Vibe Prompt Workflow (Stage A -> Stage B)](docs/diagrams/workflow-prompt-pipeline.svg)
+
+<details>
+<summary>Mermaid workflow source (text fallback)</summary>
+
 ```mermaid
 %%{init: {'flowchart': {'curve': 'basis', 'padding': 16, 'nodeSpacing': 28, 'rankSpacing': 44}}}%%
 flowchart TB
@@ -170,11 +175,18 @@ IN REVIEW → APPROVED`"]:::step
     style P4 fill:#064e3b,stroke:#065f46,stroke-width:1px,color:#d1fae5
 ```
 
+</details>
+
 ---
 
 ## 🤖 Agentic Team Ecosystem Skill Workflow (First Choice)
 
-> **First-Choice Development Model:** Whole features are developed through the bundled [`agentic-team-ecosystem`](SDD-Vibe-Framework/.agents/skills/agentic-team-ecosystem/SKILL.md) skill (`/team-ecosystem-ca-agent`). **SDD-Vibe's 17 `-ca-agent` slash commands, spec locks, and Red-Green-Refactor TDD gates trigger automatically at each step**, while **Team 14 (Manual Workflow Guider)** tells you the exact next command and gate at every turn.
+> **First-Choice Development Model:** Whole features are developed through the bundled [`agentic-team-ecosystem`](SDD-Vibe-Framework/.agents/skills/agentic-team-ecosystem/SKILL.md) skill (`/team-ecosystem-ca-agent`). **SDD-Vibe's 18 `-ca-agent` slash commands, spec locks, and Red-Green-Refactor TDD gates trigger automatically at each step**, while **Team 14 (Manual Workflow Guider)** tells you the exact next command and gate at every turn.
+
+![14-Team Agentic Ecosystem 3D Topology](docs/diagrams/3d-agentic-ecosystem.svg)
+
+<details>
+<summary>Mermaid ecosystem source (text fallback)</summary>
 
 ```mermaid
 %%{init: {'flowchart': {'curve': 'basis', 'padding': 16, 'nodeSpacing': 24, 'rankSpacing': 40}}}%%
@@ -202,6 +214,8 @@ Team 11 (Docs) • 12 (BI) • 13 (Marketing)`"]:::grp
     G3 -->|"Triggers"| S3["/testing-ca-agent • /review-ca-agent • /security-audit-ca-agent • /release-check-ca-agent"]:::sdd
     G4 -->|"Triggers"| S4["/dashboard-ca-agent • /handoff-ca-agent"]:::sdd
 ```
+
+</details>
 
 ### 1. Step-by-Step Development Flow (Steps 0–9) & SDD-Vibe Triggers
 

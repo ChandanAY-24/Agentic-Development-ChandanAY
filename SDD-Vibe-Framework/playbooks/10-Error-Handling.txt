@@ -24,11 +24,8 @@ Procedure:
 Required output:
 - Verified error-path tests, sanitized error responses, and updated `docs/runbook.md` / `docs/error-tracker.md`.
 
-=== 3D AXONOMETRIC WORKFLOW DIAGRAM ===
-      ╔───────────────────────────────────────────╗
-     ╱               DEFECT TRACKER              ╱│
-    ╔───────────────────────────────────────────╗ │
-    ║   ERR-### -> AC Link -> Regression Test   ║ │
-    ║            (3D Isometric Layer)           ║╱
-    ╚───────────────────────────────────────────╝
-    Visual SVG: ../docs/diagrams/3d-testing-pyramid.svg
+=== WORKFLOW DIAGRAM (diagram-design) ===
+┌─────────────────┐    ┌────────────────────┐    ┌─────────────────────┐    ┌────────────────────────┐
+│ Capture ERR-### │ ─► │ Link AC-FEAT###-## │ ─► │ Add Regression Test │ ─► │ Close in error-tracker │
+└─────────────────┘    └────────────────────┘    └─────────────────────┘    └────────────────────────┘
+Visual SVG: ../docs/diagrams/3d-testing-pyramid.svg

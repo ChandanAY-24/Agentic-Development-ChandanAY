@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 385" width="100%" role="img" aria-label="CI/CD &amp; Quality Gate Pipeline">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="55%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <pattern id="bgGrid" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="12" cy="12" r="0.9" fill="#1e293b" opacity="0.75"/></pattern>
+    <filter id="glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.42"/>
+    </filter>
+    <marker id="arrow-64748b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#64748b"/></marker>
+    <marker id="arrow-38bdf8" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#38bdf8"/></marker>
+    <marker id="arrow-818cf8" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#818cf8"/></marker>
+    <marker id="arrow-c084fc" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#c084fc"/></marker>
+    <marker id="arrow-34d399" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#34d399"/></marker>
+    <marker id="arrow-fbbf24" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#fbbf24"/></marker>
+    <marker id="arrow-fb7185" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#fb7185"/></marker>
+  </defs>
+  <rect width="960" height="385" rx="14" fill="url(#bgGrad)" stroke="#1e293b" stroke-width="1.5"/>
+  <rect width="960" height="385" rx="14" fill="url(#bgGrid)"/>
+  <text x="32" y="38" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="19" font-weight="800" fill="#f8fafc">CI/CD &amp; Quality Gate Pipeline</text>
+  <text x="32" y="58" font-family="JetBrains Mono, Consolas, monospace" font-size="11.2" fill="#94a3b8">.github/workflows/frameworks-ci.yml · Automated Zero-Error Release Verification</text>
+  <g>
+  <rect x="36" y="128" width="198" height="92" rx="10" fill="#082f49" stroke="#38bdf8" stroke-width="1.6"/>
+  <rect x="48" y="138" width="55.2" height="18" rx="5" fill="#38bdf8" opacity="0.18"/><text x="75.6" y="150.5" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="9.5" font-weight="700" fill="#38bdf8">GATE 1</text>
+  <text x="135.0" y="173.0" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" fill="#e0f2fe">Lint &amp; Format</text>
+  <text x="135.0" y="190.0" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="10.2" fill="#cbd5e1" opacity="0.9">ESLint · Prettier</text>
+  <line x1="234" y1="174" x2="266" y2="174" stroke="#34d399" stroke-width="1.8" marker-end="url(#arrow-34d399)"/>
+  <rect x="266" y="128" width="198" height="92" rx="10" fill="#1e1b4b" stroke="#818cf8" stroke-width="1.6"/>
+  <rect x="278" y="138" width="55.2" height="18" rx="5" fill="#818cf8" opacity="0.18"/><text x="305.6" y="150.5" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="9.5" font-weight="700" fill="#818cf8">GATE 2</text>
+  <text x="365.0" y="173.0" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" fill="#e0e7ff">Docs &amp; Manifest</text>
+  <text x="365.0" y="190.0" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="10.2" fill="#cbd5e1" opacity="0.9">check_docs · manifest</text>
+  <line x1="464" y1="174" x2="496" y2="174" stroke="#34d399" stroke-width="1.8" marker-end="url(#arrow-34d399)"/>
+  <rect x="496" y="128" width="198" height="92" rx="10" fill="#022c22" stroke="#34d399" stroke-width="1.6"/>
+  <rect x="508" y="138" width="55.2" height="18" rx="5" fill="#34d399" opacity="0.18"/><text x="535.6" y="150.5" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="9.5" font-weight="700" fill="#34d399">GATE 3</text>
+  <text x="595.0" y="173.0" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" fill="#d1fae5">Test Suites</text>
+  <text x="595.0" y="190.0" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="10.2" fill="#cbd5e1" opacity="0.9">run-tests.js (10/10)</text>
+  <line x1="694" y1="174" x2="726" y2="174" stroke="#34d399" stroke-width="1.8" marker-end="url(#arrow-34d399)"/>
+  <rect x="726" y="128" width="198" height="92" rx="10" fill="#4c0519" stroke="#fb7185" stroke-width="1.6"/>
+  <rect x="738" y="138" width="55.2" height="18" rx="5" fill="#fb7185" opacity="0.18"/><text x="765.6" y="150.5" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="9.5" font-weight="700" fill="#fb7185">GATE 4</text>
+  <text x="825.0" y="173.0" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" fill="#ffe4e6">Secret Scan</text>
+  <text x="825.0" y="190.0" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="10.2" fill="#cbd5e1" opacity="0.9">Gitleaks · Regex</text>
+  <rect x="36" y="264" width="888" height="58" rx="10" fill="#022c22" stroke="#34d399" stroke-width="1.4"/>
+  <text x="480" y="298" text-anchor="middle" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#d1fae5">Zero-Error Release Gate Passed -> /release-check-ca-agent Approved</text>
+  </g>
+  
+  <text x="932" y="361" text-anchor="end" font-family="JetBrains Mono, Consolas, monospace" font-size="10" fill="#64748b">SDD-Vibe · Editorial 2D</text>
+</svg>

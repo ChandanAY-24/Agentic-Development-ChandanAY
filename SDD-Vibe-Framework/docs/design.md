@@ -6,7 +6,7 @@
 > **Status:** Template; project-specific instantiation requires review
 
 <!-- SDD-VIBE-3D-DIAGRAM -->
-![5-Tier System Architecture & Clean Layers 3D](diagrams/3d-system-architecture.svg)
+![Staged Web App Development Pipeline](diagrams/workflow-staged-web-dev.svg)
 
 ## Purpose
 

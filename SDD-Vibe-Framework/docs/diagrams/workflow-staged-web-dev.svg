@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 390" width="100%" role="img" aria-label="Staged Web App Development Pipeline">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="55%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <pattern id="bgGrid" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="12" cy="12" r="0.9" fill="#1e293b" opacity="0.75"/></pattern>
+    <filter id="glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.42"/>
+    </filter>
+    <marker id="arrow-64748b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#64748b"/></marker>
+    <marker id="arrow-38bdf8" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#38bdf8"/></marker>
+    <marker id="arrow-818cf8" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#818cf8"/></marker>
+    <marker id="arrow-c084fc" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#c084fc"/></marker>
+    <marker id="arrow-34d399" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#34d399"/></marker>
+    <marker id="arrow-fbbf24" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#fbbf24"/></marker>
+    <marker id="arrow-fb7185" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#fb7185"/></marker>
+  </defs>
+  <rect width="960" height="390" rx="14" fill="url(#bgGrad)" stroke="#1e293b" stroke-width="1.5"/>
+  <rect width="960" height="390" rx="14" fill="url(#bgGrid)"/>
+  <text x="32" y="38" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="19" font-weight="800" fill="#f8fafc">Staged Web App Development Pipeline</text>
+  <text x="32" y="58" font-family="JetBrains Mono, Consolas, monospace" font-size="11.2" fill="#94a3b8">Frontend-First Sensory Verification -&gt; Progressive Backend, Auth &amp; QA Hardening</text>
+  <g>
+  <rect x="32" y="125" width="205" height="106" rx="10" fill="#2e1065" stroke="#c084fc" stroke-width="1.6"/>
+  <rect x="44" y="135" width="62.4" height="18" rx="5" fill="#c084fc" opacity="0.18"/><text x="75.2" y="147.5" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="9.5" font-weight="700" fill="#c084fc">STAGE A</text>
+  <text x="134.5" y="170.0" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" fill="#f3e8ff">Frontend &amp; Sensory Demo</text>
+  <text x="134.5" y="187.0" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="10.2" fill="#cbd5e1" opacity="0.9">UI · Responsive · Mock State · :3000</text>
+  <line x1="237" y1="178" x2="263" y2="178" stroke="#34d399" stroke-width="1.8" marker-end="url(#arrow-34d399)"/>
+  <text x="250.0" y="170.0" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9.5" font-weight="600" fill="#34d399">Gate</text>
+  <rect x="263" y="125" width="205" height="106" rx="10" fill="#082f49" stroke="#38bdf8" stroke-width="1.6"/>
+  <rect x="275" y="135" width="62.4" height="18" rx="5" fill="#38bdf8" opacity="0.18"/><text x="306.2" y="147.5" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="9.5" font-weight="700" fill="#38bdf8">STAGE B</text>
+  <text x="365.5" y="170.0" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" fill="#e0f2fe">Backend &amp; Persistence</text>
+  <text x="365.5" y="187.0" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="10.2" fill="#cbd5e1" opacity="0.9">APIs · DB Schema · Migrations</text>
+  <line x1="468" y1="178" x2="494" y2="178" stroke="#34d399" stroke-width="1.8" marker-end="url(#arrow-34d399)"/>
+  <text x="481.0" y="170.0" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9.5" font-weight="600" fill="#34d399">Gate</text>
+  <rect x="494" y="125" width="205" height="106" rx="10" fill="#451a03" stroke="#fbbf24" stroke-width="1.6"/>
+  <rect x="506" y="135" width="62.4" height="18" rx="5" fill="#fbbf24" opacity="0.18"/><text x="537.2" y="147.5" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="9.5" font-weight="700" fill="#fbbf24">STAGE C</text>
+  <text x="596.5" y="170.0" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" fill="#fef3c7">Auth, RBAC &amp; Security</text>
+  <text x="596.5" y="187.0" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="10.2" fill="#cbd5e1" opacity="0.9">Sessions · RLS · Zod · Rate Limit</text>
+  <line x1="699" y1="178" x2="725" y2="178" stroke="#34d399" stroke-width="1.8" marker-end="url(#arrow-34d399)"/>
+  <text x="712.0" y="170.0" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9.5" font-weight="600" fill="#34d399">Gate</text>
+  <rect x="725" y="125" width="205" height="106" rx="10" fill="#022c22" stroke="#34d399" stroke-width="1.6"/>
+  <rect x="737" y="135" width="62.4" height="18" rx="5" fill="#34d399" opacity="0.18"/><text x="768.2" y="147.5" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="9.5" font-weight="700" fill="#34d399">STAGE D</text>
+  <text x="827.5" y="170.0" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" fill="#d1fae5">Testing, SAST &amp; Ship</text>
+  <text x="827.5" y="187.0" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="10.2" fill="#cbd5e1" opacity="0.9">Unit/E2E · /security-audit · Release</text>
+  <rect x="32" y="272" width="898" height="58" rx="10" fill="#0b1120" stroke="#334155" stroke-width="1.3"/>
+  <text x="481" y="305" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11.2" fill="#e2e8f0">Directive 8 Rule: Never build all features at once — verify Stage A visually (/run-ca-agent) before Stage B/C/D</text>
+  </g>
+  
+  <text x="932" y="366" text-anchor="end" font-family="JetBrains Mono, Consolas, monospace" font-size="10" fill="#64748b">SDD-Vibe · Editorial 2D</text>
+</svg>

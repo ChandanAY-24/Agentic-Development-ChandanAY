@@ -2,7 +2,7 @@
 ### Local-Only, Zero-Dependency Telemetry Mission Control for SDD-Vibe
 
 <!-- SDD-VIBE-3D-DIAGRAM -->
-![In-IDE Project-Manager-Dashboard 3D Dataflow](../docs/diagrams/3d-mission-control-dashboard.svg)
+![In-IDE Project-Manager-Dashboard Architecture](../docs/diagrams/flow-mission-control-dashboard.svg)
 
 <div align="center">
 

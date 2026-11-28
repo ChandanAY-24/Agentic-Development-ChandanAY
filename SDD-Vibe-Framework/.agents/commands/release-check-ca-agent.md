@@ -6,7 +6,7 @@ argument-hint: "[release version, e.g. v1.0.0]"
 # /release-check-ca-agent
 
 <!-- SDD-VIBE-3D-DIAGRAM -->
-![CI/CD & Quality Gate Pipeline 3D Flow](../../docs/diagrams/3d-cicd-devops.svg)
+![CI/CD & Quality Gate Pipeline](../../docs/diagrams/flow-cicd-devops.svg)
 
 **Purpose:** Verify artifact, test results, authorizations, rollback and observability before release.
 

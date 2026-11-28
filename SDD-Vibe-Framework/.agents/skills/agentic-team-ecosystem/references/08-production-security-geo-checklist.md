@@ -1,7 +1,7 @@
 # 08 — Production, Security, GEO & Store Publishing Checklists
 
 <!-- SDD-VIBE-3D-DIAGRAM -->
-![14-Team Agentic Ecosystem 3D Topology](../../../../docs/diagrams/3d-agentic-ecosystem.svg)
+![Feature Spec Lifecycle & Change Control](../../../../docs/diagrams/flow-feature-lifecycle.svg)
 
 **Scope:** Concrete, actionable verification checklists for **Team 4 (Dev)**, **Team 6 (Security)**, **Team 8 (QA)**, **Team 9 (Deployment Ops)**, and **Team 13 (Growth & Store)**. Inspired by practical indie-to-production engineering playbooks; all items are **framework-agnostic** and **Developer Choice**.
 

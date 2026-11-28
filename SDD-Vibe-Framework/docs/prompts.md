@@ -6,7 +6,7 @@
 > **Status:** Template; project-specific content requires review
 
 <!-- SDD-VIBE-3D-DIAGRAM -->
-![SDD-Vibe 1-in-2 Single Workflow 3D Stack](diagrams/3d-sdd-vibe-pipeline.svg)
+![SDD-Vibe Prompt Workflow (Stage A -> Stage B)](diagrams/workflow-prompt-pipeline.svg)
 
 ## Purpose
 

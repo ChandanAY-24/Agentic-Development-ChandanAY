@@ -26,11 +26,25 @@ Procedure:
 Required output:
 - Exact commands executed, raw pass/fail counts, coverage/gate status, and updated `docs/task.md`.
 
-=== 3D AXONOMETRIC WORKFLOW DIAGRAM ===
-      ╔──────────────────────────────────────────────────╗
-     ╱                 TESTING PYRAMID                  ╱│
-    ╔──────────────────────────────────────────────────╗ │
-    ║   Unit (70%) -> Integration (20%) -> E2E (10%)   ║ │
-    ║               (3D Isometric Layer)               ║╱
-    ╚──────────────────────────────────────────────────╝
-    Visual SVG: ../docs/diagrams/3d-testing-pyramid.svg
+=== WORKFLOW DIAGRAM (diagram-design) ===
+      ┌────────────────────────────────────┐
+     ╱      TOP: E2E Journeys (10%)       ╱│
+    ┌────────────────────────────────────┐ │
+    │         (3D Stack Layer 4)         │╱
+    └────────────────────────────────────┘
+      ┌────────────────────────────────────┐
+     ╱  MID: Integration API/DB (20-30%)  ╱│
+    ┌────────────────────────────────────┐ │
+    │         (3D Stack Layer 3)         │╱
+    └────────────────────────────────────┘
+      ┌────────────────────────────────────┐
+     ╱  BASE: Unit & Contracts (60-70%)   ╱│
+    ┌────────────────────────────────────┐ │
+    │         (3D Stack Layer 2)         │╱
+    └────────────────────────────────────┘
+      ┌────────────────────────────────────┐
+     ╱    AUDIT: logs/test.log & AC-*     ╱│
+    ┌────────────────────────────────────┐ │
+    │         (3D Stack Layer 1)         │╱
+    └────────────────────────────────────┘
+Visual SVG: ../docs/diagrams/3d-testing-pyramid.svg

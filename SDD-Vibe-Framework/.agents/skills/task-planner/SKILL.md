@@ -6,7 +6,7 @@ description: "Break an approved feature version into TASK-### entries in docs/ta
 # Skill: task-planner
 
 <!-- SDD-VIBE-3D-DIAGRAM -->
-![Feature Spec Lifecycle & Change Control 3D Flow](../../../docs/diagrams/3d-feature-lifecycle.svg)
+![Feature Spec Lifecycle & Change Control](../../../docs/diagrams/flow-feature-lifecycle.svg)
 
 **Purpose:** Decompose a `FEAT-###` specification into atomic, reviewable `TASK-###` units in `docs/task.md` with explicit file ownership, dependency ordering, effort sizing, and Definition of Done.
 

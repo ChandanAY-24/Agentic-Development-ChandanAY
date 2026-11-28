@@ -6,7 +6,7 @@ description: "Draft or update docs/prd.md requirements (REQ-###/NFR-###) derived
 # Skill: prd-writer
 
 <!-- SDD-VIBE-3D-DIAGRAM -->
-![Feature Spec Lifecycle & Change Control 3D Flow](../../../docs/diagrams/3d-feature-lifecycle.svg)
+![Feature Spec Lifecycle & Change Control](../../../docs/diagrams/flow-feature-lifecycle.svg)
 
 **Purpose:** Author and maintain `docs/prd.md` with unambiguous, testable `REQ-###` and `NFR-###` requirements traced directly to `docs/product.md` capabilities (`CAP-###`) and personas (`PER-##`).
 

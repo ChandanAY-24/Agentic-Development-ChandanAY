@@ -6,7 +6,7 @@
 > **Status:** Template; project-specific content requires review
 
 <!-- SDD-VIBE-3D-DIAGRAM -->
-![CI/CD & Quality Gate Pipeline 3D Flow](diagrams/3d-cicd-devops.svg)
+![CI/CD & Quality Gate Pipeline](diagrams/flow-cicd-devops.svg)
 
 ## Purpose
 

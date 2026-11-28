@@ -1,7 +1,7 @@
 # AI-Powered Project Development — Universal 1-in-2 Single Workflow (`SDD-Vibe`) Production Guide for Any Project
 
 <!-- SDD-VIBE-3D-DIAGRAM -->
-![Cross-IDE Portability Engine 3D Sync Hub](docs/diagrams/3d-cross-ide-portability.svg)
+![Feature Spec Lifecycle & Change Control](docs/diagrams/flow-feature-lifecycle.svg)
 
 **Framework:** SDD-Vibe (1-in-2 Single Workflow: Vibe-Coding Sensory Discovery + SDD-TDD Contract Assurance)  
 **Author:** Chandan Adhikary  

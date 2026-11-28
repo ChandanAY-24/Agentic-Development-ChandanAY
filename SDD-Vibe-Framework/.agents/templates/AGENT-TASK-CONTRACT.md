@@ -1,7 +1,7 @@
 # Agent Task Contract
 
 <!-- SDD-VIBE-3D-DIAGRAM -->
-![Feature Spec Lifecycle & Change Control 3D Flow](../../docs/diagrams/3d-feature-lifecycle.svg)
+![Feature Spec Lifecycle & Change Control](../../docs/diagrams/flow-feature-lifecycle.svg)
 
 TASK_ID: [ID]
 ROLE: [ROLE]

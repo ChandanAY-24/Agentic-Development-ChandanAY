@@ -24,11 +24,8 @@ Checklist:
 Required output:
 - Completed `/release-check-ca-agent` + `/handoff-ca-agent` evidence and human ship approval.
 
-=== 3D AXONOMETRIC WORKFLOW DIAGRAM ===
-      ╔───────────────────────────────────────────────────╗
-     ╱                 RELEASE CHECKLIST                 ╱│
-    ╔───────────────────────────────────────────────────╗ │
-    ║   Specs Green -> SAST Clean -> APR-### Sign-Off   ║ │
-    ║                (3D Isometric Layer)               ║╱
-    ╚───────────────────────────────────────────────────╝
-    Visual SVG: ../docs/diagrams/3d-sdd-vibe-pipeline.svg
+=== WORKFLOW DIAGRAM (diagram-design) ===
+┌────────────────────┐    ┌──────────────────┐    ┌──────────────────────┐    ┌──────────────────────┐
+│ All Specs APPROVED │ ─► │ Tests 100% GREEN │ ─► │ SAST & Secrets Clean │ ─► │ APR-### Release Ship │
+└────────────────────┘    └──────────────────┘    └──────────────────────┘    └──────────────────────┘
+Visual SVG: ../docs/diagrams/flow-cicd-devops.svg

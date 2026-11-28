@@ -6,7 +6,7 @@
 > **Status:** Approved
 
 <!-- SDD-VIBE-3D-DIAGRAM -->
-![Feature Spec Lifecycle & Change Control 3D Flow](diagrams/3d-feature-lifecycle.svg)
+![Staged Web App Development Pipeline](diagrams/workflow-staged-web-dev.svg)
 
 ## Purpose
 

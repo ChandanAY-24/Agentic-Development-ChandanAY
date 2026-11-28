@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 595" width="100%" role="img" aria-label="SDD-Vibe Prompt Workflow (Stage A -&gt; Stage B)">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="55%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <pattern id="bgGrid" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="12" cy="12" r="0.9" fill="#1e293b" opacity="0.75"/></pattern>
+    <filter id="glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.42"/>
+    </filter>
+    <marker id="arrow-64748b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#64748b"/></marker>
+    <marker id="arrow-38bdf8" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#38bdf8"/></marker>
+    <marker id="arrow-818cf8" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#818cf8"/></marker>
+    <marker id="arrow-c084fc" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#c084fc"/></marker>
+    <marker id="arrow-34d399" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#34d399"/></marker>
+    <marker id="arrow-fbbf24" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#fbbf24"/></marker>
+    <marker id="arrow-fb7185" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#fb7185"/></marker>
+  </defs>
+  <rect width="960" height="595" rx="14" fill="url(#bgGrad)" stroke="#1e293b" stroke-width="1.5"/>
+  <rect width="960" height="595" rx="14" fill="url(#bgGrid)"/>
+  <text x="32" y="38" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="19" font-weight="800" fill="#f8fafc">SDD-Vibe Prompt Workflow (Stage A -&gt; Stage B)</text>
+  <text x="32" y="58" font-family="JetBrains Mono, Consolas, monospace" font-size="11.2" fill="#94a3b8">Editorial 2D Swimlane · Frontend Sensory Sign-Off -&gt; Contract-First TDD &amp; Release</text>
+  <g>
+  <rect x="32" y="84" width="896" height="205" rx="12" fill="#0b1120" stroke="#334155" stroke-width="1.3"/>
+  <text x="48" y="108" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" fill="#c084fc">STAGE A — ARCHITECTURE DISCOVERY &amp; FRONTEND SENSORY DEMO</text>
+  <rect x="48" y="124" width="170" height="74" rx="10" fill="#082f49" stroke="#38bdf8" stroke-width="1.6"/>
+  <rect x="60" y="134" width="55.2" height="18" rx="5" fill="#38bdf8" opacity="0.18"/><text x="87.6" y="146.5" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="9.5" font-weight="700" fill="#38bdf8">STEP 0</text>
+  <text x="133.0" y="169.0" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" fill="#e0f2fe">1. Setup &amp; Verify</text>
+  <text x="133.0" y="186.0" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="10.2" fill="#cbd5e1" opacity="0.9">Check 18 /-ca-agent</text>
+  <rect x="254" y="124" width="185" height="74" rx="10" fill="#1e1b4b" stroke="#818cf8" stroke-width="1.6"/>
+  <rect x="266" y="134" width="62.4" height="18" rx="5" fill="#818cf8" opacity="0.18"/><text x="297.2" y="146.5" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="9.5" font-weight="700" fill="#818cf8">PHASE 1</text>
+  <text x="346.5" y="169.0" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" fill="#e0e7ff">2. Prompt 1: Plan</text>
+  <text x="346.5" y="186.0" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="10.2" fill="#cbd5e1" opacity="0.9">HLD/LLD · Design Tokens</text>
+  <polygon points="505,127 549,161 505,195 461,161" fill="#451a03" stroke="#fbbf24" stroke-width="1.8"/>
+  <text x="505" y="165" text-anchor="middle" font-family="Inter, Segoe UI, sans-serif" font-size="11.5" font-weight="700" fill="#fef3c7">OK?</text>
+  <rect x="585" y="124" width="165" height="74" rx="10" fill="#2e1065" stroke="#c084fc" stroke-width="1.6"/>
+  <rect x="597" y="134" width="62.4" height="18" rx="5" fill="#c084fc" opacity="0.18"/><text x="628.2" y="146.5" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="9.5" font-weight="700" fill="#c084fc">PHASE 2</text>
+  <text x="667.5" y="169.0" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" fill="#f3e8ff">3. UI Sensory Shell</text>
+  <text x="667.5" y="186.0" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="10.2" fill="#cbd5e1" opacity="0.9">PROTOTYPE · Mock State</text>
+  <rect x="780" y="124" width="132" height="74" rx="10" fill="#2e1065" stroke="#c084fc" stroke-width="1.6"/>
+  <rect x="792" y="134" width="55.2" height="18" rx="5" fill="#c084fc" opacity="0.18"/><text x="819.6" y="146.5" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="9.5" font-weight="700" fill="#c084fc">VERIFY</text>
+  <text x="846.0" y="169.0" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" fill="#f3e8ff">4. Live Demo</text>
+  <text x="846.0" y="186.0" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="10.2" fill="#cbd5e1" opacity="0.9">/run-ca-agent :3000</text>
+  <line x1="218" y1="161" x2="254" y2="161" stroke="#38bdf8" stroke-width="1.8" marker-end="url(#arrow-38bdf8)"/>
+  <line x1="439" y1="161" x2="461" y2="161" stroke="#818cf8" stroke-width="1.8" marker-end="url(#arrow-818cf8)"/>
+  <line x1="549" y1="161" x2="585" y2="161" stroke="#34d399" stroke-width="1.8" marker-end="url(#arrow-34d399)"/>
+  <text x="567.0" y="153.0" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9.5" font-weight="600" fill="#34d399">Yes</text>
+  <line x1="750" y1="161" x2="780" y2="161" stroke="#c084fc" stroke-width="1.8" marker-end="url(#arrow-c084fc)"/>
+  <path d="M 505 195 L 505 245 L 346 245 L 346 198" fill="none" stroke="#fbbf24" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#arrow-fbbf24)"/>
+  <text x="425" y="262" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="#fbbf24">Revise Plan / Architecture</text>
+  <path d="M 846 198 L 846 245 L 667 245 L 667 198" fill="none" stroke="#c084fc" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#arrow-c084fc)"/>
+  <text x="756" y="262" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="#c084fc">Tune UI / Vibe</text>
+  <line x1="846" y1="289" x2="846" y2="325" stroke="#34d399" stroke-width="1.8" marker-end="url(#arrow-34d399)"/>
+  <text x="900.0" y="297.0" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9.5" font-weight="600" fill="#34d399">UI Signed Off</text>
+  <rect x="32" y="325" width="896" height="215" rx="12" fill="#0b1120" stroke="#334155" stroke-width="1.3"/>
+  <text x="48" y="349" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" fill="#34d399">STAGE B — FORMAL SPEC LOCK, TDD RED-GREEN-REFACTOR &amp; SHIP</text>
+  <rect x="48" y="370" width="175" height="74" rx="10" fill="#022c22" stroke="#34d399" stroke-width="1.6"/>
+  <rect x="60" y="380" width="62.4" height="18" rx="5" fill="#34d399" opacity="0.18"/><text x="91.2" y="392.5" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="9.5" font-weight="700" fill="#34d399">PHASE 4</text>
+  <text x="135.5" y="415.0" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" fill="#d1fae5">8. Release Gate</text>
+  <text x="135.5" y="432.0" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="10.2" fill="#cbd5e1" opacity="0.9">/release-check-ca-agent</text>
+  <rect x="260" y="370" width="195" height="74" rx="10" fill="#451a03" stroke="#fbbf24" stroke-width="1.6"/>
+  <rect x="272" y="380" width="48.0" height="18" rx="5" fill="#fbbf24" opacity="0.18"/><text x="296.0" y="392.5" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="9.5" font-weight="700" fill="#fbbf24">AUDIT</text>
+  <text x="357.5" y="415.0" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" fill="#fef3c7">7. Review &amp; SAST</text>
+  <text x="357.5" y="432.0" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="10.2" fill="#cbd5e1" opacity="0.9">/review · /security-audit</text>
+  <rect x="495" y="370" width="185" height="74" rx="10" fill="#022c22" stroke="#34d399" stroke-width="1.6"/>
+  <rect x="507" y="380" width="33.6" height="18" rx="5" fill="#34d399" opacity="0.18"/><text x="523.8" y="392.5" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="9.5" font-weight="700" fill="#34d399">TDD</text>
+  <text x="587.5" y="415.0" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" fill="#d1fae5">6. GREEN: Implement</text>
+  <text x="587.5" y="432.0" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="10.2" fill="#cbd5e1" opacity="0.9">/tdd · /implement</text>
+  <rect x="720" y="370" width="192" height="74" rx="10" fill="#4c0519" stroke="#fb7185" stroke-width="1.6"/>
+  <rect x="732" y="380" width="62.4" height="18" rx="5" fill="#fb7185" opacity="0.18"/><text x="763.2" y="392.5" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="9.5" font-weight="700" fill="#fb7185">PHASE 3</text>
+  <text x="816.0" y="415.0" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" fill="#ffe4e6">5. Spec Lock &amp; RED</text>
+  <text x="816.0" y="432.0" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="10.2" fill="#cbd5e1" opacity="0.9">APPROVED · /testing</text>
+  <line x1="720" y1="407" x2="680" y2="407" stroke="#fb7185" stroke-width="1.8" marker-end="url(#arrow-fb7185)"/>
+  <text x="700.0" y="399.0" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9.5" font-weight="600" fill="#fb7185">Fail</text>
+  <line x1="495" y1="407" x2="455" y2="407" stroke="#34d399" stroke-width="1.8" marker-end="url(#arrow-34d399)"/>
+  <text x="475.0" y="399.0" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9.5" font-weight="600" fill="#34d399">Pass</text>
+  <line x1="260" y1="407" x2="223" y2="407" stroke="#fbbf24" stroke-width="1.8" marker-end="url(#arrow-fbbf24)"/>
+  <text x="241.5" y="399.0" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9.5" font-weight="600" fill="#fbbf24">Clean</text>
+  <path d="M 587 444 L 587 498 L 816 498 L 816 444" fill="none" stroke="#38bdf8" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#arrow-38bdf8)"/>
+  <text x="701" y="515" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="#38bdf8">Next Feature Spec (1 Spec at a Time)</text>
+  </g>
+  <rect x="36.0" y="561" width="12" height="12" rx="3" fill="#0284c7" stroke="#38bdf8" stroke-width="1.2"/><text x="54.0" y="571" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#cbd5e1">Plan</text>
+  <rect x="105.2" y="561" width="12" height="12" rx="3" fill="#7c3aed" stroke="#c084fc" stroke-width="1.2"/><text x="123.2" y="571" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#cbd5e1">Vibe UI</text>
+  <rect x="194.8" y="561" width="12" height="12" rx="3" fill="#e11d48" stroke="#fb7185" stroke-width="1.2"/><text x="212.8" y="571" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#cbd5e1">TDD Red</text>
+  <rect x="284.4" y="561" width="12" height="12" rx="3" fill="#059669" stroke="#34d399" stroke-width="1.2"/><text x="302.4" y="571" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#cbd5e1">TDD Green / Ship</text>
+  <rect x="435.2" y="561" width="12" height="12" rx="3" fill="#d97706" stroke="#fbbf24" stroke-width="1.2"/><text x="453.2" y="571" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#cbd5e1">Gate / Audit</text>
+  <text x="932" y="571" text-anchor="end" font-family="JetBrains Mono, Consolas, monospace" font-size="10" fill="#64748b">SDD-Vibe · Editorial 2D</text>
+</svg>

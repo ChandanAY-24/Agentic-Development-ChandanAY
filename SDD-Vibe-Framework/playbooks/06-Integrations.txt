@@ -25,11 +25,8 @@ Procedure:
 Required output:
 - Passing contract/integration tests, updated `docs/apis.md` / `docs/database.md`, and `check_docs.py` pass.
 
-=== 3D AXONOMETRIC WORKFLOW DIAGRAM ===
-      ╔────────────────────────────────────────────╗
-     ╱           EXTERNAL INTEGRATIONS            ╱│
-    ╔────────────────────────────────────────────╗ │
-    ║   Contract -> Webhook Sig -> Idempotency   ║ │
-    ║            (3D Isometric Layer)            ║╱
-    ╚────────────────────────────────────────────╝
-    Visual SVG: ../docs/diagrams/3d-sdd-vibe-pipeline.svg
+=== WORKFLOW DIAGRAM (diagram-design) ===
+┌──────────────┐    ┌────────────────────┐    ┌─────────────────┐    ┌───────────────────┐
+│ API Contract │ ─► │ Webhook Sig Verify │ ─► │ Idempotency Key │ ─► │ Error & Retry Log │
+└──────────────┘    └────────────────────┘    └─────────────────┘    └───────────────────┘
+Visual SVG: ../docs/diagrams/3d-api-gateway.svg

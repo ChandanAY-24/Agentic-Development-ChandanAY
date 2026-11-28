@@ -35,6 +35,11 @@
 
 ## 🏛️ 1-in-2 Hybrid Staged Pipeline
 
+![SDD-Vibe Prompt Workflow (Stage A -> Stage B)](docs/diagrams/workflow-prompt-pipeline.svg)
+
+<details>
+<summary>Mermaid pipeline source (text fallback)</summary>
+
 ```mermaid
 %%{init: {'flowchart': {'curve': 'basis', 'padding': 16, 'nodeSpacing': 28, 'rankSpacing': 44}}}%%
 flowchart TB
@@ -111,6 +116,8 @@ IN REVIEW → APPROVED`"]:::gov
     style Phase4 fill:#064e3b,stroke:#065f46,stroke-width:1px,color:#d1fae5
 ```
 
+</details>
+
 ---
 
 ## 🤖 Agentic Team Ecosystem Workflow (First Choice)
@@ -142,6 +149,11 @@ IN REVIEW → APPROVED`"]:::gov
 
 Every line of production code traces back to a root business capability:
 
+![Spec-to-Code Traceability Contract](docs/diagrams/workflow-traceability-contract.svg)
+
+<details>
+<summary>Mermaid traceability source (text fallback)</summary>
+
 ```mermaid
 %%{init: {'flowchart': {'curve': 'basis', 'padding': 16, 'nodeSpacing': 28, 'rankSpacing': 40}}}%%
 flowchart LR
@@ -164,6 +176,8 @@ TEST-FEAT002-01 (tests/unit/)`"]:::test
     TEST ==>|"Guarantees"| CODE["`**💻 PRODUCTION CODE**
 src/modules/students/enroll.ts`"]:::code
 ```
+
+</details>
 
 ---
 

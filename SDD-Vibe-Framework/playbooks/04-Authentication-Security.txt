@@ -26,11 +26,25 @@ Procedure:
 Required output:
 - Passing security/negative tests, `/security-audit-ca-agent` report with zero unresolved Critical/High issues.
 
-=== 3D AXONOMETRIC WORKFLOW DIAGRAM ===
-      ╔─────────────────────────────────────────────╗
-     ╱               SECURITY & AUTH               ╱│
-    ╔─────────────────────────────────────────────╗ │
-    ║   Edge -> RBAC/2FA -> Zod -> RLS -> Audit   ║ │
-    ║             (3D Isometric Layer)            ║╱
-    ╚─────────────────────────────────────────────╝
-    Visual SVG: ../docs/diagrams/3d-security-defense.svg
+=== WORKFLOW DIAGRAM (diagram-design) ===
+      ┌──────────────────────────────┐
+     ╱  L4: Edge & Zod Input Guard  ╱│
+    ┌──────────────────────────────┐ │
+    │      (3D Stack Layer 4)      │╱
+    └──────────────────────────────┘
+      ┌──────────────────────────────┐
+     ╱    L3: AuthN, RBAC & 2FA     ╱│
+    ┌──────────────────────────────┐ │
+    │      (3D Stack Layer 3)      │╱
+    └──────────────────────────────┘
+      ┌──────────────────────────────┐
+     ╱    L2: SAST & Secret Scan    ╱│
+    ┌──────────────────────────────┐ │
+    │      (3D Stack Layer 2)      │╱
+    └──────────────────────────────┘
+      ┌──────────────────────────────┐
+     ╱   L1: RLS & Encrypted Data   ╱│
+    ┌──────────────────────────────┐ │
+    │      (3D Stack Layer 1)      │╱
+    └──────────────────────────────┘
+Visual SVG: ../docs/diagrams/3d-security-defense.svg

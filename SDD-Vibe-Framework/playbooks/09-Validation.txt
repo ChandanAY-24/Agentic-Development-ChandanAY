@@ -25,11 +25,8 @@ Procedure:
 Required output:
 - Zero errors from `check_docs.py` and `manifest.py --check`, passing CI/test evidence, and recorded approval.
 
-=== 3D AXONOMETRIC WORKFLOW DIAGRAM ===
-      ╔─────────────────────────────────────────────────╗
-     ╱                   QUALITY GATE                  ╱│
-    ╔─────────────────────────────────────────────────╗ │
-    ║   check_docs -> manifest -> run-tests -> Ship   ║ │
-    ║               (3D Isometric Layer)              ║╱
-    ╚─────────────────────────────────────────────────╝
-    Visual SVG: ../docs/diagrams/3d-sdd-vibe-pipeline.svg
+=== WORKFLOW DIAGRAM (diagram-design) ===
+┌───────────────┐    ┌────────────────────┐    ┌──────────────────────┐    ┌──────────────────┐
+│ check_docs.py │ ─► │ manifest.py verify │ ─► │ run-tests.js (10/10) │ ─► │ /verify-ca-agent │
+└───────────────┘    └────────────────────┘    └──────────────────────┘    └──────────────────┘
+Visual SVG: ../docs/diagrams/flow-cicd-devops.svg
