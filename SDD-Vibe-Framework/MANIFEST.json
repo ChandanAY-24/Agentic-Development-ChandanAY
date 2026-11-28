@@ -36,7 +36,7 @@
     },
     {
       "path": ".agents/commands/handoff-ca-agent.md",
-      "sha256": "23e2b0a19a78810d639a462d340ef88bd2b86c1e0699b5b600865a7c307f76d5"
+      "sha256": "e70c73a1d189194dd214a53bf2f2e8406446a083ded6f3d58530c1a7df55b13f"
     },
     {
       "path": ".agents/commands/implement-ca-agent.md",
@@ -128,7 +128,7 @@
     },
     {
       "path": ".agents/skills/agentic-team-ecosystem/references/07-curated-external-skills-registry.md",
-      "sha256": "21b6783440bdcaa12a91ba2f5b0fcb79f2b75fc0569aa01eae5b3959928b679a"
+      "sha256": "35215c27230903c3a992c6f0146a0ab475696803cd2067536800014c41e885de"
     },
     {
       "path": ".agents/skills/agentic-team-ecosystem/references/08-production-security-geo-checklist.md",
@@ -228,7 +228,7 @@
     },
     {
       "path": ".agents/workflows/handoff-ca-agent.md",
-      "sha256": "23e2b0a19a78810d639a462d340ef88bd2b86c1e0699b5b600865a7c307f76d5"
+      "sha256": "e70c73a1d189194dd214a53bf2f2e8406446a083ded6f3d58530c1a7df55b13f"
     },
     {
       "path": ".agents/workflows/implement-ca-agent.md",
@@ -800,7 +800,7 @@
     },
     {
       "path": "scripts/hooks/session_start.py",
-      "sha256": "e6eaa40bca326a6ef75f82d8e0b89c1646a2589bf18509aeeb42828523a1af4a"
+      "sha256": "a3efaa25d47ce9c0502d67a03baa293a0d64f4d2d10c390c10511eb4e7064688"
     },
     {
       "path": "scripts/init_project.py",

@@ -21,11 +21,12 @@ argument-hint: "[recipient and scope]"
 
 ## Procedure
 
-1. **MUST** read `AGENTS.md` and the relevant `docs/` source of truth.
+1. **MUST** read `AGENTS.md`, `docs/memory.md`, and the relevant `docs/` source of truth.
 2. **MUST** inspect existing artifacts and identify missing approvals or conflicts.
 3. **MUST** perform only the approved operation: Summarize verified state, docs, test evidence, blockers and next authorized tasks.
-4. **MUST** run applicable objective checks; never invent execution results.
-5. **MUST** report changed files, actual results, deviations and next authorized action.
+4. **MUST** update `docs/memory.md` (Global Verified State and relevant Related-Agent Memory Lane with a compact Memory Delta) and `docs/handoff.md`.
+5. **MUST** run applicable objective checks; never invent execution results.
+6. **MUST** report changed files, actual results, deviations and next authorized action.
 
 ## Stop conditions
 

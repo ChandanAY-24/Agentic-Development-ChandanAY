@@ -16,6 +16,7 @@ def main() -> int:
         ROOT / "AGENTS.md",
         ROOT / "docs" / "INDEX.md",
         ROOT / "docs" / "rules.md",
+        ROOT / "docs" / "memory.md",
         ROOT / "docs" / "features",
         ROOT / ".agents" / "workflows",
         ROOT / ".agents" / "skills",
@@ -30,6 +31,7 @@ def main() -> int:
         "root": str(ROOT),
         "git_present": (ROOT / ".git").exists(),
         "adapters_synced": adapters_synced,
+        "memory_file": "docs/memory.md" if (ROOT / "docs" / "memory.md").exists() else None,
         "missing": missing,
     }
     if not adapters_synced:
