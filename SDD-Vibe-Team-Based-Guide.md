@@ -147,6 +147,8 @@ flowchart TB
 | **Team 13** *(Marketing / Brand / GEO)* | Group 4 | **Step 1** (if Brand/GTM), **Step 7** (Launch), **Step 9** (Growth) | Brand guidelines, SEO/AEO/GEO (`llms.txt`), Google Play ASO, CRM/social/ad proposals | `/team-ecosystem-ca-agent` | **⚡ Standard** · `claude-seo`, `postiz-app` |
 | **Team 14** *(Manual Workflow Guider)* | Orchestrator | **Always-On (Steps 0–9):** From first command to final release | Tracks current step/gate, prevents skipped steps, tells you the exact next command & decision | `/team-ecosystem-ca-agent` | **🟢 Lite/Fast** *(Lightweight Coach)* |
 
+> **Full External Skills Reference:** See **[SDD-Vibe-External-Skills-Guide.md](SDD-Vibe-External-Skills-Guide.md)** for all parameters (`Rank #1` critical criteria, Trust Tier, Multiple-Times Use, Developer's Choice & Suggest-to-User mode, Working Details, and Team 1–14 ownership tables).
+
 ---
 
 ## 3. Domain Playbooks: "Which Teams Do I Need for My Project?"

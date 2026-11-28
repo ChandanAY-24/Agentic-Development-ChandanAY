@@ -241,7 +241,7 @@ Team 11 (Docs) • 12 (BI) • 13 (Marketing)`"]:::grp
 
 ### 2. External Skill Mapping & Exact Trigger Timing
 
-External skills are **optional (Developer Choice)** and **never loaded randomly**. Follow the registry in [`07-curated-external-skills-registry.md`](SDD-Vibe-Framework/.agents/skills/agentic-team-ecosystem/references/07-curated-external-skills-registry.md): activate **at most 1–3 external skills per step**, pick **Rank #1 only** per category, and pass the **5-Point Security Vetting Checklist** before installing.
+External skills are **optional (Developer Choice)** and **never loaded randomly**. Follow the registry in [`07-curated-external-skills-registry.md`](SDD-Vibe-Framework/.agents/skills/agentic-team-ecosystem/references/07-curated-external-skills-registry.md) and the full parameter & team-ownership tables in **[SDD-Vibe-External-Skills-Guide.md](SDD-Vibe-External-Skills-Guide.md)**: activate **at most 1–3 external skills per step**, pick **Rank #1 only** per category, and pass the **5-Point Security Vetting Checklist** before installing.
 
 | Trigger Timing | Task / Bottleneck | Rank #1 External Skill | Frequency Tier | Owning Team |
 |---|---|---|---|---|
@@ -354,6 +354,7 @@ The in-built **Project-Manager-Dashboard** is a zero-dependency, Apple/Linear an
 ### 1. Unified 1-in-2 Framework Master Guides
 - **[SDD-Vibe-Activation-Guide.md](SDD-Vibe-Activation-Guide.md)** — Complete guide to collision-free **`activate ca agents`** / `/activate-ca-agent`, terminal wrappers, `.py` scripts, and `agentic-team-ecosystem` registration.
 - **[SDD-Vibe-Team-Based-Guide.md](SDD-Vibe-Team-Based-Guide.md)** — Detailed **"When & What to Use"** playbook for all **4 Groups & 14 Teams** (`agentic-team-ecosystem`), domain maps, model tiers, and situation-based triggers.
+- **[SDD-Vibe-External-Skills-Guide.md](SDD-Vibe-External-Skills-Guide.md)** — Complete tabular external skills reference with **all parameters viewed** (`Rank #1` critical criteria, Trust Tier, Multiple-Times Use, Developer's Choice & Suggest-to-User mode, Working Details, and Team 1–14 ownership).
 - **[PROJECT-MANAGER-DASHBOARD-GUIDE.md](PROJECT-MANAGER-DASHBOARD-GUIDE.md)** — In-IDE Project-Manager-Dashboard step-by-step launch, docking, AC engine, and token telemetry guide.
 - **[SDD-Vibe-Token-Optimization-Guide.md](SDD-Vibe-Token-Optimization-Guide.md)** — Dual-Budget Token Strategy: burn 50–80% fewer tokens on routine work while unleashing Full-Potential models on planning, research, complex computations, and security.
 - **[SDD-Vibe-Production-Guide-Universal.md](SDD-Vibe-Production-Guide-Universal.md)** — Universal 1-in-2 production guide with variable mapping for any SaaS, web app, or enterprise platform.
