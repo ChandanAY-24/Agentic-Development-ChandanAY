@@ -25,6 +25,11 @@
 
 This repository provides a single, unified, battle-tested engineering framework—**SDD-Vibe (1-in-2 Single Workflow)**—for developing **production-grade software** using autonomous AI coding agents. Instead of forcing a choice between rapid visual prototyping and formal enterprise rigor, **SDD-Vibe** combines **Vibe-Coding's** frontend-first sensory demo and fluid iteration with **SDD + TDD's** contract-first specifications, Red-Green-Refactor discipline, and measurable quality gates in one seamless pipeline.
 
+![SDD-Vibe 1-in-2 Executive Overview](docs/diagrams/workflow-executive-overview.svg)
+
+<details>
+<summary>Mermaid overview source (text fallback)</summary>
+
 ```mermaid
 %%{init: {'flowchart': {'curve': 'basis', 'padding': 16, 'nodeSpacing': 32, 'rankSpacing': 44}}}%%
 flowchart TB
@@ -69,6 +74,8 @@ Plan, Prompts, Constitution, Spec & ADRs`"]:::core
     style Stage34 fill:#0b1120,stroke:#334155,stroke-width:1.5px,color:#e2e8f0
     style SharedCore fill:#0b1120,stroke:#475569,stroke-width:1.5px,color:#e2e8f0
 ```
+
+</details>
 
 ### The 4 Foundational Directives of Agentic Engineering:
 > 1. **Never Code Speculatively:** Autonomous agents must first inspect repository governance, synthesize domain architecture, configure living documentation, and obtain explicit human sign-off before writing production code.

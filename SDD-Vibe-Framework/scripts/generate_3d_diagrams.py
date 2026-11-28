@@ -563,6 +563,44 @@ def build_feature_lifecycle_2d() -> str:
     )
 
 
+def build_executive_overview_2d() -> str:
+    parts = [
+        # Stage A container (left)
+        '<rect x="36" y="92" width="420" height="210" rx="12" fill="#0b1120" stroke="#334155" stroke-width="1.4"/>',
+        '<text x="52" y="116" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700" fill="#c084fc">STAGE A — VIBE DISCOVERY &amp; SENSORY DEMO</text>',
+        draw_card(52, 132, 184, 150, "sky", "Phase 1: Architecture", "Domain · HLD/LLD · Tokens", "PHASE 1"),
+        draw_card(256, 132, 184, 150, "violet", "Phase 2: Sensory Demo", "PROTOTYPE -> DRAFT (:3000)", "PHASE 2"),
+
+        # Visual Sign-Off arrow Stage A -> Stage B
+        draw_arrow(456, 197, 504, 197, "#34d399", "Sign-Off", label_dy=-9),
+
+        # Stage B container (right)
+        '<rect x="504" y="92" width="420" height="210" rx="12" fill="#0b1120" stroke="#334155" stroke-width="1.4"/>',
+        '<text x="520" y="116" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700" fill="#34d399">STAGE B — SPEC LOCK, TDD &amp; RELEASE</text>',
+        draw_card(520, 132, 184, 150, "emerald", "Phase 3: Spec & TDD", "APPROVED · Red-Green", "PHASE 3"),
+        draw_card(724, 132, 184, 150, "amber", "Phase 4: Audit & Ship", "/review · /security · /release", "PHASE 4"),
+
+        # Governance arrows down to Shared Core
+        draw_arrow(246, 302, 246, 354, "#818cf8", "Governed By", label_dx=46, label_dy=0),
+        draw_arrow(714, 302, 714, 354, "#38bdf8", "Enforced By", label_dx=46, label_dy=0),
+
+        # Unified Governance & Mission Control Base
+        '<rect x="36" y="354" width="888" height="148" rx="12" fill="#0b1120" stroke="#475569" stroke-width="1.5"/>',
+        '<text x="52" y="378" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700" fill="#94a3b8">UNIFIED GOVERNANCE &amp; MISSION CONTROL CORE</text>',
+        draw_card(52, 394, 272, 92, "indigo", ".agents/ Asset Engine", "18 Commands · 18 Skills · Hooks", "PORTABLE"),
+        draw_card(344, 394, 272, 92, "sky", "In-IDE Mission Control", "Zero-Dep Daemon (Port 4200)", "TELEMETRY"),
+        draw_card(636, 394, 272, 92, "slate", "docs/ Governance Engine", "Plan · Prompts · Spec · ADRs", "CONTRACTS"),
+    ]
+    return wrap_svg(
+        "SDD-Vibe 1-in-2 Executive Overview",
+        "Frontend-First Sensory Discovery + Contract-First TDD & Unified Governance",
+        "\n  ".join(parts),
+        width=960, height=565,
+        legend=[("sky", "Architecture"), ("violet", "Vibe UI"), ("emerald", "TDD"), ("amber", "Audit/Ship"), ("indigo", "Governance")],
+        mode_label="SDD-Vibe · Editorial 2D", is_3d=False,
+    )
+
+
 # ==============================================================================
 # VALIDATION & GALLERY GENERATION
 # ==============================================================================
@@ -722,7 +760,8 @@ def generate_all() -> list[Path]:
             legend=[("indigo", "Orchestrator"), ("amber", "Strategy"), ("violet", "Build"), ("emerald", "Verify/Ops"), ("sky", "Docs/Growth")],
         ),
 
-        # --- 7 Editorial 2D Diagrams (diagram-design style) ---
+        # --- 8 Editorial 2D Diagrams (diagram-design style) ---
+        "workflow-executive-overview.svg": build_executive_overview_2d(),
         "workflow-prompt-pipeline.svg": build_prompt_workflow_2d(),
         "workflow-traceability-contract.svg": build_traceability_contract_2d(),
         "workflow-staged-web-dev.svg": build_staged_web_dev_2d(),
