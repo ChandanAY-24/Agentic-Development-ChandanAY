@@ -48,7 +48,7 @@ Use this single table to know **with 0 confusion** which skill (Core, **Antigrav
 |---|---|---|
 | **Tier 1 (Official / Vendor)** | Official vendor orgs (`anthropics/skills`, `anthropics/claude-plugins-official` (`claude-code-setup`), `google/elephant-goldfish-model`, `vercel-labs/agent-skills`, `vercel-labs/skills`, `upstash/context7`, `microsoft/playwright`, `semgrep`, `aquasecurity/trivy`, `gitleaks`, `trufflesecurity/trufflehog`) | Verify exact org/package name; standard lockfile/checksum check |
 | **Tier 2 (Established OSS)** | Well-known open-source ecosystems (`superpowers`, `serena`, `graphify`, `openhands`, `dify`, `paperclipai/paperclip`, `21st-dev/magic-mcp`, `alibaba/open-code-review`, `CopilotKit/OpenBot`, `mantine`, `recharts`, `anime.js`, `motion.dev`, `ibelick/motion-primitives`, `backnotprop/plannotator`, `juxtopposed/realtimecolors`, `open-wa/wa-automate-nodejs`, `SecLists`, `PayloadsAllTheThings`) | Verify official repo & license; read scripts before running |
-| **Tier 3 (Trending / Community)** | Specialized community skills & tools (`grill-me`, `claude-mem`, `ui-ux-pro-max`, `find-skill`, `cathrynlavery/diagram-design`, `AndreyBegma/glass-ui`, `alexburlis/glassyui`, `h4ckf0r0day/obscura`, `rmyndharis/OpenWA`, `nightly-labs/openbot`, `haikei.app`, `heydamir/unslop`, `elayadesign/ai-design-skills`, `kaankiziltug/logo-design-skill`, `patch-gg/pixelfx`, `Panniantong/Agent-Reach`, `DeadInternetStudios/100x-engineer-skill`) | **Mandatory 5-Point Security Vetting Checklist** + sandbox dry-run before use |
+| **Tier 3 (Trending / Community)** | Specialized community skills & tools (`grill-me`, `claude-mem`, `ui-ux-pro-max`, `find-skill`, `cathrynlavery/diagram-design`, `AndreyBegma/glass-ui`, `alexburlis/glassyui`, `h4ckf0r0day/obscura`, `rmyndharis/OpenWA`, `nightly-labs/openbot`, `haikei.app`, `heydamir/unslop`, `elayadesign/ai-design-skills`, `kaankiziltug/logo-design-skill`, `patch-gg/pixelfx`, `Panniantong/Agent-Reach`, `DeadInternetStudios/100x-engineer-skill`, `elementalsouls/Claude-BugHunter`) | **Mandatory 5-Point Security Vetting Checklist** + sandbox dry-run before use |
 
 ---
 
@@ -137,6 +137,7 @@ Use this single table to know **with 0 confusion** which skill (Core, **Antigrav
 | **#2** | `trivy` | Tier 1 | Phase-Gate (Step 6) | Container, OS package, and dependency CVE scanning |
 | **#2** | `open-code-review` (`alibaba/open-code-review`) | Tier 2 | Phase-Gate (Step 6) | **Team 7 & Team 6:** Hybrid deterministic + LLM line-level code review (`ocr` CLI) for NPEs, thread-safety, XSS & SQLi |
 | **#3** | `security-audit-skill` / `strix` / `sigma` / `awesome-security` | Tier 3 | Domain-Intuition | AI-assisted security review & detection rules |
+| **#3** | `Claude-BugHunter` (`elementalsouls/Claude-BugHunter`) | Tier 3 | Domain-Intuition | **Team 6 authorized-targets only:** 85 skills, 16 commands, 681 vulnerability patterns across 24 classes (never bypass auth/CAPTCHAs) |
 | **Ref** | `SecLists` / `PayloadsAllTheThings` | Tier 2 | Domain-Intuition | **Authorized defensive testing only** against owned staging targets |
 
 ---
