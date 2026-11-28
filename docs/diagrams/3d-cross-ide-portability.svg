@@ -22,35 +22,35 @@
   <text x="32" y="38" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="19" font-weight="800" fill="#f8fafc">Cross-IDE Portability Engine (3D Sync Hub)</text>
   <text x="32" y="58" font-family="JetBrains Mono, Consolas, monospace" font-size="11.2" fill="#94a3b8">Canonical .agents/ -&gt; scripts/sync_ide_adapters.py -&gt; 8 AI Coding IDEs</text>
   <g filter="url(#glow)">
-  <polygon points="267.8,200.5 376.1,254.7 376.1,278.7 267.8,224.5" fill="#0369a1" stroke="#38bdf8" stroke-width="1.2" opacity="0.95"/>
-  <polygon points="458.4,213.5 376.1,254.7 376.1,278.7 458.4,237.5" fill="#075985" stroke="#38bdf8" stroke-width="1.2" opacity="0.95"/>
-  <polygon points="350.1,159.4 458.4,213.5 376.1,254.7 267.8,200.5" fill="#0284c7" stroke="#38bdf8" stroke-width="1.6"/>
-  <text x="363.1" y="203.0" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#e0f2fe">Claude &amp; Antigravity</text>
-  <text x="363.1" y="220.0" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="10" fill="#e2e8f0" opacity="0.92">.claude/ · .agents/workflows/</text>
-  <polygon points="475.7,304.5 583.9,358.6 583.9,382.6 475.7,328.5" fill="#6d28d9" stroke="#c084fc" stroke-width="1.2" opacity="0.95"/>
-  <polygon points="666.2,317.4 583.9,358.6 583.9,382.6 666.2,341.4" fill="#5b21b6" stroke="#c084fc" stroke-width="1.2" opacity="0.95"/>
-  <polygon points="557.9,263.3 666.2,317.4 583.9,358.6 475.7,304.5" fill="#7c3aed" stroke="#c084fc" stroke-width="1.6"/>
-  <text x="570.9" y="306.9" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#f3e8ff">Cursor &amp; Windsurf</text>
-  <text x="570.9" y="323.9" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="10" fill="#e2e8f0" opacity="0.92">.cursor/ · .windsurf/</text>
-  <polygon points="133.6,267.6 241.8,321.8 241.8,345.8 133.6,291.6" fill="#047857" stroke="#34d399" stroke-width="1.2" opacity="0.95"/>
-  <polygon points="324.1,280.6 241.8,321.8 241.8,345.8 324.1,304.6" fill="#065f46" stroke="#34d399" stroke-width="1.2" opacity="0.95"/>
-  <polygon points="215.9,226.5 324.1,280.6 241.8,321.8 133.6,267.6" fill="#059669" stroke="#34d399" stroke-width="1.6"/>
-  <text x="228.9" y="270.1" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#d1fae5">Codex &amp; Copilot</text>
-  <text x="228.9" y="287.1" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="10" fill="#e2e8f0" opacity="0.92">.codex/ · .github/prompts/</text>
-  <polygon points="341.4,371.6 449.7,425.7 449.7,449.7 341.4,395.6" fill="#b45309" stroke="#fbbf24" stroke-width="1.2" opacity="0.95"/>
-  <polygon points="532.0,384.6 449.7,425.7 449.7,449.7 532.0,408.6" fill="#92400e" stroke="#fbbf24" stroke-width="1.2" opacity="0.95"/>
-  <polygon points="423.7,330.4 532.0,384.6 449.7,425.7 341.4,371.6" fill="#d97706" stroke="#fbbf24" stroke-width="1.6"/>
-  <text x="436.7" y="374.1" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#fef3c7">OpenCode &amp; Trae</text>
-  <text x="436.7" y="391.1" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="10" fill="#e2e8f0" opacity="0.92">AGENTS.md Discovery</text>
-  <line x1="363.1" y1="207.0" x2="391.2" y2="225.9" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.85"/><circle cx="363.1" cy="207.0" r="3.5" fill="#38bdf8"/>
-  <line x1="570.9" y1="310.9" x2="391.2" y2="225.9" stroke="#c084fc" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.85"/><circle cx="570.9" cy="310.9" r="3.5" fill="#c084fc"/>
-  <line x1="228.9" y1="274.1" x2="391.2" y2="225.9" stroke="#34d399" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.85"/><circle cx="228.9" cy="274.1" r="3.5" fill="#34d399"/>
-  <line x1="436.7" y1="378.1" x2="391.2" y2="225.9" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.85"/><circle cx="436.7" cy="378.1" r="3.5" fill="#fbbf24"/>
-  <polygon points="276.5,188.5 402.1,251.2 402.1,283.2 276.5,220.5" fill="#4338ca" stroke="#818cf8" stroke-width="1.2" opacity="0.95"/>
-  <polygon points="506.0,199.3 402.1,251.2 402.1,283.2 506.0,231.3" fill="#3730a3" stroke="#818cf8" stroke-width="1.2" opacity="0.95"/>
-  <polygon points="380.4,136.5 506.0,199.3 402.1,251.2 276.5,188.5" fill="#4f46e5" stroke="#818cf8" stroke-width="1.6"/>
-  <text x="391.2" y="189.9" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#e0e7ff">Canonical .agents/</text>
-  <text x="391.2" y="206.9" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="10" fill="#e2e8f0" opacity="0.92">18 Commands · 18 Skills · Hooks</text>
+  <polygon points="150.9,239.0 280.8,304.0 280.8,328.0 150.9,263.0" fill="#0369a1" stroke="#38bdf8" stroke-width="1.2" opacity="0.95"/>
+  <polygon points="376.1,256.4 280.8,304.0 280.8,328.0 376.1,280.4" fill="#075985" stroke="#38bdf8" stroke-width="1.2" opacity="0.95"/>
+  <polygon points="246.2,191.4 376.1,256.4 280.8,304.0 150.9,239.0" fill="#0284c7" stroke="#38bdf8" stroke-width="1.6"/>
+  <text x="263.5" y="243.7" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#e0f2fe">Claude &amp; Antigravity</text>
+  <text x="263.5" y="260.7" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="10" fill="#e2e8f0" opacity="0.92">.claude/ · .agents/workflows/</text>
+  <polygon points="618.6,239.0 748.5,304.0 748.5,328.0 618.6,263.0" fill="#6d28d9" stroke="#c084fc" stroke-width="1.2" opacity="0.95"/>
+  <polygon points="843.7,256.4 748.5,304.0 748.5,328.0 843.7,280.4" fill="#5b21b6" stroke="#c084fc" stroke-width="1.2" opacity="0.95"/>
+  <polygon points="713.8,191.4 843.7,256.4 748.5,304.0 618.6,239.0" fill="#7c3aed" stroke="#c084fc" stroke-width="1.6"/>
+  <text x="731.1" y="243.7" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#f3e8ff">Cursor &amp; Windsurf</text>
+  <text x="731.1" y="260.7" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="10" fill="#e2e8f0" opacity="0.92">.cursor/ · .windsurf/</text>
+  <polygon points="129.3,362.4 259.2,427.4 259.2,451.4 129.3,386.4" fill="#047857" stroke="#34d399" stroke-width="1.2" opacity="0.95"/>
+  <polygon points="354.4,379.8 259.2,427.4 259.2,451.4 354.4,403.8" fill="#065f46" stroke="#34d399" stroke-width="1.2" opacity="0.95"/>
+  <polygon points="224.5,314.8 354.4,379.8 259.2,427.4 129.3,362.4" fill="#059669" stroke="#34d399" stroke-width="1.6"/>
+  <text x="241.8" y="367.1" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#d1fae5">Codex &amp; Copilot</text>
+  <text x="241.8" y="384.1" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="10" fill="#e2e8f0" opacity="0.92">.codex/ · .github/prompts/</text>
+  <polygon points="640.2,362.4 770.1,427.4 770.1,451.4 640.2,386.4" fill="#b45309" stroke="#fbbf24" stroke-width="1.2" opacity="0.95"/>
+  <polygon points="865.4,379.8 770.1,427.4 770.1,451.4 865.4,403.8" fill="#92400e" stroke="#fbbf24" stroke-width="1.2" opacity="0.95"/>
+  <polygon points="735.5,314.8 865.4,379.8 770.1,427.4 640.2,362.4" fill="#d97706" stroke="#fbbf24" stroke-width="1.6"/>
+  <text x="752.8" y="367.1" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#fef3c7">OpenCode &amp; Trae</text>
+  <text x="752.8" y="384.1" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="10" fill="#e2e8f0" opacity="0.92">AGENTS.md Discovery</text>
+  <line x1="263.5" y1="247.7" x2="480.0" y2="175.0" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.85"/><circle cx="263.5" cy="247.7" r="3.5" fill="#38bdf8"/>
+  <line x1="731.1" y1="247.7" x2="480.0" y2="175.0" stroke="#c084fc" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.85"/><circle cx="731.1" cy="247.7" r="3.5" fill="#c084fc"/>
+  <line x1="241.8" y1="371.1" x2="480.0" y2="175.0" stroke="#34d399" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.85"/><circle cx="241.8" cy="371.1" r="3.5" fill="#34d399"/>
+  <line x1="752.8" y1="371.1" x2="480.0" y2="175.0" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.85"/><circle cx="752.8" cy="371.1" r="3.5" fill="#fbbf24"/>
+  <polygon points="350.1,145.0 480.0,209.9 480.0,239.9 350.1,175.0" fill="#4338ca" stroke="#818cf8" stroke-width="1.2" opacity="0.95"/>
+  <polygon points="609.9,145.0 480.0,209.9 480.0,239.9 609.9,175.0" fill="#3730a3" stroke="#818cf8" stroke-width="1.2" opacity="0.95"/>
+  <polygon points="480.0,80.1 609.9,145.0 480.0,209.9 350.1,145.0" fill="#4f46e5" stroke="#818cf8" stroke-width="1.6"/>
+  <text x="480.0" y="141.0" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#e0e7ff">Canonical .agents/</text>
+  <text x="480.0" y="158.0" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="10" fill="#e2e8f0" opacity="0.92">18 Commands · 18 Skills · Hooks</text>
   </g>
   <rect x="36.0" y="566" width="12" height="12" rx="3" fill="#4f46e5" stroke="#818cf8" stroke-width="1.2"/><text x="54.0" y="576" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#cbd5e1">Canonical Hub</text>
   <rect x="166.39999999999998" y="566" width="12" height="12" rx="3" fill="#0284c7" stroke="#38bdf8" stroke-width="1.2"/><text x="184.39999999999998" y="576" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#cbd5e1">Claude/AGY</text>

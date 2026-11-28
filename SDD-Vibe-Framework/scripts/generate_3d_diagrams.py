@@ -227,30 +227,32 @@ def build_exploded_stack(
     layers: list[tuple[str, str, str]],
     base_label: str | None = None,
 ) -> str:
-    """Build a vertical exploded 3D axonometric stack with guaranteed zero clipping."""
+    """Build a vertical exploded 3D axonometric stack with guaranteed zero clipping and zero label overlap."""
     n = len(layers)
     ox = 480.0
-    oy = 395.0 if n >= 5 else 355.0
-    height = 680 if n >= 5 else (645 if base_label else 600)
+    z_step = 96 if n >= 5 else 104
+    slab_w, slab_d, slab_h = 200.0, 116.0, 22.0
+    height = 175 + n * z_step + (155 if base_label else 35)
+    oy = height - (275.0 if base_label else 160.0)
 
     body_parts = []
-    top_pt = iso(105, 105, 30 + n * 62 + 24, ox, oy)
-    bot_pt = iso(105, 105, -14, ox, oy)
+    top_pt = iso(slab_w / 2, slab_d / 2, 16 + (n - 1) * z_step + slab_h + 24, ox, oy)
+    bot_pt = iso(slab_w / 2, slab_d / 2, -60 if base_label else 10, ox, oy)
     body_parts.append(
         f'<line x1="{bot_pt[0]}" y1="{bot_pt[1]}" x2="{top_pt[0]}" y2="{top_pt[1]}" '
         f'stroke="#475569" stroke-width="1.5" stroke-dasharray="5,5"/>'
     )
 
     if base_label:
-        body_parts.append(draw_box(-30, -30, -24, 270, 270, 18, "slate", base_label, "Shared Governance Baseplate", ox, oy))
+        body_parts.append(draw_box(-25, -20, -82, 250, 156, 18, "slate", base_label, "Shared Governance Baseplate", ox, oy))
 
     for i, (color_key, l_title, l_sub) in enumerate(layers):
-        z = 16 + i * 62
-        body_parts.append(draw_box(0, 0, z, 210, 210, 26, color_key, l_title, l_sub, ox, oy))
+        z = 16 + i * z_step
+        body_parts.append(draw_box(0, 0, z, slab_w, slab_d, slab_h, color_key, l_title, l_sub, ox, oy))
 
     for i, (color_key, _, _) in enumerate(layers):
-        z = 16 + i * 62 + 16
-        edge = iso(210, 105, z, ox, oy)
+        z = 16 + i * z_step + slab_h / 2 + 4
+        edge = iso(slab_w, slab_d / 2, z, ox, oy)
         _, _, _, stroke_c, _, _ = PALETTE[color_key]
         body_parts.append(
             f'<line x1="{edge[0]}" y1="{edge[1]}" x2="{edge[0] + 46}" y2="{edge[1]}" stroke="{stroke_c}" stroke-width="1.2" stroke-dasharray="3,3"/>'
@@ -268,8 +270,8 @@ def build_hub_3d(
     satellites: list[tuple[float, float, float, float, float, float, str, str, str]],
     legend: list[tuple[str, str]],
 ) -> str:
-    """Build a centered 3D hub-and-spoke topology with isometric connectors."""
-    ox, oy = 480.0, 270.0
+    """Build a centered 3D hub-and-spoke topology with non-overlapping satellites and isometric connectors."""
+    ox, oy = 480.0, 315.0
     hx, hy, hz, hw, hd, hh, hc, ht, hs = hub
     hub_bot = iso(hx + hw / 2, hy + hd / 2, hz, ox, oy)
 
@@ -299,32 +301,32 @@ def build_hub_3d(
 
 
 def build_pyramid_3d() -> str:
-    """3D Isometric Testing Pyramid (Unit -> Integration -> E2E + AC Traceability)."""
-    ox, oy = 480.0, 365.0
+    """3D Isometric Testing Pyramid (Unit -> Integration -> E2E + AC Traceability) with non-overlapping tiers."""
+    ox, oy = 410.0, 395.0
     parts = [
-        draw_box(-20, -20, -20, 250, 250, 16, "slate", "logs/test.log & AC Traceability", "AC-FEAT###-## -> TEST-FEAT###-##", ox, oy),
-        draw_box(0, 0, 12, 210, 210, 44, "sky", "UNIT TESTS (60-70%)", "tests/unit/ · Domain & Contracts", ox, oy),
-        draw_box(32, 32, 74, 146, 146, 42, "indigo", "INTEGRATION (20-30%)", "tests/integration/ · API & DB", ox, oy),
-        draw_box(66, 66, 134, 78, 78, 38, "violet", "E2E (10%)", "Browser Journeys", ox, oy),
+        draw_box(-20, -15, -82, 240, 150, 16, "slate", "logs/test.log & AC Traceability", "AC-FEAT###-## -> TEST-FEAT###-##", ox, oy),
+        draw_box(0, 0, 22, 200, 120, 30, "sky", "UNIT TESTS (60-70%)", "tests/unit/ · Domain & Contracts", ox, oy),
+        draw_box(28, 18, 118, 144, 84, 28, "indigo", "INTEGRATION (20-30%)", "tests/integration/ · API & DB", ox, oy),
+        draw_box(55, 34, 204, 90, 52, 26, "violet", "E2E (10%)", "Browser Journeys", ox, oy),
     ]
     callouts = [
-        (33, "sky", "60-70% Unit"),
-        (95, "indigo", "20-30% Integration"),
-        (153, "violet", "10% E2E"),
+        (37, 200, 60, "sky", "60-70% Unit"),
+        (132, 172, 60, "indigo", "20-30% Integration"),
+        (217, 145, 60, "violet", "10% E2E"),
     ]
-    for cz, ckey, clabel in callouts:
-        edge = iso(180 if ckey == "sky" else (160 if ckey == "indigo" else 135), 105, cz, ox, oy)
+    for cz, ex, ey, ckey, clabel in callouts:
+        edge = iso(ex, ey, cz, ox, oy)
         _, _, _, stroke_c, text_c, _ = PALETTE[ckey]
         parts.append(
-            f'<line x1="{edge[0]}" y1="{edge[1]}" x2="735" y2="{edge[1]}" stroke="{stroke_c}" stroke-width="1.2" stroke-dasharray="3,3"/>'
-            f'<rect x="740" y="{edge[1] - 12}" width="145" height="24" rx="6" fill="#0f172a" stroke="{stroke_c}" stroke-width="1.3"/>'
-            f'<text x="812.5" y="{edge[1] + 4}" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700" fill="{text_c}">{clabel}</text>'
+            f'<line x1="{edge[0]}" y1="{edge[1]}" x2="725" y2="{edge[1]}" stroke="{stroke_c}" stroke-width="1.2" stroke-dasharray="3,3"/>'
+            f'<rect x="730" y="{edge[1] - 12}" width="155" height="24" rx="6" fill="#0f172a" stroke="{stroke_c}" stroke-width="1.3"/>'
+            f'<text x="807.5" y="{edge[1] + 4}" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700" fill="{text_c}">{clabel}</text>'
         )
     return wrap_svg(
         "3D Isometric Testing Pyramid & AC Traceability",
         "Red-Green-Refactor TDD Gate · Zero-Regression Verification",
         "\n  ".join(parts),
-        width=960, height=625,
+        width=960, height=665,
         legend=[("sky", "Unit"), ("indigo", "Integration"), ("violet", "E2E"), ("slate", "Audit Log")],
         mode_label="SDD-Vibe · Pure 3D Pyramid", is_3d=True,
     )
@@ -738,24 +740,24 @@ def generate_all() -> list[Path]:
         "3d-cross-ide-portability.svg": build_hub_3d(
             "Cross-IDE Portability Engine (3D Sync Hub)",
             "Canonical .agents/ -> scripts/sync_ide_adapters.py -> 8 AI Coding IDEs",
-            (-65, 50, 95, 145, 120, 32, "indigo", "Canonical .agents/", "18 Commands · 18 Skills · Hooks"),
+            (-75, -75, 140, 150, 150, 30, "indigo", "Canonical .agents/", "18 Commands · 18 Skills · Hooks"),
             [
-                (-175, -25, 0, 125, 95, 24, "sky", "Claude & Antigravity", ".claude/ · .agents/workflows/"),
-                (65, -25, 0, 125, 95, 24, "violet", "Cursor & Windsurf", ".cursor/ · .windsurf/"),
-                (-175, 130, 0, 125, 95, 24, "emerald", "Codex & Copilot", ".codex/ · .github/prompts/"),
-                (65, 130, 0, 125, 95, 24, "amber", "OpenCode & Trae", "AGENTS.md Discovery"),
+                (-250, 20, 0, 150, 110, 24, "sky", "Claude & Antigravity", ".claude/ · .agents/workflows/"),
+                (20, -250, 0, 150, 110, 24, "violet", "Cursor & Windsurf", ".cursor/ · .windsurf/"),
+                (-120, 175, 0, 150, 110, 24, "emerald", "Codex & Copilot", ".codex/ · .github/prompts/"),
+                (175, -120, 0, 150, 110, 24, "amber", "OpenCode & Trae", "AGENTS.md Discovery"),
             ],
             legend=[("indigo", "Canonical Hub"), ("sky", "Claude/AGY"), ("violet", "Cursor/Windsurf"), ("emerald", "Codex/Copilot"), ("amber", "OpenCode/Trae")],
         ),
         "3d-agentic-ecosystem.svg": build_hub_3d(
             "14-Team Agentic Ecosystem (3D Topology)",
             "Just-In-Time Opt-In Activation · Main Agent + Team 14 Orchestrator",
-            (-65, 50, 95, 145, 120, 32, "indigo", "Main Orchestrator", "/team-ecosystem-ca-agent"),
+            (-75, -75, 140, 150, 150, 30, "indigo", "Main Orchestrator", "/team-ecosystem-ca-agent"),
             [
-                (-175, -25, 0, 135, 105, 26, "amber", "Group 1: Strategy & PM", "Team 1 Kanban · Team 2 REA"),
-                (60, -25, 0, 135, 105, 26, "violet", "Group 2: Design & Build", "Team 3 UI/UX · Team 4 Dev"),
-                (-175, 130, 0, 135, 105, 26, "emerald", "Group 3: Verify & Ops", "Teams 5-8 QA · Teams 9-10 Ops"),
-                (60, 130, 0, 135, 105, 26, "sky", "Group 4: Docs & Growth", "Teams 11-13 · Team 14 Guider"),
+                (-250, 20, 0, 150, 110, 24, "amber", "Group 1: Strategy & PM", "Team 1 Kanban · Team 2 REA"),
+                (20, -250, 0, 150, 110, 24, "violet", "Group 2: Design & Build", "Team 3 UI/UX · Team 4 Dev"),
+                (-120, 175, 0, 150, 110, 24, "emerald", "Group 3: Verify & Ops", "Teams 5-8 QA · Teams 9-10 Ops"),
+                (175, -120, 0, 150, 110, 24, "sky", "Group 4: Docs & Growth", "Teams 11-13 · Team 14 Guider"),
             ],
             legend=[("indigo", "Orchestrator"), ("amber", "Strategy"), ("violet", "Build"), ("emerald", "Verify/Ops"), ("sky", "Docs/Growth")],
         ),
